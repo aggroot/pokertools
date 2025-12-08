@@ -1,10 +1,26 @@
 version: "3.8"
 
 services:
-  nats:
-    image: nats:2.10
-    command: ["-js"]
+  hub:
+    build: .
+    expose:
+      - "9000"
+
+  nginx:
+    image: nginx:stable
     ports:
-      - "9992:4222"
-      - "6222:6222"
-      - "8222:8222"
+      - "9992:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./certbot/www:/var/www/certbot:ro
+      - ./certbot/live:/etc/letsencrypt:ro
+    depends_on:
+      - hub
+
+  certbot:
+    ports:
+    - "80:80"
+    image: certbot/certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/live:/etc/letsencrypt

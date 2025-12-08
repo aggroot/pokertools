@@ -5,7 +5,7 @@ import time
 from typing import Optional
 
 import cv2
-import nats
+import aiohttp
 
 
 class FrameBuffer:
@@ -49,22 +49,16 @@ async def run_producer(args: argparse.Namespace) -> None:
     buffer = FrameBuffer(quality=args.quality, fps=args.fps, interval=args.interval)
     buffer.start_capture(args.device, args.width, args.height, args.fps)
 
-    nc = await nats.connect(args.nats_url)
-    subject = f"{args.subject_prefix}.{args.producer_id}"
-
-    try:
-        while True:
-            frame = buffer.get_frame()
-            if frame is None:
-                await asyncio.sleep(0.01)
-                continue
-            await nc.publish(subject, frame)
-            if args.publish_interval > 0:
-                await asyncio.sleep(args.publish_interval)
-            else:
+    async with aiohttp.ClientSession() as session:
+        params = {"id": args.producer_id}
+        async with session.ws_connect(args.server_url, params=params) as ws:
+            while True:
+                frame = buffer.get_frame()
+                if frame is None:
+                    await asyncio.sleep(0.01)
+                    continue
+                await ws.send_bytes(frame)
                 await asyncio.sleep(0)
-    finally:
-        await nc.drain()
 
 
 def parse_args() -> argparse.Namespace:
@@ -81,18 +75,9 @@ def parse_args() -> argparse.Namespace:
         help="Seconds between frames (0 to match FPS).",
     )
     parser.add_argument(
-        "--nats-url", default="nats://127.0.0.1:4222", help="NATS server URL."
-    )
-    parser.add_argument(
-        "--subject-prefix", default="cams", help="Subject prefix used when publishing frames."
+        "--server-url", default="ws://localhost:9000/ws/producer", help="Go hub producer endpoint."
     )
     parser.add_argument("--producer-id", required=True, help="Unique producer ID.")
-    parser.add_argument(
-        "--publish-interval",
-        type=float,
-        default=0.0,
-        help="Seconds to wait between publishes (0 publishes every frame).",
-    )
     return parser.parse_args()
 
 

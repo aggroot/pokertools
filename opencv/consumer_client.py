@@ -2,53 +2,51 @@ import argparse
 import asyncio
 from pathlib import Path
 
+import aiohttp
 import cv2
-import nats
 import numpy as np
 
 
 async def consume(args: argparse.Namespace) -> None:
-    nc = await nats.connect(args.nats_url)
-    subject = f"{args.subject_prefix}.{args.producer_id}"
-
     window_name = f"Stream {args.producer_id}"
 
-    async def handle_message(msg):
-        data = msg.data
-        print(f"Received frame ({len(data)} bytes)")
-        if args.show or args.save_dir:
-            array = np.frombuffer(data, dtype=np.uint8)
-            frame = cv2.imdecode(array, cv2.IMREAD_COLOR)
-            if frame is None:
-                return
-            if args.show:
-                cv2.imshow(window_name, frame)
-                cv2.waitKey(1)
-            if args.save_dir:
-                ts_path = Path(args.save_dir) / f"{int(asyncio.get_event_loop().time() * 1000)}.jpg"
-                ts_path.parent.mkdir(parents=True, exist_ok=True)
-                cv2.imwrite(str(ts_path), frame)
+    async with aiohttp.ClientSession() as session:
+        params = {"id": args.producer_id}
+        async with session.ws_connect(args.server_url, params=params, heartbeat=30) as ws:
+            async for msg in ws:
+                if msg.type == aiohttp.WSMsgType.BINARY:
+                    data = msg.data
+                    print(f"Received frame ({len(data)} bytes)")
+                    if args.show or args.save_dir:
+                        frame = decode_frame(data)
+                        if frame is None:
+                            continue
+                        if args.show:
+                            cv2.imshow(window_name, frame)
+                            cv2.waitKey(1)
+                        if args.save_dir:
+                            save_frame(frame, Path(args.save_dir))
+                elif msg.type == aiohttp.WSMsgType.ERROR:
+                    break
+    if args.show:
+        cv2.destroyWindow(window_name)
 
-    await nc.subscribe(subject, cb=handle_message)
 
-    print(f"Subscribed to {subject}")
-    try:
-        await asyncio.Future()
-    except asyncio.CancelledError:
-        pass
-    finally:
-        if args.show:
-            cv2.destroyWindow(window_name)
-        await nc.drain()
+def decode_frame(data: bytes):
+    array = np.frombuffer(data, dtype=np.uint8)
+    return cv2.imdecode(array, cv2.IMREAD_COLOR)
+
+
+def save_frame(frame, directory: Path) -> None:
+    directory.mkdir(parents=True, exist_ok=True)
+    filepath = directory / f"{int(asyncio.get_event_loop().time() * 1000)}.jpg"
+    cv2.imwrite(str(filepath), frame)
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="NATS consumer receiving camera frames.")
+    parser = argparse.ArgumentParser(description="WebSocket consumer receiving frames.")
     parser.add_argument(
-        "--nats-url", default="nats://127.0.0.1:4222", help="NATS server URL."
-    )
-    parser.add_argument(
-        "--subject-prefix", default="cams", help="Subject prefix used when subscribing."
+        "--server-url", default="ws://localhost:9000/ws/consumer", help="Go hub consumer endpoint."
     )
     parser.add_argument("--producer-id", required=True, help="Producer ID to subscribe to.")
     parser.add_argument(
