@@ -38,13 +38,16 @@ class Hub:
                     self.consumers.pop(producer_id, None)
 
     async def broadcast_frame(self, producer_id: str, data: bytes) -> None:
+        to_remove = []
         async with self.lock:
             consumers = list(self.consumers.get(producer_id, []))
         for consumer in consumers:
             try:
                 await consumer.send_bytes(data)
             except Exception:
-                await self.unregister_consumer(producer_id, consumer)
+                to_remove.append(consumer)
+        for consumer in to_remove:
+            await self.unregister_consumer(producer_id, consumer)
 
 
 async def producer_handler(request: web.Request) -> web.WebSocketResponse:
