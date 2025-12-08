@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Range Analysis Viewer</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg: #0b0c0f;
+      --panel: rgba(255, 255, 255, 0.05);
+      --border: rgba(255, 255, 255, 0.1);
+      --accent: #3ddc97;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      background: var(--bg);
+      color: #f5f7fa;
+    }
+
+    main {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: sticky;
+      top: 2rem;
+      align-self: start;
+      max-height: calc(100vh - 2rem);
+      overflow-y: auto;
+      padding-right: 0.25rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    header h1 {
+      margin-bottom: 0.25rem;
+    }
+
+    header {
+      grid-column: 1 / -1;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      align-items: stretch;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    select {
+      width: 100%;
+      padding: 0.45rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.25);
+      color: inherit;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="url"] {
+      width: 100%;
+      padding: 0.45rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.25);
+      color: inherit;
+      font-size: 0.95rem;
+    }
+
+    .file-input {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      width: 100%;
+      min-height: 2.75rem;
+      padding: 0.4rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+    }
+
+    .file-button {
+      background: var(--accent);
+      color: #0b0c0f;
+      border: none;
+      border-radius: 6px;
+      padding: 0.35rem 1rem;
+      min-width: 110px;
+      height: 2.2rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .file-name {
+      flex: 1;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.85);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.1rem;
+      max-height: 2.2rem;
+      overflow: hidden;
+    }
+
+    .file-input input[type="file"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .stat-card {
+      padding: 0.75rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .stat-card span {
+      display: block;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 0.35rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .message {
+      text-align: center;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .section-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .slider-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .slider-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .matrix-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 2px;
+      table-layout: fixed;
+    }
+
+    .matrix-table th,
+    .matrix-table td {
+      text-align: center;
+      padding: 0.35rem;
+      border: none;
+      font-size: 0.78rem;
+    }
+
+    .matrix-table th {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .matrix-cell {
+      border-radius: 6px;
+      min-width: 38px;
+      height: 38px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.12s ease;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .matrix-cell.muted {
+      border-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .matrix-cell:hover {
+      transform: translateY(-2px);
+    }
+
+    .matrix-cell::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 50%;
+      bottom: 110%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      background: rgba(15, 17, 25, 0.95);
+      color: #f5f7fa;
+      padding: 0.3rem 0.55rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.12s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .matrix-cell:hover::after {
+      opacity: 1;
+    }
+
+    .matrix-legend {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .legend-bar {
+      flex: 1;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), #3ddc97);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .matrix-note {
+      margin-top: 0.35rem;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.65);
+      text-align: right;
+    }
+
+    .loading-overlay {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem 1rem;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .loading-overlay.hidden {
+      display: none;
+    }
+
+    .loading-overlay .spinner {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.25);
+      border-top-color: var(--accent);
+      animation: spin 1s linear infinite;
+    }
+
+    .loading-overlay.error .spinner {
+      display: none;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .checkbox-group span {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.3);
+      accent-color: var(--accent);
+    }
+
+
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .breakdown-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem;
+      background: rgba(255, 255, 255, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .breakdown-card h3 {
+      margin: 0;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .breakdown-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .breakdown-card li {
+      font-size: 0.85rem;
+      list-style: disc;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .breakdown-card small {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media (max-width: 1020px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        flex-direction: column;
+        position: static;
+        max-height: none;
+        overflow: visible;
+        padding-right: 0;
+      }
+
+      .controls {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Poker Range Analysis Viewer</h1>
+      <p>Connect to the local <code>range_query_service.py</code> endpoint to explore positions, stages, and actions straight from the DuckDB warehouse.</p>
+    </header>
+
+    <div class="sidebar">
+      <section class="panel controls">
+        <div class="control-group">
+          <label for="positionSelect">Position</label>
+          <select id="positionSelect"></select>
+        </div>
+        <div class="control-group">
+          <label for="stageSelect">Stage</label>
+          <select id="stageSelect"></select>
+        </div>
+        <div class="control-group">
+          <label for="actionSelect">Action</label>
+          <select id="actionSelect"></select>
+        </div>
+        <div class="control-group">
+          <label for="tournamentInput">Tournament ID</label>
+          <input type="text" id="tournamentInput" placeholder="All tournaments">
+          <small>Leave blank to include all tournaments.</small>
+        </div>
+        <div class="control-group">
+          <label for="rangeSourceSelect">Bet Size Bucket</label>
+          <select id="rangeSourceSelect" disabled>
+            <option value="all">All bet sizes</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="stageFilter">Tournament Stage</label>
+          <select id="stageFilter" disabled>
+            <option value="all">All stages</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="stackFilter">Stack Bucket</label>
+          <select id="stackFilter" disabled>
+            <option value="all">All stacks</option>
+          </select>
+        </div>
+        <div class="slider-group">
+          <div class="slider-label">
+            <span>Min Frequency</span>
+            <span id="frequencyValue">&ge; 0.00%</span>
+          </div>
+          <input type="range" id="frequencyThreshold" min="0" max="5" step="0.05" value="0">
+        </div>
+        <div class="control-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="normalizeCheckbox">
+            <span>Normalize frequencies by combo count</span>
+          </label>
+        </div>
+      </section>
+    </div>
+
+    <div class="content">
+      <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p id="loadingMessage">Loading range data… ensure <code>python3 range_query_service.py serve --db range_analysis.duckdb</code> is running.</p>
+      </div>
+      <section id="dataPanel" class="panel hidden">
+        <div class="stats-grid">
+          <div class="stat-card">
+            Total Instances
+            <span id="totalInstances">0</span>
+          </div>
+        <div class="stat-card">
+          Unique Combos
+          <span id="uniqueCombos">0</span>
+        </div>
+        <div class="stat-card">
+          Median Combo Frequency
+          <span id="medianFrequency">0%</span>
+        </div>
+      </div>
+
+        <div class="matrix-section">
+          <div class="section-header">
+            <div>
+              <h2>Range Matrix</h2>
+              <p class="section-subtitle">Color intensity scales with combo frequency.</p>
+            </div>
+          </div>
+          <div id="rangeMatrixWrapper"></div>
+        </div>
+
+        <div class="matrix-section">
+          <div class="section-header">
+            <h2>Pot Size Buckets</h2>
+          </div>
+          <div id="potBreakdown" class="breakdown-grid"></div>
+        </div>
+
+        <div class="matrix-section">
+          <div class="section-header">
+            <h2>Big Blind Buckets</h2>
+          </div>
+          <div id="bbBreakdown" class="breakdown-grid"></div>
+        </div>
+
+        <div class="matrix-section">
+          <div class="section-header">
+            <h2>Stack Buckets</h2>
+          </div>
+          <div id="stackBreakdown" class="breakdown-grid"></div>
+        </div>
+
+        <div class="matrix-section">
+          <div class="section-header">
+            <h2>Tournament Stages</h2>
+          </div>
+          <div id="tournamentBreakdown" class="breakdown-grid"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const SERVICE_URL = "http://127.0.0.1:8080";
+    const ORDER = {
+      positions: ["BTN", "SB", "BB", "CO", "MP(6)", "MP(7+)", "EP(6)", "EP(7+)"],
+      stages: ["preflop", "flop", "turn", "river"],
+      actions: ["raise", "bet", "call", "check", "fold"],
+      potSizes: ["OPEN", "<0.33x", "0.33x", "0.5x", "0.75x", "1x", "1.5x", "2x", "3x+"],
+      bbSizesPre: ["MINRAISE", "2.5BB", "3BB", "4-5BB", "6-9BB", "10BB+", "1BB_CALL", "2BB_CALL", "3-4BB_CALL", "5BB+_CALL"],
+      bbSizesPost: ["<1BB", "1-3BB", "3-6BB", "6-10BB", "10BB+"],
+      stackBuckets: ["<10BB", "10-20BB", "20-30BB", "30-50BB", "50-80BB", "80BB+"],
+      tournamentStages: ["start", "pre_bubble", "bubble", "final_table"]
+    };
+    const RANKS = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
+    const BASE_RGB = [26, 34, 52];
+    const ACCENT_RGB = [61, 220, 151];
+
+    const state = {
+      sources: [],
+      selectedSourceId: null,
+      frequencyThreshold: 0,
+      selectedStage: "all",
+      currentRange: null,
+      pendingFetch: null,
+      normalizeCombos: false
+    };
+
+    const positionSelect = document.getElementById("positionSelect");
+    const stageSelect = document.getElementById("stageSelect");
+    const actionSelect = document.getElementById("actionSelect");
+    const dataPanel = document.getElementById("dataPanel");
+    const rangeMatrixWrapper = document.getElementById("rangeMatrixWrapper");
+    const rangeSourceSelect = document.getElementById("rangeSourceSelect");
+    const frequencySlider = document.getElementById("frequencyThreshold");
+    const frequencyValue = document.getElementById("frequencyValue");
+    const stageFilter = document.getElementById("stageFilter");
+    const stackFilter = document.getElementById("stackFilter");
+    const loadingOverlay = document.getElementById("loadingOverlay");
+    const loadingMessage = document.getElementById("loadingMessage");
+    const loadingSpinner = loadingOverlay.querySelector(".spinner");
+    const normalizeCheckbox = document.getElementById("normalizeCheckbox");
+    const tournamentInput = document.getElementById("tournamentInput");
+    const potBreakdown = document.getElementById("potBreakdown");
+    const bbBreakdown = document.getElementById("bbBreakdown");
+    const stackBreakdown = document.getElementById("stackBreakdown");
+    const tournamentBreakdown = document.getElementById("tournamentBreakdown");
+
+    const fetchInputs = [positionSelect, stageSelect, actionSelect, tournamentInput];
+
+    positionSelect.addEventListener("change", scheduleFetch);
+    stageSelect.addEventListener("change", scheduleFetch);
+    actionSelect.addEventListener("change", scheduleFetch);
+    fetchInputs.forEach((input) => {
+      if (input && input !== positionSelect && input !== stageSelect && input !== actionSelect) {
+        input.addEventListener("change", scheduleFetch);
+        input.addEventListener("input", debounceSchedule);
+      }
+    });
+    rangeSourceSelect.addEventListener("change", handleRangeSourceChange);
+    frequencySlider.addEventListener("input", handleFrequencyChange);
+    stageFilter.addEventListener("change", handleStageFilterChange);
+    stackFilter.addEventListener("change", handleStackFilterChange);
+    normalizeCheckbox.addEventListener("change", handleNormalizeToggle);
+    updateThresholdLabel();
+
+    initializeSelectOptions();
+    scheduleFetch();
+
+    function initializeSelectOptions() {
+      populateSelect(positionSelect, ORDER.positions);
+      populateSelect(stageSelect, ORDER.stages);
+      populateSelect(actionSelect, ORDER.actions);
+      positionSelect.value = ORDER.positions[0];
+      stageSelect.value = ORDER.stages[0];
+      actionSelect.value = ORDER.actions[0];
+      stackFilter.innerHTML = "";
+      stackFilter.append(new Option("All stacks", "all"));
+      stackFilter.disabled = true;
+    }
+
+    function populateSelect(selectEl, values, includeAny = false) {
+      if (!selectEl) return;
+      selectEl.innerHTML = "";
+      if (includeAny) {
+        const option = new Option("Any", "", true, true);
+        selectEl.append(option);
+      }
+      values.forEach((value, index) => {
+        const label = value ? value.replace("_", " ").toUpperCase() : "Any";
+        const option = new Option(label, value, false, index === 0 && !includeAny);
+        selectEl.append(option);
+      });
+    }
+
+    function scheduleFetch() {
+      debounceSchedule();
+    }
+
+    function debounceSchedule() {
+      if (state.pendingFetch) {
+        clearTimeout(state.pendingFetch);
+      }
+      state.pendingFetch = setTimeout(() => fetchRange(false), 250);
+    }
+
+    async function fetchRange(force = false) {
+      if (state.pendingFetch) {
+        clearTimeout(state.pendingFetch);
+        state.pendingFetch = null;
+      }
+      const baseUrl = SERVICE_URL.replace(/\/$/, "");
+      const position = positionSelect.value;
+      const stage = stageSelect.value;
+      const action = actionSelect.value;
+      if (!position || !stage || !action) {
+        showOverlay("Select a position, stage, and action.", false);
+        dataPanel.classList.add("hidden");
+        return;
+      }
+      const params = new URLSearchParams({
+        position,
+        stage,
+        action
+      });
+
+      const optionalParams = {
+        tournament_id: tournamentInput.value.trim()
+      };
+
+      Object.entries(optionalParams).forEach(([key, value]) => {
+        if (value) params.set(key, value);
+      });
+
+      const url = `${baseUrl}/ranges?${params.toString()}`;
+      state.sources = [];
+      state.selectedSourceId = null;
+      populateRangeSourceSelect([], null);
+      showOverlay("Loading range data…", true);
+      dataPanel.classList.add("hidden");
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`Service returned ${response.status}`);
+        }
+        const data = await response.json();
+        state.currentRange = data;
+        dataPanel.classList.remove("hidden");
+        updateStageFilterOptions(data);
+        updateStackFilterOptions(data);
+        state.sources = buildBetSizeSources(data, stage);
+        if (!state.sources.length) {
+          showOverlay("No data available for the selected filters.", false);
+          dataPanel.classList.add("hidden");
+          return;
+        }
+        state.selectedSourceId = state.sources[0].id;
+        populateRangeSourceSelect(state.sources, state.selectedSourceId);
+        rangeSourceSelect.disabled = false;
+        frequencySlider.disabled = false;
+        renderView();
+        hideOverlay();
+      } catch (error) {
+        console.error(error);
+        showOverlay(`Failed to fetch data: ${error.message}`, false);
+        state.currentRange = null;
+        dataPanel.classList.add("hidden");
+        return;
+      }
+    }
+
+    function renderView() {
+      if (!state.currentRange) {
+        showOverlay("Fetch a range to begin.", false);
+        return;
+      }
+      const stage = stageSelect.value;
+      const previousSourceId = state.selectedSourceId;
+      const nextSourceId = state.sources.some((src) => src.id === previousSourceId)
+        ? previousSourceId
+        : state.sources[0]?.id || null;
+      state.selectedSourceId = nextSourceId;
+      populateRangeSourceSelect(state.sources, state.selectedSourceId);
+      const activeStats = getActiveStats();
+      const summary = activeStats?.all || activeStats;
+      if (!summary || !summary.hands) {
+        showOverlay("No range data found for these filters.", false);
+        return;
+      }
+      updateStats(summary);
+      renderRangeMatrix(summary);
+      const potData = state.normalizeCombos ? normalizeBucketMap(state.currentRange.by_pot_size) : (state.currentRange.by_pot_size || {});
+      const bbData = state.normalizeCombos ? normalizeBucketMap(state.currentRange.by_bb_size) : (state.currentRange.by_bb_size || {});
+      const stackData = state.normalizeCombos ? normalizeBucketMap(state.currentRange.by_stack_bucket) : (state.currentRange.by_stack_bucket || {});
+      const tournamentData = state.normalizeCombos ? normalizeBucketMap(state.currentRange.by_tournament_stage) : (state.currentRange.by_tournament_stage || {});
+      renderBreakdown(potBreakdown, potData, ORDER.potSizes, "No pot-size buckets.");
+      const bbOrder = stage === "preflop" ? ORDER.bbSizesPre : ORDER.bbSizesPost;
+      renderBreakdown(bbBreakdown, bbData, bbOrder, "No big-blind buckets.");
+      renderBreakdown(stackBreakdown, stackData, ORDER.stackBuckets, "No stack buckets.");
+      renderBreakdown(tournamentBreakdown, tournamentData, ORDER.tournamentStages, "No tournament-stage data.");
+    }
+
+    function updateStats(stats) {
+      document.getElementById("totalInstances").textContent = stats.total_instances ?? 0;
+      document.getElementById("uniqueCombos").textContent = stats.unique_combos ?? Object.keys(stats.hands || {}).length;
+      const median = stats.median_frequency_pct ?? 0;
+      document.getElementById("medianFrequency").textContent = `${median.toFixed(2)}%`;
+    }
+
+    function showOverlay(message, showSpinner = false) {
+      loadingMessage.innerHTML = message;
+      loadingOverlay.classList.remove("hidden");
+      if (showSpinner) {
+        loadingSpinner.style.display = "block";
+        loadingOverlay.classList.remove("error");
+      } else {
+        loadingSpinner.style.display = "none";
+        loadingOverlay.classList.add("error");
+      }
+    }
+
+    function hideOverlay() {
+      loadingOverlay.classList.add("hidden");
+      loadingOverlay.classList.remove("error");
+      loadingSpinner.style.display = "block";
+    }
+
+    function showOverlay(message, showSpinner = false) {
+      loadingMessage.innerHTML = message;
+      loadingOverlay.classList.remove("hidden");
+      if (showSpinner) {
+        loadingOverlay.classList.remove("error");
+      } else {
+        loadingOverlay.classList.add("error");
+      }
+    }
+
+    function hideOverlay() {
+      loadingOverlay.classList.add("hidden");
+      loadingOverlay.classList.remove("error");
+    }
+
+    function buildBetSizeSources(node, stage) {
+      const sources = [];
+      if (hasHands(node.all)) {
+        sources.push({ id: "all", label: "All bet sizes", stats: node });
+      }
+      const potBuckets = node.by_pot_size || {};
+      const bbBuckets = node.by_bb_size || {};
+      const potOrder = ORDER.potSizes.filter((bucket) => hasHands(potBuckets[bucket]));
+      const potExtras = Object.keys(potBuckets)
+        .filter((bucket) => !ORDER.potSizes.includes(bucket) && hasHands(potBuckets[bucket]))
+        .sort();
+      potOrder.concat(potExtras).forEach((bucket) => {
+        sources.push({ id: `pot-${bucket}`, label: `Pot Ratio · ${bucket}`, stats: { all: potBuckets[bucket] } });
+      });
+      const baseBbOrder = stage === "preflop" ? ORDER.bbSizesPre : ORDER.bbSizesPost;
+      const bbOrder = baseBbOrder.filter((bucket) => hasHands(bbBuckets[bucket]));
+      const bbExtras = Object.keys(bbBuckets)
+        .filter((bucket) => !baseBbOrder.includes(bucket) && hasHands(bbBuckets[bucket]))
+        .sort();
+      bbOrder.concat(bbExtras).forEach((bucket) => {
+        sources.push({ id: `bb-${bucket}`, label: `BB Size · ${bucket}`, stats: { all: bbBuckets[bucket] } });
+      });
+      return sources;
+    }
+
+    function hasHands(bucket) {
+      return bucket && bucket.hands && Object.keys(bucket.hands).length > 0;
+    }
+
+    function populateRangeSourceSelect(sources, selectedId = null) {
+      rangeSourceSelect.innerHTML = "";
+      if (!sources.length) {
+        const emptyOption = new Option("No bet sizes", "", true, true);
+        rangeSourceSelect.append(emptyOption);
+        rangeSourceSelect.disabled = true;
+        return;
+      }
+      rangeSourceSelect.disabled = false;
+      sources.forEach((source, index) => {
+        const opt = new Option(source.label, source.id);
+        if ((selectedId && source.id === selectedId) || (!selectedId && index === 0)) {
+          opt.selected = true;
+        }
+        rangeSourceSelect.append(opt);
+      });
+    }
+
+    function getSelectedSource() {
+      return state.sources.find((src) => src.id === state.selectedSourceId) || state.sources[0];
+    }
+
+    function handleRangeSourceChange(event) {
+      state.selectedSourceId = event.target.value;
+      renderView();
+    }
+
+    function handleFrequencyChange(event) {
+      state.frequencyThreshold = parseFloat(event.target.value) || 0;
+      updateThresholdLabel();
+      renderView();
+    }
+
+    function updateThresholdLabel() {
+      frequencyValue.innerHTML = `\u2265 ${state.frequencyThreshold.toFixed(2)}%`;
+    }
+
+    function handleStageFilterChange(event) {
+      state.selectedStage = event.target.value || "all";
+      renderView();
+    }
+
+    function updateStageFilterOptions(rangeData) {
+      const stageBuckets = rangeData?.by_tournament_stage || {};
+      const available = Object.keys(stageBuckets);
+      const ordered = ORDER.tournamentStages.filter((stage) => available.includes(stage));
+      const extras = available.filter((stage) => !ORDER.tournamentStages.includes(stage)).sort();
+      const finalList = ordered.concat(extras);
+
+      stageFilter.innerHTML = "";
+      stageFilter.append(new Option("All stages", "all"));
+      finalList.forEach((stage) => {
+        const label = stage.replace("_", " ");
+        const option = new Option(label.replace(/\b\w/g, (c) => c.toUpperCase()), stage);
+        stageFilter.append(option);
+      });
+
+      if (finalList.length === 0) {
+        stageFilter.disabled = true;
+        state.selectedStage = "all";
+        stageFilter.value = "all";
+      } else {
+        stageFilter.disabled = false;
+        if (state.selectedStage !== "all" && !finalList.includes(state.selectedStage)) {
+          state.selectedStage = "all";
+        }
+        stageFilter.value = state.selectedStage;
+      }
+    }
+
+    function getActiveStats() {
+      const source = getSelectedSource();
+      if (!source) return null;
+      let stats = state.selectedStage === "all"
+        ? source.stats
+        : (source.stats?.by_tournament_stage?.[state.selectedStage]
+          ? { all: source.stats.by_tournament_stage[state.selectedStage] }
+          : source.stats);
+      if (stackFilter.value && stackFilter.value !== "all") {
+        stats = state.currentRange.by_stack_bucket?.[stackFilter.value]
+          ? { all: state.currentRange.by_stack_bucket[stackFilter.value] }
+          : stats;
+      }
+      return state.normalizeCombos ? normalizeStatsTree(stats) : stats;
+    }
+
+    function handleStackFilterChange() {
+      renderView();
+    }
+
+    function updateStackFilterOptions(rangeData) {
+      const bucketData = rangeData?.by_stack_bucket || {};
+      const available = Object.keys(bucketData);
+      const ordered = ORDER.stackBuckets.filter((bucket) => available.includes(bucket));
+      const extras = available.filter((bucket) => !ordered.includes(bucket)).sort();
+      const finalList = ordered.concat(extras);
+
+      stackFilter.innerHTML = "";
+      stackFilter.append(new Option("All stacks", "all"));
+
+      finalList.forEach((bucket) => {
+        const label = bucket.replace("_", " ").toUpperCase();
+        stackFilter.append(new Option(label, bucket));
+      });
+
+      if (finalList.length === 0) {
+        stackFilter.value = "all";
+        stackFilter.disabled = true;
+      } else {
+        if (!finalList.includes(stackFilter.value)) {
+          stackFilter.value = "all";
+        }
+        stackFilter.disabled = false;
+      }
+    }
+
+    function renderRangeMatrix(allStats = {}) {
+      const hands = allStats?.hands || {};
+      rangeMatrixWrapper.innerHTML = "";
+      const comboKeys = Object.keys(hands);
+
+      if (!comboKeys.length) {
+        rangeMatrixWrapper.innerHTML = "<p class=\"message\">No combos recorded for this action.</p>";
+        return;
+      }
+
+      const maxFreq = comboKeys.reduce((max, key) => {
+        const entry = hands[key] || {};
+        const value = typeof entry.frequency_pct === "number" ? entry.frequency_pct : 0;
+        return Math.max(max, value);
+      }, 0);
+      const minFreq = state.frequencyThreshold;
+
+      const table = document.createElement("table");
+      table.className = "matrix-table";
+
+      const thead = document.createElement("thead");
+      const headerRow = document.createElement("tr");
+      headerRow.appendChild(document.createElement("th"));
+      RANKS.forEach((rank) => {
+        const th = document.createElement("th");
+        th.textContent = rank;
+        headerRow.appendChild(th);
+      });
+      thead.appendChild(headerRow);
+      table.appendChild(thead);
+
+      const tbody = document.createElement("tbody");
+      RANKS.forEach((rowRank, rowIdx) => {
+        const tr = document.createElement("tr");
+        const rowHeader = document.createElement("th");
+        rowHeader.textContent = rowRank;
+        tr.appendChild(rowHeader);
+
+        RANKS.forEach((_, colIdx) => {
+          const comboKey = getComboKey(rowIdx, colIdx);
+          const comboStats = hands[comboKey] || {};
+          const freq = typeof comboStats.frequency_pct === "number" ? comboStats.frequency_pct : 0;
+          const count = comboStats?.count ?? 0;
+
+          const cell = document.createElement("td");
+          cell.className = "matrix-cell";
+          const belowThreshold = freq < minFreq;
+          const colors = belowThreshold
+            ? { background: "rgba(255, 255, 255, 0.04)", textColor: "rgba(255, 255, 255, 0.35)" }
+            : colorForFrequency(freq, maxFreq);
+          cell.style.background = colors.background;
+          cell.style.color = colors.textColor;
+          cell.classList.toggle("muted", belowThreshold);
+          cell.innerHTML = formatMatrixContent(comboKey, freq);
+          cell.setAttribute("data-tooltip", `${comboKey} · ${count.toLocaleString()} combos · ${freq.toFixed(2)}%`);
+          tr.appendChild(cell);
+        });
+
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+
+      rangeMatrixWrapper.appendChild(table);
+
+      const legend = document.createElement("div");
+      legend.className = "matrix-legend";
+      legend.innerHTML = `
+        <span>Low</span>
+        <div class="legend-bar"></div>
+        <span>High</span>
+      `;
+      rangeMatrixWrapper.appendChild(legend);
+
+      const meta = document.createElement("p");
+      meta.className = "matrix-note";
+      meta.textContent = `Max combo frequency: ${maxFreq.toFixed(2)}% · Threshold ≥ ${minFreq.toFixed(2)}%`;
+      rangeMatrixWrapper.appendChild(meta);
+    }
+
+    function renderBreakdown(container, buckets, preferredOrder = [], emptyMessage = "No data.") {
+      container.innerHTML = "";
+      if (!buckets || !Object.keys(buckets).length) {
+        container.innerHTML = `<p class="message">${emptyMessage}</p>`;
+        return;
+      }
+      const ordered = preferredOrder.filter((bucket) => buckets[bucket]);
+      const extras = Object.keys(buckets).filter((bucket) => !ordered.includes(bucket)).sort();
+      const keys = ordered.concat(extras);
+      keys.forEach((bucket) => {
+        container.appendChild(createBreakdownCard(bucket, buckets[bucket]));
+      });
+    }
+
+    function createBreakdownCard(bucket, stats) {
+      const card = document.createElement("div");
+      card.className = "breakdown-card";
+
+      const title = document.createElement("h3");
+      title.textContent = bucket.replace("_", " ").toUpperCase();
+      card.appendChild(title);
+
+      const summary = document.createElement("small");
+      const totalInstances = Number((stats.total_instances ?? 0).toFixed ? stats.total_instances.toFixed(2) : stats.total_instances ?? 0);
+      summary.textContent = `${totalInstances} instances · ${stats.unique_combos ?? 0} combos`;
+      card.appendChild(summary);
+
+      const list = document.createElement("ul");
+      const entries = Object.entries(stats.hands || {}).sort((a, b) => (b[1].count ?? 0) - (a[1].count ?? 0)).slice(0, 8);
+      entries.forEach(([hand, info]) => {
+        const item = document.createElement("li");
+        const countText = (info.count ?? 0).toFixed ? info.count.toFixed(2) : info.count ?? 0;
+        item.textContent = `${hand}: ${countText} (${info.frequency_pct ?? 0}%)`;
+        list.appendChild(item);
+      });
+      if (!entries.length) {
+        const item = document.createElement("li");
+        item.textContent = "No combos recorded.";
+        list.appendChild(item);
+      }
+      card.appendChild(list);
+      return card;
+    }
+
+    function getComboKey(rowIdx, colIdx) {
+      const rowRank = RANKS[rowIdx];
+      const colRank = RANKS[colIdx];
+      if (rowIdx === colIdx) {
+        return `${rowRank}${colRank}`;
+      }
+      if (rowIdx < colIdx) {
+        return `${rowRank}${colRank}s`;
+      }
+      return `${colRank}${rowRank}o`;
+    }
+
+    function colorForFrequency(freq, maxFreq) {
+      if (!maxFreq || freq <= 0) {
+        return { background: "rgba(255, 255, 255, 0.03)", textColor: "#f5f7fa" };
+      }
+      const normalized = Math.min(freq / maxFreq, 1);
+      const eased = Math.pow(normalized, 0.65);
+      const rgb = BASE_RGB.map((start, idx) => Math.round(start + (ACCENT_RGB[idx] - start) * eased));
+      return {
+        background: `rgb(${rgb.join(",")})`,
+        textColor: eased > 0.55 ? "#0b0c0f" : "#f5f7fa"
+      };
+    }
+
+    function formatMatrixContent(combo, freq) {
+      const pct = freq
+        ? freq < 0.1
+          ? "<0.1%"
+          : freq < 10
+            ? `${freq.toFixed(1)}%`
+            : `${freq.toFixed(0)}%`
+        : "";
+      return `<div style="font-size:0.7rem">${combo}</div><div style="font-size:0.75rem;font-weight:600">${pct}</div>`;
+    }
+
+    function handleNormalizeToggle(event) {
+      state.normalizeCombos = event.target.checked;
+      renderView();
+    }
+
+    function normalizeStatsTree(stats) {
+      if (!stats) return stats;
+      if (stats.all) {
+        return { ...stats, all: normalizeStats(stats.all) };
+      }
+      return normalizeStats(stats);
+    }
+
+    function normalizeStats(stats) {
+      if (!stats || !stats.hands) return stats;
+      const normalizedCounts = {};
+      let total = 0;
+      const rawTotal = stats.total_instances
+        ?? Object.values(stats.hands).reduce((sum, data) => sum + (data.count ?? 0), 0);
+      Object.entries(stats.hands).forEach(([hand, data]) => {
+        const weight = comboWeight(hand);
+        const normalized = (data.count ?? 0) / weight;
+        normalizedCounts[hand] = normalized;
+        total += normalized;
+      });
+      const result = {
+        ...stats,
+        hands: {},
+        total_instances: rawTotal,
+        median_frequency_pct: 0
+      };
+      const values = [];
+      Object.entries(stats.hands).forEach(([hand, data]) => {
+        const normalized = normalizedCounts[hand];
+        const freq = total > 0 ? (normalized / total) * 100 : 0;
+        values.push(normalized);
+        result.hands[hand] = {
+          ...data,
+          frequency_pct: Number(freq.toFixed(2))
+        };
+      });
+      result.median_frequency_pct = Number(calculateMedianPct(values, total).toFixed(2));
+      return result;
+    }
+
+    function normalizeBucketMap(map) {
+      if (!map) return {};
+      const normalized = {};
+      Object.entries(map).forEach(([bucket, stats]) => {
+        normalized[bucket] = normalizeStats(stats);
+      });
+      return normalized;
+    }
+
+    function comboWeight(hand) {
+      if (!hand) return 1;
+      if (hand.length === 2) return 6;
+      const suffix = hand[2];
+      if (suffix === "s") return 4;
+      if (suffix === "o") return 12;
+      return 1;
+    }
+
+    function calculateMedianPct(values, total) {
+      if (!values.length || !total) return 0;
+      const sorted = values.slice().sort((a, b) => a - b);
+      const mid = Math.floor(sorted.length / 2);
+      const median = sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+      return (median / total) * 100;
+    }
+  </script>
+</body>
+</html>

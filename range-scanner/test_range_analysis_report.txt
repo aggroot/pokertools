@@ -1,0 +1,1805 @@
+================================================================================
+POKER RANGE ANALYSIS REPORT
+================================================================================
+
+
+================================================================================
+POSITION: BTN
+================================================================================
+
+PREFLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 22(3), 33(10), 44(8), 55(9), 66(2), 77(4), 88(5), 99(2), TT(4), JJ(10), QQ(8), KK(4), 43s(1), 52s(1), 65o(1), 64o(1), 76s(1), 76o(1), 74o(1), 72s(1), 87s(3), 87o(1), 86s(2), 85s(2), 97s(1), 96o(1), 96s(1), 95s(2), T9s(3), T9o(4), T8o(1), T8s(2), T7s(1), T5s(1), T4s(1), T4o(1), T2o(2), JTs(4), JTo(6), J9o(3), J9s(2), J8s(2), J8o(1), J7s(1), J6o(1), J5s(1), J4o(1), J4s(1), QJo(3), QJs(4), QTo(4), QTs(3), Q9s(1), Q8o(1), Q7o(1), Q7s(1), Q6o(4), Q5s(1), Q4s(1), Q3s(1), Q2o(1), KQs(6), KQo(5), KJs(4), KJo(10), KTs(2), KTo(4), K9s(5), K9o(3), K8s(2), K8o(3), K7o(1), K6o(2), K5o(5), K5s(4), K4o(2), AA(12), AKo(14), AKs(5), AQo(9), AJo(13), AJs(2), ATs(2), ATo(13), A9o(7), A9s(2), A8s(3), A8o(5), A7s(3), A7o(8), A6s(2), A6o(4), A5s(3), A5o(7), A4o(9), A4s(5), A3s(3), A3o(2), A2o(3), A2s(3)
+    Total: 100 unique combos, 352 instances, median combo frequency: 0.71%
+    By Pot Size:
+      OPEN: 22(1), 33(4), 44(6), 55(6), 77(3), TT(3), JJ(6), QQ(1), 43s(1), 52s(1), 65o(1), 64o(1), 76s(1), 76o(1), 74o(1), 72s(1), 87s(3), 87o(1), 86s(2), 85s(2), 97s(1), 96o(1), 96s(1), 95s(2), T9s(2), T9o(3), T8s(2), T8o(1), T7s(1), T4o(1), T4s(1), T2o(2), JTs(4), JTo(6), J9s(1), J9o(2), J8s(2), J8o(1), J7s(1), J6o(1), J5s(1), J4o(1), J4s(1), QJo(2), QJs(2), QTo(3), QTs(3), Q8o(1), Q7s(1), Q7o(1), Q6o(4), Q5s(1), Q4s(1), Q3s(1), Q2o(1), KQs(4), KQo(3), KJo(7), KJs(3), KTs(2), KTo(3), K9o(3), K9s(2), K8o(1), K8s(2), K7o(1), K6o(1), K5o(4), K5s(3), AA(3), K4o(2), AKo(6), AKs(3), AQo(1), AJo(6), ATs(2), ATo(8), A9o(6), A9s(1), A8o(3), A8s(1), A7s(3), A7o(6), A6s(2), A6o(4), A5s(3), A5o(6), A4o(8), A4s(2), A3o(2), A3s(2), A2o(3), A2s(2) [230 instances, 65.3%]
+      0.33x: J9o(1) [1 instances, 0.3%]
+      0.75x: 22(1), KK(1), KQs(1), KJs(1), K5o(1), AA(1), AJo(1) [7 instances, 2.0%]
+      1x: 66(1), KQo(1), AA(2), AKs(1), AKo(2), AJo(1), A8s(1) [9 instances, 2.6%]
+      1.5x: 55(1), 88(1), 99(1), TT(1), JJ(2), QQ(1), T9o(1), Q9s(1), KTo(1), K9s(1), AA(3), AKo(2), AQo(1), AJs(1), A8o(1) [19 instances, 5.4%]
+      2x: 33(1), 44(1), 55(1), 66(1), 77(1), JJ(1), QQ(4), KK(1), T9s(1), QJs(1), KQs(1), K8o(1), AA(1), AKo(2), AQo(1), AJo(1), ATo(1), A8o(1), A4s(1), A3s(1) [24 instances, 6.8%]
+      3x+: 22(1), 33(5), 44(1), 55(1), 88(4), 99(1), JJ(1), QQ(2), KK(2), T5s(1), J9s(1), QJs(1), QJo(1), QTo(1), KQo(1), KJo(3), K9s(2), K8o(1), K6o(1), K5s(1), AA(2), AKo(2), AKs(1), AQo(6), AJs(1), AJo(4), ATo(4), A9s(1), A9o(1), A8s(1), A7o(2), A5o(1), A4s(2), A4o(1), A2s(1) [62 instances, 17.6%]
+    By Big Blinds:
+      MINRAISE: 33(2), 44(3), 55(4), 66(1), TT(2), JJ(3), QQ(1), 43s(1), 52s(1), 65o(1), 72s(1), 87o(1), 87s(1), 85s(1), 96s(1), T9s(1), T8o(1), JTo(6), JTs(3), J4s(1), QJs(1), QTs(1), QTo(2), Q7o(1), KQs(2), KQo(1), KJo(1), KJs(2), K9o(1), K9s(1), K8o(1), K8s(2), K5o(3), AA(3), K4o(1), AKs(1), AKo(4), AQo(1), AJo(2), ATs(1), ATo(3), A9o(3), A7s(2), A7o(2), A5s(1), A4s(1), A4o(3), A3s(1), A3o(1), A2o(1) [86 instances, 24.4%]
+      2.5BB: 22(1), 64o(1), T9s(1), T9o(1), T4o(1), A2s(1) [6 instances, 1.7%]
+      3BB: 44(1), JJ(2), QQ(1), 95s(1), T2o(1), J9s(1), J4o(1), QJo(1), QTo(1), QTs(1), Q9s(1), Q6o(1), KQo(1), KJo(1), KTo(1), K6o(1), K5o(1), AA(3), AKs(1), AQo(1), ATo(1), A5o(1), A4s(1), A2s(1) [27 instances, 7.7%]
+      4-5BB: 55(2), TT(1), QQ(1), KK(2), 76s(1), 74o(1), 87s(1), 96o(1), T9o(2), T4s(1), JTs(1), J9o(1), J8s(1), J8o(1), J5s(1), QJs(1), QJo(1), Q8o(1), Q6o(1), KQs(1), KJo(3), KTs(1), KTo(1), AA(1), K4o(1), AKo(3), AQo(1), AJo(1), ATo(1), A8o(1), A7o(1), A6s(1), A6o(2), A4o(1), A3s(1), A2o(1) [44 instances, 12.5%]
+      6-9BB: 33(2), 55(1), 66(1), 77(1), 88(2), JJ(1), QQ(2), KK(1), 87s(1), 97s(1), T9o(1), T8s(1), J9s(1), J8s(1), QTs(1), Q4s(1), Q2o(1), KQs(1), KQo(2), KJs(2), KJo(1), KTo(1), K9o(1), K9s(2), K6o(1), K5o(1), K5s(1), AA(1), AKs(3), AKo(1), AQo(3), AJo(3), ATo(2), A9s(2), A9o(1), A8s(1), A8o(1), A5s(1), A5o(2), A4o(1), A4s(1), A3o(1), A2o(1) [58 instances, 16.5%]
+      10BB+: 22(2), 33(6), 44(4), 55(2), 77(3), 88(3), 99(2), TT(1), JJ(4), QQ(3), KK(1), 76o(1), 86s(2), 85s(1), 95s(1), T9s(1), T8s(1), T7s(1), T5s(1), T2o(1), J9o(2), J7s(1), J6o(1), QJo(1), QJs(2), QTo(1), Q7s(1), Q6o(2), Q5s(1), Q3s(1), KQs(2), KQo(1), KJo(4), KTo(1), KTs(1), K9o(1), K9s(2), K8o(2), K7o(1), K5s(3), AA(4), AKo(6), AQo(3), AJs(2), AJo(7), ATs(1), ATo(6), A9o(3), A8s(2), A8o(3), A7o(5), A7s(1), A6s(1), A6o(2), A5s(1), A5o(4), A4o(4), A4s(2), A3s(1), A2s(1) [131 instances, 37.2%]
+    By Tournament Stage:
+      start: 22(2), 33(4), 44(3), 55(6), 77(2), 88(4), 99(2), TT(1), JJ(5), QQ(5), KK(3), 52s(1), 65o(1), 87s(3), 85s(1), 95s(1), T9o(2), T8s(1), JTo(3), JTs(2), J9o(1), J9s(1), J8o(1), J4o(1), QJs(3), QJo(1), QTo(1), Q7o(1), Q6o(1), Q4s(1), KQo(4), KQs(1), KJs(1), KJo(4), KTs(1), KTo(3), K9s(2), K8s(1), K8o(2), K5s(2), K5o(1), AA(5), AKs(1), AKo(9), AQo(6), AJo(6), AJs(1), ATo(4), A9o(2), A9s(2), A8s(1), A7s(2), A7o(2), A5o(3), A5s(1), A4s(3), A4o(2), A3s(1), A3o(1), A2s(2) [140 instances, 39.8%]
+      pre_bubble: 33(1), 66(1), 86s(1), JTs(1), Q9s(1), ATo(1), A9o(1), A8s(1) [8 instances, 2.3%]
+      bubble: AJs(1) [1 instances, 0.3%]
+      final_table: 22(1), 33(5), 44(5), 55(3), 66(1), 77(2), 88(1), TT(3), JJ(5), QQ(3), KK(1), 43s(1), 64o(1), 76s(1), 76o(1), 74o(1), 72s(1), 87o(1), 86s(1), 85s(1), 97s(1), 96o(1), 96s(1), 95s(1), T9s(3), T9o(2), T8s(1), T8o(1), T7s(1), T5s(1), T4s(1), T4o(1), T2o(2), JTs(1), JTo(3), J9s(1), J9o(2), J8s(2), J7s(1), J6o(1), J5s(1), J4s(1), QJo(2), QJs(1), QTo(3), QTs(3), Q8o(1), Q7s(1), Q6o(3), Q5s(1), Q3s(1), Q2o(1), KQs(5), KQo(1), KJo(6), KJs(3), KTo(1), KTs(1), K9o(3), K9s(3), K8o(1), K8s(1), K7o(1), K6o(2), K5o(4), K5s(2), AA(7), K4o(2), AKo(5), AKs(4), AQo(3), AJo(7), ATs(2), ATo(8), A9o(4), A8o(5), A8s(1), A7s(1), A7o(6), A6s(2), A6o(4), A5s(2), A5o(4), A4o(7), A4s(2), A3o(1), A3s(2), A2o(3), A2s(1) [203 instances, 57.7%]
+
+  CALL: 33(2), 44(1), 55(6), 66(3), 88(12), 99(1), TT(12), JJ(6), QQ(5), KK(4), 42o(1), 54o(2), 53s(2), 52s(1), 65s(3), 64s(1), 63s(1), 76o(3), 76s(1), 74o(2), 73o(1), 87o(1), 86o(1), 86s(1), 85s(1), 98s(2), 97o(1), 96s(3), 95s(1), 92o(1), T9o(2), T9s(1), T8o(1), T6s(1), T4o(3), JTo(6), JTs(2), J9s(3), J9o(2), J8s(1), J7s(1), J6s(1), J4s(1), J3s(1), J3o(2), J2o(1), QJs(2), QJo(9), QTo(5), QTs(2), Q9o(1), Q9s(1), Q8o(2), Q7s(1), Q6o(2), Q5o(1), Q5s(1), Q3o(2), KQo(9), KQs(1), Q2s(2), KJo(6), KJs(4), KTs(2), KTo(2), K9o(6), K9s(1), K8o(2), K7s(1), K6o(1), K6s(2), K5s(4), K5o(1), AA(12), AKs(2), K3s(1), AKo(5), K3o(1), AQo(12), AQs(7), K2s(2), AJo(9), AJs(2), ATo(5), ATs(1), A9o(5), A8s(2), A8o(2), A7s(4), A7o(3), A6s(2), A5o(3), A5s(2), A4o(8), A4s(3), A3o(2), A2s(2), A2o(3)
+    Total: 98 unique combos, 284 instances, median combo frequency: 0.70%
+    By Pot Size:
+      N/A: 33(2), 44(1), 55(6), 66(3), 88(12), 99(1), TT(12), JJ(6), QQ(5), KK(4), 42o(1), 54o(2), 53s(2), 52s(1), 65s(3), 64s(1), 63s(1), 76o(3), 76s(1), 74o(2), 73o(1), 87o(1), 86o(1), 86s(1), 85s(1), 98s(2), 97o(1), 96s(3), 95s(1), 92o(1), T9o(2), T9s(1), T8o(1), T6s(1), T4o(3), JTs(2), JTo(6), J9s(3), J9o(2), J8s(1), J7s(1), J6s(1), J4s(1), J3o(2), J3s(1), J2o(1), QJo(9), QJs(2), QTs(2), QTo(5), Q9s(1), Q9o(1), Q8o(2), Q7s(1), Q6o(2), Q5s(1), Q5o(1), Q3o(2), KQo(9), KQs(1), Q2s(2), KJo(6), KJs(4), KTs(2), KTo(2), K9s(1), K9o(6), K8o(2), K7s(1), K6s(2), K6o(1), K5o(1), K5s(4), AA(12), K3o(1), AKo(5), K3s(1), AKs(2), AQo(12), K2s(2), AQs(7), AJs(2), AJo(9), ATs(1), ATo(5), A9o(5), A8o(2), A8s(2), A7o(3), A7s(4), A6s(2), A5s(2), A5o(3), A4o(8), A4s(3), A3o(2), A2s(2), A2o(3) [284 instances, 100.0%]
+    By Big Blinds:
+      1BB_CALL: 33(1), 55(1), 66(1), 88(3), TT(2), JJ(1), QQ(2), KK(1), 42o(1), 54o(2), 52s(1), 64s(1), 63s(1), 76o(3), 74o(2), 73o(1), 87o(1), 86s(1), 86o(1), 98s(1), 97o(1), 96s(2), 95s(1), 92o(1), T9s(1), T6s(1), T4o(3), JTo(2), JTs(1), J9s(3), J8s(1), J7s(1), J6s(1), J4s(1), J3s(1), J3o(1), QJo(6), QTo(2), Q8o(2), Q7s(1), Q6o(1), Q5o(1), Q5s(1), Q3o(2), KQo(4), Q2s(1), KJs(2), KJo(1), KTo(1), KTs(1), K9o(4), K8o(2), K7s(1), K5s(3), AA(4), AKs(1), K3o(1), AQo(3), AQs(2), AJo(2), ATo(1), ATs(1), A9o(1), A8s(2), A8o(1), A7o(2), A6s(1), A5o(2), A5s(1), A4o(3), A2o(1) [115 instances, 40.5%]
+      2BB_CALL: 44(1), 55(1), 66(1), 88(3), TT(1), JJ(1), KK(1), 53s(1), 65s(2), 98s(1), 96s(1), T9o(1), T8o(1), JTo(1), J9o(1), J2o(1), QTo(1), Q9s(1), KQo(1), KJs(1), KJo(2), K9o(1), K6s(1), K2s(1), AQo(3), AQs(2), AJo(1), ATo(1), A7o(1), A7s(1), A5s(1), A5o(1), A4s(3), A4o(1), A2o(1) [44 instances, 15.5%]
+      3-4BB_CALL: 33(1), 55(2), 88(2), 99(1), TT(2), JJ(2), QQ(1), KK(1), 76s(1), T9o(1), JTs(1), J3o(1), QJo(2), QTo(2), KQs(1), KQo(2), KJo(1), KTs(1), K9s(1), K6s(1), K5s(1), K5o(1), AA(1), AKo(2), K3s(1), K2s(1), AQo(1), AJo(1), A4o(1), A3o(1) [38 instances, 13.4%]
+      5BB+_CALL: 55(2), 66(1), 88(4), TT(7), JJ(2), QQ(2), KK(1), 53s(1), 65s(1), 85s(1), JTo(3), J9o(1), QJo(1), QJs(2), QTs(2), Q9o(1), Q6o(1), KQo(2), Q2s(1), KJs(1), KJo(2), KTo(1), K9o(1), K6o(1), AA(7), AKo(3), AKs(1), AQs(3), AQo(5), AJo(5), AJs(2), ATo(3), A9o(4), A8o(1), A7s(3), A6s(1), A4o(3), A3o(1), A2o(1), A2s(2) [87 instances, 30.6%]
+    By Tournament Stage:
+      start: 33(1), 55(5), 88(7), 99(1), TT(8), JJ(2), QQ(3), KK(1), 42o(1), 54o(1), 53s(2), 65s(2), 63s(1), 76o(2), 76s(1), 74o(1), 73o(1), 85s(1), 98s(1), 97o(1), 96s(1), T9o(1), T8o(1), JTo(1), J8s(1), J2o(1), QJo(1), QJs(1), QTo(2), Q9s(1), Q8o(1), Q3o(1), KQo(3), KQs(1), KJo(3), KJs(1), KTs(1), K9o(2), K9s(1), K5s(2), AA(5), AKo(4), K3s(1), K2s(1), AQo(5), AJo(3), ATo(1), A9o(2), A8o(1), A7s(3), A7o(2), A6s(1), A5s(1), A5o(3), A4s(3), A4o(3), A2o(1), A2s(1) [111 instances, 39.1%]
+      pre_bubble: AJs(1) [1 instances, 0.4%]
+      bubble: QTo(1) [1 instances, 0.4%]
+      final_table: 33(1), 44(1), 55(1), 66(3), 88(5), TT(4), JJ(4), QQ(2), KK(3), 54o(1), 52s(1), 65s(1), 64s(1), 76o(1), 74o(1), 87o(1), 86s(1), 86o(1), 98s(1), 96s(2), 95s(1), 92o(1), T9s(1), T9o(1), T6s(1), T4o(3), JTs(2), JTo(5), J9o(2), J9s(3), J7s(1), J6s(1), J4s(1), J3s(1), J3o(2), QJo(8), QJs(1), QTo(2), QTs(2), Q9o(1), Q8o(1), Q7s(1), Q6o(2), Q5o(1), Q5s(1), Q3o(1), KQo(6), Q2s(2), KJs(3), KJo(3), KTo(2), KTs(1), K9o(4), K8o(2), K7s(1), K6o(1), K6s(2), K5o(1), K5s(2), AA(7), AKo(1), K3o(1), AKs(2), AQs(7), K2s(1), AQo(7), AJo(6), AJs(1), ATs(1), ATo(4), A9o(3), A8s(2), A8o(1), A7s(1), A7o(1), A6s(1), A5s(1), A4o(5), A3o(2), A2o(2), A2s(1) [171 instances, 60.2%]
+
+  CHECK: 22(1), 32s(1), 43s(1), 54o(1), 64o(1), 64s(1), 62s(1), 84o(1), 96o(1), T7s(1), J2o(1), A7o(1)
+    Total: 12 unique combos, 12 instances, median combo frequency: 8.33%
+    By Pot Size:
+      N/A: 22(1), 32s(1), 43s(1), 54o(1), 64o(1), 64s(1), 62s(1), 84o(1), 96o(1), T7s(1), J2o(1), A7o(1) [12 instances, 100.0%]
+    By Big Blinds:
+      N/A: 22(1), 32s(1), 43s(1), 54o(1), 64s(1), 64o(1), 62s(1), 84o(1), 96o(1), T7s(1), J2o(1), A7o(1) [12 instances, 100.0%]
+    By Tournament Stage:
+      start: 64o(1), 84o(1) [2 instances, 16.7%]
+      final_table: 22(1), 32s(1), 43s(1), 54o(1), 64s(1), 62s(1), 96o(1), T7s(1), J2o(1), A7o(1) [10 instances, 83.3%]
+
+FLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 44(1), 88(2), JJ(2), 63s(1), 84o(1), 96s(1), T9o(1), T8o(1), JTo(1), JTs(1), J7s(1), QJo(1), Q8o(1), KJo(1), AKo(1), AQo(1), K2s(1), ATo(1), A7s(1), A5s(2), A5o(1), A4o(1), A4s(1), A3o(1)
+    Total: 24 unique combos, 27 instances, median combo frequency: 3.70%
+    By Pot Size:
+      <0.33x: A4o(1) [1 instances, 3.7%]
+      0.33x: K2s(1), A5s(1) [2 instances, 7.4%]
+      0.5x: 84o(1), A4s(1), A3o(1) [3 instances, 11.1%]
+      0.75x: 88(1), JJ(1), T8o(1), AQo(1), A7s(1) [5 instances, 18.5%]
+      1x: 63s(1), 96s(1), JTs(1), Q8o(1), KJo(1), ATo(1) [6 instances, 22.2%]
+      1.5x: T9o(1), J7s(1), QJo(1), A5o(1), A5s(1) [5 instances, 18.5%]
+      2x: JTo(1) [1 instances, 3.7%]
+      3x+: 44(1), 88(1), JJ(1), AKo(1) [4 instances, 14.8%]
+    By Big Blinds:
+      1-3BB: 84o(1), A5s(1), A4o(1) [3 instances, 11.1%]
+      3-6BB: JJ(1), JTs(1), JTo(1), K2s(1), A7s(1), A4s(1) [6 instances, 22.2%]
+      6-10BB: 63s(1), T8o(1), J7s(1), Q8o(1), AQo(1), A3o(1) [6 instances, 22.2%]
+      10BB+: 44(1), 88(2), JJ(1), 96s(1), T9o(1), QJo(1), KJo(1), AKo(1), ATo(1), A5s(1), A5o(1) [12 instances, 44.4%]
+    By Tournament Stage:
+      start: 88(2), 63s(1), 84o(1), T8o(1), Q8o(1), AQo(1), A7s(1), A5s(2), A5o(1) [11 instances, 40.7%]
+      pre_bubble: JTs(1) [1 instances, 3.7%]
+      final_table: 44(1), JJ(2), 96s(1), T9o(1), JTo(1), J7s(1), QJo(1), KJo(1), AKo(1), K2s(1), ATo(1), A4s(1), A4o(1), A3o(1) [15 instances, 55.6%]
+
+  BET: 88(2), 99(1), TT(2), QQ(1), KK(1), 54o(1), 65o(1), 76o(1), 87o(1), 87s(2), 98s(1), 97o(1), 96s(1), 95s(1), T9o(2), T7s(1), T2o(1), JTs(2), JTo(1), J9s(2), J9o(1), J3o(1), QJo(1), QJs(1), QTo(4), Q8o(1), KQo(1), KJs(1), KTs(1), K9o(1), K5o(1), AA(1), AKo(1), AKs(1), AQo(5), AJo(1), ATo(1), A9s(1), A5o(2), A4s(1), A4o(4), A2o(1)
+    Total: 42 unique combos, 59 instances, median combo frequency: 1.69%
+    By Pot Size:
+      <0.33x: QQ(1), JTs(1), AQo(2), A4s(1) [5 instances, 8.5%]
+      0.33x: TT(1), 87o(1), 96s(1), JTo(1), KJs(1), K5o(1) [6 instances, 10.2%]
+      0.5x: 65o(1), T9o(2), T2o(1), J9s(1), QJo(1), QTo(2), Q8o(1), AA(1), AQo(1), A4o(2) [13 instances, 22.0%]
+      0.75x: TT(1), KK(1), 87s(1), J9o(1), QTo(1), AQo(1) [6 instances, 10.2%]
+      1x: 88(1), 87s(1), 97o(1), JTs(1), J9s(1), J3o(1), QJs(1), QTo(1), KTs(1), AKo(1), AQo(1), AJo(1), A9s(1), A4o(1) [14 instances, 23.7%]
+      1.5x: KQo(1), K9o(1), ATo(1) [3 instances, 5.1%]
+      2x: 99(1), 54o(1), 98s(1), A5o(2) [5 instances, 8.5%]
+      3x+: 88(1), 76o(1), 95s(1), T7s(1), AKs(1), A4o(1), A2o(1) [7 instances, 11.9%]
+    By Big Blinds:
+      <1BB: AQo(1) [1 instances, 1.7%]
+      1-3BB: 88(1), TT(1), 54o(1), 65o(1), 87o(1), 87s(1), 98s(1), 97o(1), 96s(1), 95s(1), JTs(1), JTo(1), J9s(1), J3o(1), QJo(1), QTo(1), Q8o(1), KJs(1), K5o(1), AKs(1), AQo(2), A4o(1) [23 instances, 39.0%]
+      3-6BB: TT(1), QQ(1), 76o(1), 87s(1), T9o(1), T2o(1), JTs(1), J9o(1), J9s(1), QJs(1), QTo(2), KQo(1), K9o(1), AA(1), AQo(1), ATo(1), A4o(1) [18 instances, 30.5%]
+      6-10BB: T9o(1), T7s(1), KTs(1), A5o(1), A4o(1), A4s(1) [6 instances, 10.2%]
+      10BB+: 88(1), 99(1), KK(1), QTo(1), AKo(1), AQo(1), AJo(1), A9s(1), A5o(1), A4o(1), A2o(1) [11 instances, 18.6%]
+    By Tournament Stage:
+      start: 88(1), 99(1), TT(1), QQ(1), KK(1), 65o(1), 87s(2), 97o(1), T9o(1), JTo(1), JTs(1), J9s(1), J9o(1), QJs(1), QTo(3), KQo(1), KTs(1), K5o(1), AKo(1), AQo(2), AJo(1), ATo(1), A9s(1), A5o(1), A4s(1) [29 instances, 49.2%]
+      bubble: QTo(1) [1 instances, 1.7%]
+      final_table: 88(1), TT(1), 54o(1), 76o(1), 87o(1), 98s(1), 96s(1), 95s(1), T9o(1), T7s(1), T2o(1), JTs(1), J9s(1), J3o(1), QJo(1), Q8o(1), KJs(1), K9o(1), AA(1), AKs(1), AQo(3), A5o(1), A4o(4), A2o(1) [29 instances, 49.2%]
+
+  CALL: 22(1), 55(1), 88(1), QQ(2), KK(2), 54o(1), 52s(1), 65s(1), 64o(1), 64s(2), 76s(1), 74o(1), 95s(1), T9s(1), JTo(1), JTs(1), J7s(1), J4s(1), J2o(1), QJo(1), QJs(2), QTo(2), Q8o(1), KQs(2), KQo(5), KJo(1), KJs(1), KTs(1), K9s(1), K8o(1), K6s(1), K5s(1), AA(3), K3o(1), AQo(2), AQs(1), AJo(2), ATo(2), A8s(1), A7o(1), A5o(1), A3s(1), A3o(1)
+    Total: 43 unique combos, 58 instances, median combo frequency: 1.72%
+    By Pot Size:
+      N/A: 22(1), 55(1), 88(1), QQ(2), KK(2), 54o(1), 52s(1), 65s(1), 64o(1), 64s(2), 76s(1), 74o(1), 95s(1), T9s(1), JTs(1), JTo(1), J7s(1), J4s(1), J2o(1), QJo(1), QJs(2), QTo(2), Q8o(1), KQs(2), KQo(5), KJo(1), KJs(1), KTs(1), K9s(1), K8o(1), K6s(1), K5s(1), AA(3), K3o(1), AQo(2), AQs(1), AJo(2), ATo(2), A8s(1), A7o(1), A5o(1), A3o(1), A3s(1) [58 instances, 100.0%]
+    By Big Blinds:
+      <1BB: QTo(1), KQo(1), A3o(1) [3 instances, 5.2%]
+      1-3BB: 22(1), 55(1), QQ(2), 54o(1), 64s(1), 64o(1), 76s(1), T9s(1), J4s(1), J2o(1), QJs(1), QJo(1), Q8o(1), KQo(2), K9s(1), K8o(1), K6s(1), AA(1), AJo(1), ATo(1), A8s(1), A7o(1), A3s(1) [25 instances, 43.1%]
+      3-6BB: KK(1), 64s(1), 74o(1), JTo(1), JTs(1), QJs(1), KQs(2), KQo(1), KJs(1), AA(1), AQs(1), AJo(1) [13 instances, 22.4%]
+      6-10BB: 88(1), KK(1), 52s(1), 65s(1), J7s(1), QTo(1), KJo(1), KTs(1), K3o(1), AQo(1) [10 instances, 17.2%]
+      10BB+: 95s(1), KQo(1), K5s(1), AA(1), AQo(1), ATo(1), A5o(1) [7 instances, 12.1%]
+    By Tournament Stage:
+      start: QQ(1), KK(1), 52s(1), 65s(1), 64o(1), 76s(1), QJs(2), QTo(1), KQo(3), KQs(1), KJs(1), KJo(1), KTs(1), AA(1), AQo(1), ATo(1), A7o(1), A5o(1), A3s(1), A3o(1) [23 instances, 39.7%]
+      final_table: 22(1), 55(1), 88(1), QQ(1), KK(1), 54o(1), 64s(2), 74o(1), 95s(1), T9s(1), JTo(1), JTs(1), J7s(1), J4s(1), J2o(1), QJo(1), QTo(1), Q8o(1), KQs(1), KQo(2), K9s(1), K8o(1), K6s(1), K5s(1), AA(2), K3o(1), AQs(1), AQo(1), AJo(2), ATo(1), A8s(1) [35 instances, 60.3%]
+
+  CHECK: 22(1), 33(1), 44(1), 55(2), 88(2), JJ(1), QQ(1), KK(1), 32s(1), 43s(1), 54o(1), 52s(1), 64s(1), 62s(1), 76o(1), 74o(1), 87o(1), 86o(1), 86s(1), 96o(1), 96s(2), 92o(1), T6s(1), T4o(1), JTo(1), J9s(1), J8s(1), J7s(1), J6s(1), J3s(1), J2o(1), Q9s(1), Q8o(1), Q5o(1), Q3o(1), KQo(1), KJo(1), KTs(1), KTo(1), K9s(1), K8s(2), K8o(2), K7s(1), K5o(1), K4o(1), AA(1), AKo(1), AQo(1), AJo(2), ATo(1), ATs(1), A8o(1), A7o(3), A5o(1), A4s(2), A2o(1)
+    Total: 56 unique combos, 65 instances, median combo frequency: 1.54%
+    By Pot Size:
+      N/A: 22(1), 33(1), 44(1), 55(2), 88(2), JJ(1), QQ(1), KK(1), 32s(1), 43s(1), 54o(1), 52s(1), 64s(1), 62s(1), 76o(1), 74o(1), 87o(1), 86o(1), 86s(1), 96s(2), 96o(1), 92o(1), T6s(1), T4o(1), JTo(1), J9s(1), J8s(1), J7s(1), J6s(1), J3s(1), J2o(1), Q9s(1), Q8o(1), Q5o(1), Q3o(1), KQo(1), KJo(1), KTs(1), KTo(1), K9s(1), K8o(2), K8s(2), K7s(1), K5o(1), K4o(1), AA(1), AKo(1), AQo(1), AJo(2), ATs(1), ATo(1), A8o(1), A7o(3), A5o(1), A4s(2), A2o(1) [65 instances, 100.0%]
+    By Big Blinds:
+      N/A: 22(1), 33(1), 44(1), 55(2), 88(2), JJ(1), QQ(1), KK(1), 32s(1), 43s(1), 54o(1), 52s(1), 64s(1), 62s(1), 76o(1), 74o(1), 87o(1), 86s(1), 86o(1), 96o(1), 96s(2), 92o(1), T6s(1), T4o(1), JTo(1), J9s(1), J8s(1), J7s(1), J6s(1), J3s(1), J2o(1), Q9s(1), Q8o(1), Q5o(1), Q3o(1), KQo(1), KJo(1), KTs(1), KTo(1), K9s(1), K8s(2), K8o(2), K7s(1), K5o(1), AA(1), K4o(1), AKo(1), AQo(1), AJo(2), ATo(1), ATs(1), A8o(1), A7o(3), A5o(1), A4s(2), A2o(1) [65 instances, 100.0%]
+    By Tournament Stage:
+      start: 44(1), 55(2), 88(2), JJ(1), QQ(1), 76o(1), 74o(1), 96s(1), JTo(1), J8s(1), Q9s(1), Q8o(1), KJo(1), KTo(1), K9s(1), K8s(1), AA(1), A8o(1), A7o(2), A5o(1), A4s(2) [25 instances, 38.5%]
+      final_table: 22(1), 33(1), KK(1), 32s(1), 43s(1), 54o(1), 52s(1), 64s(1), 62s(1), 87o(1), 86o(1), 86s(1), 96o(1), 96s(1), 92o(1), T6s(1), T4o(1), J9s(1), J7s(1), J6s(1), J3s(1), J2o(1), Q5o(1), Q3o(1), KQo(1), KTs(1), K8o(2), K8s(1), K7s(1), K5o(1), K4o(1), AKo(1), AQo(1), AJo(2), ATs(1), ATo(1), A7o(1), A2o(1) [40 instances, 61.5%]
+
+TURN:
+--------------------------------------------------------------------------------
+
+  RAISE: 52s(2), 96s(1), T8o(2), QTo(1), K9s(1), AQs(1), AQo(1), AJo(1), A7o(1)
+    Total: 9 unique combos, 11 instances, median combo frequency: 9.09%
+    By Pot Size:
+      0.33x: T8o(1), K9s(1) [2 instances, 18.2%]
+      0.5x: T8o(1), QTo(1), AQs(1) [3 instances, 27.3%]
+      1x: 52s(1), A7o(1) [2 instances, 18.2%]
+      2x: AJo(1) [1 instances, 9.1%]
+      3x+: 52s(1), 96s(1), AQo(1) [3 instances, 27.3%]
+    By Big Blinds:
+      3-6BB: 96s(1), K9s(1) [2 instances, 18.2%]
+      6-10BB: AQo(1) [1 instances, 9.1%]
+      10BB+: 52s(2), T8o(2), QTo(1), AQs(1), AJo(1), A7o(1) [8 instances, 72.7%]
+    By Tournament Stage:
+      start: 52s(1), 96s(1), T8o(2), A7o(1) [5 instances, 45.5%]
+      bubble: QTo(1) [1 instances, 9.1%]
+      final_table: 52s(1), K9s(1), AQs(1), AQo(1), AJo(1) [5 instances, 45.5%]
+
+  BET: 88(2), TT(2), KK(1), 32s(1), 62s(1), 87o(1), 86o(1), 86s(1), 98s(1), 97o(1), T4o(1), JTo(1), JTs(2), J9s(2), J7s(1), J3s(1), QTo(1), Q8o(1), KQs(1), KTs(1), K9o(1), K8s(1), K7s(1), K4o(1), AKs(1), AKo(1), AQo(1), A7s(1), A7o(3), A4o(1), A3o(1)
+    Total: 31 unique combos, 37 instances, median combo frequency: 2.70%
+    By Pot Size:
+      OPEN: 62s(1) [1 instances, 2.7%]
+      <0.33x: TT(1), QTo(1), AKo(1), AQo(1), A4o(1), A3o(1) [6 instances, 16.2%]
+      0.33x: J9s(1), Q8o(1), A7s(1), A7o(1) [4 instances, 10.8%]
+      0.5x: KK(1), 87o(1), 98s(1), 97o(1), K8s(1), K4o(1) [6 instances, 16.2%]
+      0.75x: 88(2), JTo(1), J9s(1), A7o(1) [5 instances, 13.5%]
+      1x: TT(1), JTs(1), J7s(1), KQs(1), K7s(1), A7o(1) [6 instances, 16.2%]
+      2x: 86s(1), 86o(1), T4o(1), JTs(1), J3s(1) [5 instances, 13.5%]
+      3x+: 32s(1), KTs(1), K9o(1), AKs(1) [4 instances, 10.8%]
+    By Big Blinds:
+      1-3BB: TT(1), 62s(1), 87o(1), 86o(1), 86s(1), 98s(1), T4o(1), J3s(1), K7s(1), K4o(1), AQo(1), A7o(2), A4o(1) [14 instances, 37.8%]
+      3-6BB: 88(1), 32s(1), 97o(1), JTo(1), J9s(2), QTo(1), Q8o(1), K8s(1), A7o(1) [10 instances, 27.0%]
+      6-10BB: AKo(1), A7s(1), A3o(1) [3 instances, 8.1%]
+      10BB+: 88(1), TT(1), KK(1), JTs(2), J7s(1), KQs(1), KTs(1), K9o(1), AKs(1) [10 instances, 27.0%]
+    By Tournament Stage:
+      start: 88(2), TT(1), KK(1), 97o(1), JTo(1), JTs(1), J9s(1), QTo(1), KQs(1), K8s(1), AKo(1), A7s(1), A7o(2) [15 instances, 40.5%]
+      pre_bubble: JTs(1) [1 instances, 2.7%]
+      final_table: TT(1), 32s(1), 62s(1), 87o(1), 86s(1), 86o(1), 98s(1), T4o(1), J9s(1), J7s(1), J3s(1), Q8o(1), KTs(1), K9o(1), K7s(1), K4o(1), AKs(1), AQo(1), A7o(1), A4o(1), A3o(1) [21 instances, 56.8%]
+
+  CALL: 33(1), 44(1), 55(1), 88(1), JJ(2), QQ(2), KK(2), 32s(1), 64s(1), 63s(1), 96o(1), 96s(3), JTo(1), J9s(1), Q9s(1), Q3o(1), KQo(1), KTs(1), KTo(1), K9s(1), K8s(1), K6s(1), AA(1), AJo(1), ATs(1), A8s(1), A4s(1), A4o(1), A3s(1)
+    Total: 29 unique combos, 34 instances, median combo frequency: 2.94%
+    By Pot Size:
+      N/A: 33(1), 44(1), 55(1), 88(1), JJ(2), QQ(2), KK(2), 32s(1), 64s(1), 63s(1), 96o(1), 96s(3), JTo(1), J9s(1), Q9s(1), Q3o(1), KQo(1), KTs(1), KTo(1), K9s(1), K8s(1), K6s(1), AA(1), AJo(1), ATs(1), A8s(1), A4o(1), A4s(1), A3s(1) [34 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: 33(1), 55(1), QQ(1), KK(2), 96s(1), 96o(1), J9s(1), Q3o(1), KTo(1), AJo(1), ATs(1), A8s(1), A4o(1), A3s(1) [15 instances, 44.1%]
+      3-6BB: 44(1), 88(1), JJ(2), 96s(1), JTo(1), Q9s(1), KQo(1), K9s(1), AA(1), A4s(1) [11 instances, 32.4%]
+      6-10BB: 32s(1), 63s(1), K8s(1), K6s(1) [4 instances, 11.8%]
+      10BB+: QQ(1), 64s(1), 96s(1), KTs(1) [4 instances, 11.8%]
+    By Tournament Stage:
+      start: 44(1), 55(1), 88(1), JJ(1), QQ(1), 63s(1), 96s(1), JTo(1), Q9s(1), KTs(1), KTo(1), K9s(1), AA(1), A4s(1), A3s(1) [15 instances, 44.1%]
+      final_table: 33(1), JJ(1), QQ(1), KK(2), 32s(1), 64s(1), 96o(1), 96s(2), J9s(1), Q3o(1), KQo(1), K8s(1), K6s(1), AJo(1), ATs(1), A8s(1), A4o(1) [19 instances, 55.9%]
+
+  CHECK: 22(1), 55(1), QQ(3), 43s(1), 54o(2), 65o(1), 64s(1), 64o(1), 76o(1), 76s(1), 74o(1), 87s(2), 87o(1), 96o(1), 96s(1), 92o(1), T9s(1), T6s(1), T2o(1), JTo(1), J8s(1), J6s(1), J4s(1), J2o(1), QJo(2), Q5o(1), Q3o(1), KQo(2), KJo(1), K8o(2), K5o(2), AA(1), AKo(1), AJo(2), ATo(1), A8o(1), A4s(3), A2o(1)
+    Total: 38 unique combos, 49 instances, median combo frequency: 2.04%
+    By Pot Size:
+      N/A: 22(1), 55(1), QQ(3), 43s(1), 54o(2), 65o(1), 64o(1), 64s(1), 76o(1), 76s(1), 74o(1), 87o(1), 87s(2), 96s(1), 96o(1), 92o(1), T9s(1), T6s(1), T2o(1), JTo(1), J8s(1), J6s(1), J4s(1), J2o(1), QJo(2), Q5o(1), Q3o(1), KQo(2), KJo(1), K8o(2), K5o(2), AA(1), AKo(1), AJo(2), ATo(1), A8o(1), A4s(3), A2o(1) [49 instances, 100.0%]
+    By Big Blinds:
+      N/A: 22(1), 55(1), QQ(3), 43s(1), 54o(2), 65o(1), 64s(1), 64o(1), 76o(1), 76s(1), 74o(1), 87o(1), 87s(2), 96s(1), 96o(1), 92o(1), T9s(1), T6s(1), T2o(1), JTo(1), J8s(1), J6s(1), J4s(1), J2o(1), QJo(2), Q5o(1), Q3o(1), KQo(2), KJo(1), K8o(2), K5o(2), AA(1), AKo(1), AJo(2), ATo(1), A8o(1), A4s(3), A2o(1) [49 instances, 100.0%]
+    By Tournament Stage:
+      start: 55(1), QQ(3), 65o(1), 64o(1), 76o(1), 76s(1), 74o(1), 87s(2), 96s(1), JTo(1), J8s(1), KQo(1), KJo(1), K5o(1), AA(1), A8o(1), A4s(2) [21 instances, 42.9%]
+      final_table: 22(1), 43s(1), 54o(2), 64s(1), 87o(1), 96o(1), 92o(1), T9s(1), T6s(1), T2o(1), J6s(1), J4s(1), J2o(1), QJo(2), Q5o(1), Q3o(1), KQo(1), K8o(2), K5o(1), AKo(1), AJo(2), ATo(1), A4s(1), A2o(1) [28 instances, 57.1%]
+
+RIVER:
+--------------------------------------------------------------------------------
+
+  RAISE: 44(1), KK(1), J6s(1), K5o(1), A4s(1), A2o(2)
+    Total: 6 unique combos, 7 instances, median combo frequency: 14.29%
+    By Pot Size:
+      0.33x: A2o(1) [1 instances, 14.3%]
+      0.5x: A4s(1) [1 instances, 14.3%]
+      0.75x: K5o(1), A2o(1) [2 instances, 28.6%]
+      1x: 44(1), KK(1) [2 instances, 28.6%]
+      1.5x: J6s(1) [1 instances, 14.3%]
+    By Big Blinds:
+      3-6BB: J6s(1), K5o(1), A2o(1) [3 instances, 42.9%]
+      6-10BB: KK(1), A4s(1), A2o(1) [3 instances, 42.9%]
+      10BB+: 44(1) [1 instances, 14.3%]
+    By Tournament Stage:
+      start: 44(1) [1 instances, 14.3%]
+      final_table: KK(1), J6s(1), K5o(1), A4s(1), A2o(2) [6 instances, 85.7%]
+
+  BET: JJ(1), 64o(1), 76s(1), 87s(1), 86o(1), T9s(1), T4o(1), J9s(1), QJo(1), KQo(2), KJo(1), K8s(1), K7s(1), A8s(1), A4o(1)
+    Total: 15 unique combos, 16 instances, median combo frequency: 6.25%
+    By Pot Size:
+      <0.33x: QJo(1), A8s(1), A4o(1) [3 instances, 18.8%]
+      0.33x: JJ(1), 87s(1), KQo(1) [3 instances, 18.8%]
+      0.5x: J9s(1), KQo(1), KJo(1) [3 instances, 18.8%]
+      0.75x: 64o(1) [1 instances, 6.2%]
+      1x: 76s(1), 86o(1), T4o(1), K8s(1), K7s(1) [5 instances, 31.2%]
+      2x: T9s(1) [1 instances, 6.2%]
+    By Big Blinds:
+      1-3BB: J9s(1), QJo(1), KQo(1), A8s(1) [4 instances, 25.0%]
+      3-6BB: JJ(1), 64o(1), 87s(1), 86o(1), T9s(1), T4o(1), KJo(1), K7s(1), A4o(1) [9 instances, 56.2%]
+      6-10BB: KQo(1) [1 instances, 6.2%]
+      10BB+: 76s(1), K8s(1) [2 instances, 12.5%]
+    By Tournament Stage:
+      start: JJ(1), 64o(1), 76s(1), 87s(1), KQo(1), KJo(1), K8s(1) [7 instances, 43.8%]
+      final_table: 86o(1), T9s(1), T4o(1), J9s(1), QJo(1), KQo(1), K7s(1), A8s(1), A4o(1) [9 instances, 56.2%]
+
+  CALL: 55(1), JJ(1), QQ(2), KK(1), 54o(1), 52s(1), 87o(1), Q9s(1), KTs(1), K9s(2), K8o(1), ATs(1), A7o(1), A4s(2), A3s(1), A3o(1)
+    Total: 16 unique combos, 19 instances, median combo frequency: 5.26%
+    By Pot Size:
+      N/A: 55(1), JJ(1), QQ(2), KK(1), 54o(1), 52s(1), 87o(1), Q9s(1), KTs(1), K9s(2), K8o(1), ATs(1), A7o(1), A4s(2), A3o(1), A3s(1) [19 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: 55(1), 87o(1), A7o(1), A4s(1), A3s(1) [5 instances, 26.3%]
+      3-6BB: 54o(1), 52s(1), KTs(1), K9s(1), K8o(1), ATs(1) [6 instances, 31.6%]
+      6-10BB: QQ(1), KK(1), K9s(1), A4s(1) [4 instances, 21.1%]
+      10BB+: JJ(1), QQ(1), Q9s(1), A3o(1) [4 instances, 21.1%]
+    By Tournament Stage:
+      start: 55(1), JJ(1), QQ(2), 52s(1), Q9s(1), KTs(1), K9s(1), A7o(1), A4s(2), A3s(1) [12 instances, 63.2%]
+      final_table: KK(1), 54o(1), 87o(1), K9s(1), K8o(1), ATs(1), A3o(1) [7 instances, 36.8%]
+
+  CHECK: 22(1), 33(1), 55(1), 88(2), TT(1), QQ(1), KK(1), 43s(1), 54o(2), 65o(1), 62s(1), 76o(1), 74o(1), 87s(1), 87o(1), 86s(1), 98s(1), 97o(1), 96o(1), 96s(2), 92o(1), T6s(1), T2o(1), JTo(1), J9s(1), J8s(1), J4s(1), J3s(1), J2o(1), QJo(1), QTo(1), Q5o(1), Q3o(1), KTo(1), K8o(2), K6s(1), K5o(1), AA(1), K4o(1), AKo(1), AQo(1), AJo(1), ATo(1), A8o(1), A7s(1), A7o(2), A4s(1)
+    Total: 47 unique combos, 52 instances, median combo frequency: 1.92%
+    By Pot Size:
+      N/A: 22(1), 33(1), 55(1), 88(2), TT(1), QQ(1), KK(1), 43s(1), 54o(2), 65o(1), 62s(1), 76o(1), 74o(1), 87o(1), 87s(1), 86s(1), 98s(1), 97o(1), 96s(2), 96o(1), 92o(1), T6s(1), T2o(1), JTo(1), J9s(1), J8s(1), J4s(1), J3s(1), J2o(1), QJo(1), QTo(1), Q5o(1), Q3o(1), KTo(1), K8o(2), K6s(1), K5o(1), AA(1), K4o(1), AKo(1), AQo(1), AJo(1), ATo(1), A8o(1), A7o(2), A7s(1), A4s(1) [52 instances, 100.0%]
+    By Big Blinds:
+      N/A: 22(1), 33(1), 55(1), 88(2), TT(1), QQ(1), KK(1), 43s(1), 54o(2), 65o(1), 62s(1), 76o(1), 74o(1), 87o(1), 87s(1), 86s(1), 98s(1), 97o(1), 96s(2), 96o(1), 92o(1), T6s(1), T2o(1), JTo(1), J9s(1), J8s(1), J4s(1), J3s(1), J2o(1), QJo(1), QTo(1), Q5o(1), Q3o(1), KTo(1), K8o(2), K6s(1), K5o(1), AA(1), K4o(1), AKo(1), AQo(1), AJo(1), ATo(1), A8o(1), A7o(2), A7s(1), A4s(1) [52 instances, 100.0%]
+    By Tournament Stage:
+      start: 55(1), 88(2), KK(1), 65o(1), 76o(1), 74o(1), 87s(1), 97o(1), 96s(1), JTo(1), J9s(1), J8s(1), QTo(1), KTo(1), K5o(1), AA(1), A8o(1), A7s(1), A7o(1), A4s(1) [21 instances, 40.4%]
+      final_table: 22(1), 33(1), TT(1), QQ(1), 43s(1), 54o(2), 62s(1), 87o(1), 86s(1), 98s(1), 96o(1), 96s(1), 92o(1), T6s(1), T2o(1), J4s(1), J3s(1), J2o(1), QJo(1), Q5o(1), Q3o(1), K8o(2), K6s(1), K4o(1), AKo(1), AQo(1), AJo(1), ATo(1), A7o(1) [31 instances, 59.6%]
+
+================================================================================
+POSITION: SB
+================================================================================
+
+PREFLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 22(2), 33(1), 44(3), 55(3), 66(3), 77(8), 88(7), 99(4), TT(6), JJ(9), QQ(6), KK(4), 43o(1), 54s(1), 64s(1), 63o(2), 76o(1), 87s(2), 87o(1), 83s(1), 95s(1), 94o(1), 93o(1), T9s(2), T9o(1), T6o(1), JTo(3), JTs(2), J9o(1), J7o(2), J7s(1), J6o(1), J4s(1), QJo(3), QTo(6), QTs(1), Q9o(1), Q8o(1), Q8s(1), Q6o(1), Q6s(1), Q5o(1), Q5s(1), Q4s(1), KQo(2), KQs(3), Q2o(1), KJo(7), KJs(3), KTs(3), KTo(2), K9s(1), K8o(1), K8s(1), K7s(1), K7o(1), AA(6), K4o(1), AKo(11), AKs(4), K2o(2), AQs(2), K2s(1), AQo(9), AJs(2), AJo(15), ATs(3), ATo(5), A9o(5), A9s(1), A8s(1), A8o(3), A7o(5), A6s(2), A5s(1), A5o(3), A3s(3), A3o(3)
+    Total: 78 unique combos, 216 instances, median combo frequency: 0.93%
+    By Pot Size:
+      OPEN: 22(2), 44(1), 55(1), 77(4), 88(4), 99(2), TT(4), JJ(3), QQ(4), KK(2), 43o(1), 54s(1), 63o(2), 76o(1), 87s(1), 87o(1), 83s(1), 95s(1), 94o(1), 93o(1), T9o(1), T9s(2), T6o(1), JTo(2), JTs(2), J9o(1), J7s(1), J7o(1), J6o(1), J4s(1), QJo(2), QTo(2), QTs(1), Q9o(1), Q8o(1), Q8s(1), Q6o(1), Q6s(1), Q5s(1), Q5o(1), Q4s(1), KQo(1), KQs(1), Q2o(1), KJs(2), KJo(2), KTs(3), KTo(1), K9s(1), K8s(1), K8o(1), K7s(1), K7o(1), AA(1), K4o(1), AKs(2), AKo(1), AQs(1), AQo(3), AJo(6), AJs(1), ATs(1), ATo(1), A9o(2), A9s(1), A8s(1), A8o(2), A7o(3), A6s(1), A5o(2), A5s(1), A3s(3), A3o(1) [115 instances, 53.2%]
+      0.75x: KQs(1), AKo(1), AQo(1) [3 instances, 1.4%]
+      1x: 66(1), 88(1), KK(1), AKo(1), AQs(1), K2s(1), AQo(1), AJo(1), ATo(1), ATs(1), A9o(1), A3o(1) [12 instances, 5.6%]
+      1.5x: 44(1), 66(1), 77(2), TT(1), JJ(1), 64s(1), J7o(1), KQs(1), KJo(1), AKs(1), AKo(1), AJo(4), A9o(1) [17 instances, 7.9%]
+      2x: JJ(1), JTo(1), QJo(1), KJo(2), AA(1), AKo(3), AQo(1), AJo(1), ATs(1), A8o(1), A7o(1) [14 instances, 6.5%]
+      3x+: 33(1), 44(1), 55(2), 66(1), 77(2), 88(2), 99(2), TT(1), JJ(4), QQ(2), KK(1), 87s(1), QTo(4), KQo(1), KJo(2), KJs(1), KTo(1), AA(4), AKs(1), AKo(4), K2o(2), AQo(3), AJs(1), AJo(3), ATo(3), A9o(1), A7o(1), A6s(1), A5o(1), A3o(1) [55 instances, 25.5%]
+    By Big Blinds:
+      MINRAISE: 88(1), TT(2), JJ(2), QQ(2), 43o(1), 94o(1), T9o(1), JTs(1), JTo(1), J7s(1), QJo(1), Q4s(1), KQo(1), Q2o(1), K9s(1), K8s(1), K8o(1), K7s(1), AA(1), AKs(2), AQo(1), AJo(2), A8s(1), A8o(1), A7o(1), A5s(1), A5o(1), A3s(1) [33 instances, 15.3%]
+      2.5BB: 88(1), JTo(1), QJo(1), QTs(1), KJo(1), KTs(1), K2s(1), AJo(1) [8 instances, 3.7%]
+      3BB: 33(1), 55(1), 77(1), 88(2), TT(1), JJ(1), QQ(2), KK(2), 64s(1), 63o(1), 87s(1), 83s(1), T9s(1), J7o(1), Q9o(1), Q8s(1), KJo(1), KTs(1), AJo(4), ATo(1), ATs(2), A9s(1), A7o(1), A3s(2) [32 instances, 14.8%]
+      4-5BB: 22(1), 44(1), 99(1), JJ(1), 54s(1), 95s(1), JTs(1), J4s(1), QJo(1), QTo(1), KQs(2), KJo(2), KJs(1), KTs(1), K7o(1), AA(1), AJo(1), A9o(1) [20 instances, 9.3%]
+      6-9BB: 55(1), 66(1), 77(3), 99(2), TT(2), JJ(2), QQ(1), 87o(1), 93o(1), T6o(1), J7o(1), J6o(1), QTo(1), Q8o(1), Q6s(1), Q5o(1), Q5s(1), KQo(1), KJo(2), KJs(1), AA(2), K4o(1), AKo(4), AKs(1), AQo(4), AQs(1), AJo(3), ATo(1), A9o(2), A8o(1), A7o(1), A3o(1) [48 instances, 22.2%]
+      10BB+: 22(1), 44(2), 55(1), 66(2), 77(4), 88(3), 99(1), TT(1), JJ(3), QQ(1), KK(2), 63o(1), 76o(1), 87s(1), T9s(1), JTo(1), J9o(1), QTo(4), Q6o(1), KQs(1), KJo(1), KJs(1), KTo(2), AA(2), AKo(7), AKs(1), AQo(4), K2o(2), AQs(1), AJo(4), AJs(2), ATo(3), ATs(1), A9o(2), A8o(1), A7o(2), A6s(2), A5o(2), A3o(2) [75 instances, 34.7%]
+    By Tournament Stage:
+      start: 33(1), 55(3), 66(3), 77(6), 88(2), 99(3), TT(2), JJ(7), QQ(3), KK(2), 54s(1), 87s(1), 87o(1), 83s(1), 94o(1), T9s(1), T6o(1), JTo(1), JTs(1), J7s(1), J7o(1), J4s(1), QJo(1), QTo(6), Q9o(1), Q8s(1), Q6s(1), Q5s(1), Q4s(1), KQo(2), KQs(2), KJo(3), KJs(1), KTo(2), K8s(1), K8o(1), AA(4), AKs(1), AKo(8), K2o(2), K2s(1), AQo(8), AJo(10), AJs(1), ATo(3), ATs(1), A9o(3), A9s(1), A7o(1), A6s(2), A3s(2), A3o(2) [118 instances, 54.6%]
+      pre_bubble: 44(1), 93o(1), T9s(1), JTs(1), KJo(1), KJs(1), AJo(1), A9o(1) [8 instances, 3.7%]
+      bubble: Q8o(1) [1 instances, 0.5%]
+      final_table: 22(2), 44(2), 77(2), 88(5), 99(1), TT(4), JJ(2), QQ(3), KK(2), 43o(1), 64s(1), 63o(2), 76o(1), 87s(1), 95s(1), T9o(1), JTo(2), J9o(1), J7o(1), J6o(1), QJo(2), QTs(1), Q6o(1), Q5o(1), KQs(1), Q2o(1), KJs(1), KJo(3), KTs(3), K9s(1), K7s(1), K7o(1), AA(2), K4o(1), AKo(3), AKs(3), AQs(2), AQo(1), AJo(4), AJs(1), ATs(2), ATo(2), A9o(1), A8o(3), A8s(1), A7o(4), A5s(1), A5o(3), A3s(1), A3o(1) [89 instances, 41.2%]
+
+  CALL: 22(1), 44(3), 55(3), 66(6), 77(4), 88(8), 99(3), TT(6), JJ(3), QQ(3), KK(3), 32s(1), 32o(2), 43s(1), 42s(1), 52s(1), 75o(1), 75s(1), 74s(1), 87s(2), 86s(1), 84o(1), 83o(1), 98o(1), 97o(1), 96o(1), 96s(2), 95s(2), 93s(1), T9o(4), T9s(2), T8o(1), T7o(3), T7s(1), T3o(1), T2s(1), JTo(2), JTs(2), J9s(1), J9o(3), J8o(1), J8s(1), J7o(2), J7s(2), J5s(1), J3o(1), QJo(4), QJs(1), QTo(4), QTs(2), Q9o(3), Q9s(2), Q8s(1), Q7s(1), Q6s(1), Q3o(3), Q2s(1), Q2o(3), KQo(8), KQs(1), KJo(3), KTs(2), KTo(2), K9o(3), K9s(2), K8o(4), K8s(1), K7s(2), K7o(6), K6o(1), K5o(3), AA(3), AKs(6), K3o(3), AKo(8), AQo(3), AJo(12), AJs(2), ATs(2), ATo(5), A9o(2), A8s(2), A8o(8), A7o(1), A6o(2), A6s(1), A5s(2), A5o(4), A4s(4), A4o(5), A3s(3), A3o(3)
+    Total: 92 unique combos, 239 instances, median combo frequency: 0.84%
+    By Pot Size:
+      N/A: 22(1), 44(3), 55(3), 66(6), 77(4), 88(8), 99(3), TT(6), JJ(3), QQ(3), KK(3), 32s(1), 32o(2), 43s(1), 42s(1), 52s(1), 75s(1), 75o(1), 74s(1), 87s(2), 86s(1), 84o(1), 83o(1), 98o(1), 97o(1), 96s(2), 96o(1), 95s(2), 93s(1), T9s(2), T9o(4), T8o(1), T7o(3), T7s(1), T3o(1), T2s(1), JTs(2), JTo(2), J9s(1), J9o(3), J8s(1), J8o(1), J7s(2), J7o(2), J5s(1), J3o(1), QJs(1), QJo(4), QTs(2), QTo(4), Q9o(3), Q9s(2), Q8s(1), Q7s(1), Q6s(1), Q3o(3), Q2o(3), KQo(8), KQs(1), Q2s(1), KJo(3), KTs(2), KTo(2), K9s(2), K9o(3), K8o(4), K8s(1), K7s(2), K7o(6), K6o(1), K5o(3), AA(3), K3o(3), AKs(6), AKo(8), AQo(3), AJs(2), AJo(12), ATs(2), ATo(5), A9o(2), A8o(8), A8s(2), A7o(1), A6o(2), A6s(1), A5o(4), A5s(2), A4o(5), A4s(4), A3o(3), A3s(3) [239 instances, 100.0%]
+    By Big Blinds:
+      1BB_CALL: 44(2), 55(1), 66(1), 77(3), 88(2), 99(1), TT(1), JJ(1), 32s(1), 32o(2), 43s(1), 42s(1), 75o(1), 75s(1), 74s(1), 87s(1), 86s(1), 84o(1), 83o(1), 98o(1), 97o(1), 96s(1), 96o(1), 95s(1), T9o(3), T9s(2), T8o(1), T7s(1), T7o(2), T3o(1), JTo(2), JTs(1), J9s(1), J9o(3), J8s(1), J8o(1), J7o(1), J5s(1), J3o(1), QJo(3), QTo(4), QTs(1), Q9s(2), Q9o(2), Q7s(1), Q6s(1), Q3o(3), KQo(4), Q2o(3), Q2s(1), KJo(1), KTs(1), KTo(1), K9s(1), K9o(1), K8o(1), K8s(1), K7o(3), K6o(1), K5o(2), AA(1), AKs(2), AKo(1), AJo(5), ATo(2), A9o(1), A8s(1), A8o(4), A6s(1), A6o(1), A5s(1), A4s(1), A4o(2), A3s(2), A3o(2) [116 instances, 48.5%]
+      2BB_CALL: 66(2), 88(2), 87s(1), 96s(1), 93s(1), T7o(1), T2s(1), J7s(1), QJs(1), KQo(2), KJo(1), K9o(1), K3o(1), AJo(1), A9o(1), A5o(2) [20 instances, 8.4%]
+      3-4BB_CALL: 22(1), TT(1), T9o(1), QTs(1), Q8s(1), KTo(1), KTs(1), K9o(1), K8o(1), K7s(1), AA(2), AKo(1), AQo(1), AJo(3), ATo(1), A8o(1), A8s(1), A7o(1), A5o(1), A4o(2), A4s(1) [25 instances, 10.5%]
+      5BB+_CALL: 44(1), 55(2), 66(3), 77(1), 88(4), 99(2), TT(4), JJ(2), QQ(3), KK(3), 52s(1), 95s(1), JTs(1), J7s(1), J7o(1), QJo(1), Q9o(1), KQo(2), KQs(1), KJo(1), K9s(1), K8o(2), K7s(1), K7o(3), K5o(1), AKo(6), AKs(4), K3o(2), AQo(2), AJo(3), AJs(2), ATs(2), ATo(2), A8o(3), A6o(1), A5o(1), A5s(1), A4o(1), A4s(2), A3s(1), A3o(1) [78 instances, 32.6%]
+    By Tournament Stage:
+      start: 22(1), 44(3), 55(1), 66(3), 77(2), 88(5), 99(2), TT(1), JJ(2), QQ(2), KK(1), 32s(1), 52s(1), 75o(1), 75s(1), 74s(1), 87s(1), 86s(1), 83o(1), 98o(1), 97o(1), 96o(1), 96s(2), 95s(2), T9s(1), T9o(4), T7s(1), T7o(1), T3o(1), T2s(1), JTo(1), JTs(1), J9o(2), J7s(2), J7o(2), J5s(1), QJs(1), QJo(3), QTo(3), Q9s(1), Q9o(2), Q8s(1), Q6s(1), Q3o(1), KQo(5), KQs(1), Q2o(2), KJo(2), KTs(2), KTo(2), K9o(3), K9s(1), K8o(2), K8s(1), K7o(4), K6o(1), K5o(3), AKs(2), AKo(4), K3o(3), AQo(2), AJs(1), AJo(8), ATo(5), A8o(3), A6s(1), A6o(1), A5o(3), A5s(1), A4o(3), A4s(1), A3s(2), A3o(1) [139 instances, 58.2%]
+      pre_bubble: 43s(1), JTs(1), J9o(1), J3o(1), Q2s(1), K8o(1), AKs(1), ATs(1), A3o(2) [10 instances, 4.2%]
+      final_table: 55(2), 66(3), 77(2), 88(3), 99(1), TT(5), JJ(1), QQ(1), KK(2), 32o(2), 42s(1), 87s(1), 84o(1), 93s(1), T9s(1), T8o(1), T7o(2), JTo(1), J9s(1), J8o(1), J8s(1), QJo(1), QTs(2), QTo(1), Q9s(1), Q9o(1), Q7s(1), Q3o(2), KQo(3), Q2o(1), KJo(1), K9s(1), K8o(1), K7o(2), K7s(2), AA(3), AKs(3), AKo(4), AQo(1), AJo(4), AJs(1), ATs(1), A9o(2), A8s(2), A8o(5), A7o(1), A6o(1), A5s(1), A5o(1), A4s(3), A4o(2), A3s(1) [90 instances, 37.7%]
+
+  CHECK: 42o(1), 83s(1), T5o(1), T2s(1), JTs(1), J7o(1), Q7o(1), Q3o(1), KJs(1), K9o(1), K3o(1)
+    Total: 11 unique combos, 11 instances, median combo frequency: 9.09%
+    By Pot Size:
+      N/A: 42o(1), 83s(1), T5o(1), T2s(1), JTs(1), J7o(1), Q7o(1), Q3o(1), KJs(1), K9o(1), K3o(1) [11 instances, 100.0%]
+    By Big Blinds:
+      N/A: 42o(1), 83s(1), T5o(1), T2s(1), JTs(1), J7o(1), Q7o(1), Q3o(1), KJs(1), K9o(1), K3o(1) [11 instances, 100.0%]
+    By Tournament Stage:
+      start: 42o(1), T5o(1), Q3o(1) [3 instances, 27.3%]
+      final_table: 83s(1), T2s(1), JTs(1), J7o(1), Q7o(1), KJs(1), K9o(1), K3o(1) [8 instances, 72.7%]
+
+FLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 44(1), TT(1), 96s(1), J9s(1), J8s(1), J5s(1), AA(1), AKs(1)
+    Total: 8 unique combos, 8 instances, median combo frequency: 12.50%
+    By Pot Size:
+      0.5x: 44(1) [1 instances, 12.5%]
+      0.75x: J9s(1) [1 instances, 12.5%]
+      1x: 96s(1), J5s(1), AKs(1) [3 instances, 37.5%]
+      1.5x: TT(1) [1 instances, 12.5%]
+      2x: J8s(1) [1 instances, 12.5%]
+      3x+: AA(1) [1 instances, 12.5%]
+    By Big Blinds:
+      1-3BB: AA(1) [1 instances, 12.5%]
+      3-6BB: J9s(1) [1 instances, 12.5%]
+      6-10BB: J5s(1) [1 instances, 12.5%]
+      10BB+: 44(1), TT(1), 96s(1), J8s(1), AKs(1) [5 instances, 62.5%]
+    By Tournament Stage:
+      start: 44(1), TT(1), 96s(1), J5s(1) [4 instances, 50.0%]
+      pre_bubble: AKs(1) [1 instances, 12.5%]
+      final_table: J9s(1), J8s(1), AA(1) [3 instances, 37.5%]
+
+  BET: 44(1), 66(1), 99(1), JJ(1), QQ(1), KK(1), 42o(1), 64s(1), 75o(1), 83o(1), 83s(1), 96s(1), T9s(1), T9o(1), T7o(2), JTo(1), J9o(1), J8o(1), J7o(1), J7s(1), QJo(2), QTo(1), QTs(1), Q9o(1), Q9s(1), Q8s(1), Q7o(1), Q3o(2), KJo(1), KJs(1), K9s(1), K7s(1), AA(1), AKo(1), AKs(1), K3o(1), AJo(3), ATs(1), A8s(1), A5s(2), A4o(1), A3s(2), A3o(1)
+    Total: 43 unique combos, 50 instances, median combo frequency: 2.00%
+    By Pot Size:
+      <0.33x: 96s(1), T7o(1), QJo(1), Q8s(1) [4 instances, 8.0%]
+      0.33x: 99(1), 75o(1), JTo(1), Q3o(1), K9s(1), AKo(1), AJo(1), A5s(1) [8 instances, 16.0%]
+      0.5x: 66(1), JJ(1), QQ(1), T9s(1), AJo(1), ATs(1), A3s(1) [7 instances, 14.0%]
+      0.75x: J7s(1), QJo(1), Q9o(1), Q9s(1), AKs(1), AJo(1) [6 instances, 12.0%]
+      1x: KK(1), 83s(1), 83o(1), KJs(1), A3s(1) [5 instances, 10.0%]
+      1.5x: A8s(1), A3o(1) [2 instances, 4.0%]
+      2x: 44(1), 42o(1), T9o(1), J9o(1), J8o(1), QTo(1), QTs(1), Q7o(1), Q3o(1), KJo(1), K7s(1), AA(1), A5s(1) [13 instances, 26.0%]
+      3x+: 64s(1), T7o(1), J7o(1), K3o(1), A4o(1) [5 instances, 10.0%]
+    By Big Blinds:
+      <1BB: QJo(1) [1 instances, 2.0%]
+      1-3BB: JJ(1), 42o(1), 75o(1), 83s(1), 83o(1), 96s(1), T9o(1), T7o(1), JTo(1), J9o(1), J8o(1), J7o(1), QJo(1), QTs(1), QTo(1), Q9s(1), Q8s(1), Q7o(1), Q3o(2), KJs(1), K9s(1), AKs(1), AJo(1), A5s(2), A3s(1) [27 instances, 54.0%]
+      3-6BB: 44(1), 66(1), QQ(1), KK(1), T9s(1), Q9o(1), KJo(1), AJo(1), A4o(1), A3s(1) [10 instances, 20.0%]
+      6-10BB: 99(1), K7s(1), K3o(1), AKo(1), A8s(1), A3o(1) [6 instances, 12.0%]
+      10BB+: 64s(1), T7o(1), J7s(1), AA(1), AJo(1), ATs(1) [6 instances, 12.0%]
+    By Tournament Stage:
+      start: 44(1), 66(1), 99(1), JJ(1), QQ(1), 42o(1), 75o(1), 83o(1), 96s(1), T9s(1), T9o(1), T7o(1), JTo(1), J7o(1), J7s(1), QJo(1), QTo(1), Q9o(1), Q8s(1), AA(1), AKs(1), AKo(1), AJo(2), ATs(1), A5s(1), A3o(1) [27 instances, 54.0%]
+      pre_bubble: J9o(1), AJo(1) [2 instances, 4.0%]
+      final_table: KK(1), 64s(1), 83s(1), T7o(1), J8o(1), QJo(1), QTs(1), Q9s(1), Q7o(1), Q3o(2), KJo(1), KJs(1), K9s(1), K7s(1), K3o(1), A8s(1), A5s(1), A4o(1), A3s(2) [21 instances, 42.0%]
+
+  CALL: 77(2), 88(1), 99(1), TT(1), JJ(3), QQ(2), KK(1), 42s(1), 87s(1), 84o(1), 94o(1), T9s(2), T7s(1), T2s(1), J7s(1), QJo(1), Q9s(1), Q4s(1), Q3o(2), KQo(1), KTs(1), KTo(1), K9o(1), K9s(2), K7o(1), AA(1), AKo(1), AKs(1), AJo(1), ATo(1), A8s(1), A6o(1), A5s(1), A5o(2), A4s(1), A3s(2)
+    Total: 36 unique combos, 45 instances, median combo frequency: 2.22%
+    By Pot Size:
+      N/A: 77(2), 88(1), 99(1), TT(1), JJ(3), QQ(2), KK(1), 42s(1), 87s(1), 84o(1), 94o(1), T9s(2), T7s(1), T2s(1), J7s(1), QJo(1), Q9s(1), Q4s(1), Q3o(2), KQo(1), KTs(1), KTo(1), K9s(2), K9o(1), K7o(1), AA(1), AKs(1), AKo(1), AJo(1), ATo(1), A8s(1), A6o(1), A5s(1), A5o(2), A4s(1), A3s(2) [45 instances, 100.0%]
+    By Big Blinds:
+      <1BB: AKs(1), A5s(1), A5o(1), A4s(1) [4 instances, 8.9%]
+      1-3BB: 77(1), 88(1), TT(1), 42s(1), 87s(1), 84o(1), T7s(1), T2s(1), QJo(1), Q4s(1), Q3o(2), KQo(1), K9s(1), K7o(1), AJo(1), ATo(1), A8s(1), A6o(1), A5o(1), A3s(1) [21 instances, 46.7%]
+      3-6BB: 77(1), 99(1), JJ(2), QQ(2), 94o(1), T9s(1), Q9s(1), KTs(1), KTo(1), K9s(1), K9o(1), A3s(1) [14 instances, 31.1%]
+      6-10BB: KK(1), T9s(1), J7s(1), AA(1), AKo(1) [5 instances, 11.1%]
+      10BB+: JJ(1) [1 instances, 2.2%]
+    By Tournament Stage:
+      start: 77(1), 88(1), 99(1), JJ(2), QQ(2), 87s(1), 94o(1), T9s(2), T7s(1), J7s(1), QJo(1), Q4s(1), Q3o(1), KQo(1), KTs(1), KTo(1), K9o(1), K9s(1), AKo(1), ATo(1), A6o(1), A5o(2), A5s(1), A3s(1) [28 instances, 62.2%]
+      pre_bubble: AKs(1) [1 instances, 2.2%]
+      final_table: 77(1), TT(1), JJ(1), KK(1), 42s(1), 84o(1), T2s(1), Q9s(1), Q3o(1), K9s(1), K7o(1), AA(1), AJo(1), A8s(1), A4s(1), A3s(1) [16 instances, 35.6%]
+
+  CHECK: 33(1), 66(1), 77(3), 88(2), 99(2), TT(2), JJ(1), QQ(1), 32s(1), 32o(1), 43s(1), 42s(1), 74s(1), 87s(1), 86s(1), 84o(1), 98o(1), 97o(1), 96o(1), 96s(1), T9o(1), T9s(2), T8o(1), T7s(1), T7o(1), T5o(1), T3o(1), JTs(1), J9o(2), J8s(1), J7o(1), J5s(1), QJo(2), QTo(2), Q9o(1), Q9s(1), Q7s(1), Q6s(1), Q4s(1), Q3o(1), KQo(2), Q2o(2), Q2s(1), KTs(1), KTo(1), K9o(2), K9s(1), K8s(1), K7o(2), K6o(1), K5o(2), AA(3), AKs(1), AKo(1), AJo(7), ATo(1), A9o(2), A8o(1), A5o(1), A3s(1), A3o(1)
+    Total: 61 unique combos, 84 instances, median combo frequency: 1.19%
+    By Pot Size:
+      N/A: 33(1), 66(1), 77(3), 88(2), 99(2), TT(2), JJ(1), QQ(1), 32o(1), 32s(1), 43s(1), 42s(1), 74s(1), 87s(1), 86s(1), 84o(1), 98o(1), 97o(1), 96s(1), 96o(1), T9s(2), T9o(1), T8o(1), T7o(1), T7s(1), T5o(1), T3o(1), JTs(1), J9o(2), J8s(1), J7o(1), J5s(1), QJo(2), QTo(2), Q9o(1), Q9s(1), Q7s(1), Q6s(1), Q4s(1), Q3o(1), Q2o(2), Q2s(1), KQo(2), KTs(1), KTo(1), K9s(1), K9o(2), K8s(1), K7o(2), K6o(1), K5o(2), AA(3), AKo(1), AKs(1), AJo(7), ATo(1), A9o(2), A8o(1), A5o(1), A3o(1), A3s(1) [84 instances, 100.0%]
+    By Big Blinds:
+      N/A: 33(1), 66(1), 77(3), 88(2), 99(2), TT(2), JJ(1), QQ(1), 32o(1), 32s(1), 43s(1), 42s(1), 74s(1), 87s(1), 86s(1), 84o(1), 98o(1), 97o(1), 96s(1), 96o(1), T9o(1), T9s(2), T8o(1), T7o(1), T7s(1), T5o(1), T3o(1), JTs(1), J9o(2), J8s(1), J7o(1), J5s(1), QJo(2), QTo(2), Q9s(1), Q9o(1), Q7s(1), Q6s(1), Q4s(1), Q3o(1), Q2o(2), Q2s(1), KQo(2), KTs(1), KTo(1), K9s(1), K9o(2), K8s(1), K7o(2), K6o(1), K5o(2), AA(3), AKo(1), AKs(1), AJo(7), ATo(1), A9o(2), A8o(1), A5o(1), A3o(1), A3s(1) [84 instances, 100.0%]
+    By Tournament Stage:
+      start: 33(1), 77(1), 88(2), 99(2), JJ(1), QQ(1), 32s(1), 74s(1), 87s(1), 86s(1), 98o(1), 97o(1), 96o(1), 96s(1), T9o(1), T9s(1), T7s(1), T5o(1), T3o(1), J9o(2), J5s(1), QJo(2), QTo(2), Q9o(1), Q9s(1), Q6s(1), Q4s(1), Q3o(1), KQo(2), Q2o(2), KTs(1), KTo(1), K9o(1), K9s(1), K8s(1), K7o(1), K6o(1), K5o(2), AA(1), AKo(1), AJo(6), ATo(1), A5o(1), A3s(1) [57 instances, 67.9%]
+      pre_bubble: 43s(1), Q2s(1), AKs(1), A3o(1) [4 instances, 4.8%]
+      final_table: 66(1), 77(2), TT(2), 32o(1), 42s(1), 84o(1), T9s(1), T8o(1), T7o(1), JTs(1), J8s(1), J7o(1), Q7s(1), K9o(1), K7o(1), AA(2), AJo(1), A9o(2), A8o(1) [23 instances, 27.4%]
+
+TURN:
+--------------------------------------------------------------------------------
+
+  RAISE: 99(1), ATo(1)
+    Total: 2 unique combos, 2 instances, median combo frequency: 50.00%
+    By Pot Size:
+      0.5x: 99(1) [1 instances, 50.0%]
+      0.75x: ATo(1) [1 instances, 50.0%]
+    By Big Blinds:
+      6-10BB: ATo(1) [1 instances, 50.0%]
+      10BB+: 99(1) [1 instances, 50.0%]
+    By Tournament Stage:
+      start: 99(1), ATo(1) [2 instances, 100.0%]
+
+  BET: 88(1), 99(1), 42o(1), 83o(1), 96s(1), T9s(1), T8o(1), T7o(1), JTo(1), JTs(1), J9o(2), J8o(1), QJo(1), QTo(1), QTs(1), Q2o(1), KJo(1), K5o(1), AA(2), AJo(4), A9o(1), A6o(1), A5s(1), A3o(1)
+    Total: 24 unique combos, 29 instances, median combo frequency: 3.45%
+    By Pot Size:
+      <0.33x: 96s(1), T7o(1), QJo(1), AJo(1), A9o(1) [5 instances, 17.2%]
+      0.33x: 42o(1), QTs(1), QTo(1), AJo(2), A6o(1), A5s(1) [7 instances, 24.1%]
+      0.5x: 99(1), 83o(1), K5o(1), AA(1), AJo(1) [5 instances, 17.2%]
+      0.75x: JTo(1), J9o(1) [2 instances, 6.9%]
+      1x: T9s(1), JTs(1), KJo(1), A3o(1) [4 instances, 13.8%]
+      1.5x: 88(1), AA(1) [2 instances, 6.9%]
+      2x: T8o(1), J9o(1), Q2o(1) [3 instances, 10.3%]
+      3x+: J8o(1) [1 instances, 3.4%]
+    By Big Blinds:
+      1-3BB: 42o(1), 96s(1), T9s(1), T8o(1), T7o(1), JTs(1), J9o(2), QJo(1), QTs(1), QTo(1), K5o(1), AJo(2), A9o(1), A6o(1), A5s(1) [17 instances, 58.6%]
+      3-6BB: 83o(1), JTo(1), Q2o(1), AA(1), AJo(1) [5 instances, 17.2%]
+      6-10BB: J8o(1), KJo(1), AA(1), AJo(1) [4 instances, 13.8%]
+      10BB+: 88(1), 99(1), A3o(1) [3 instances, 10.3%]
+    By Tournament Stage:
+      start: 88(1), 99(1), 42o(1), 83o(1), 96s(1), JTo(1), J9o(1), QJo(1), QTo(1), Q2o(1), K5o(1), AA(1), AJo(4), A6o(1), A3o(1) [18 instances, 62.1%]
+      pre_bubble: J9o(1) [1 instances, 3.4%]
+      final_table: T9s(1), T8o(1), T7o(1), JTs(1), J8o(1), QTs(1), KJo(1), AA(1), A9o(1), A5s(1) [10 instances, 34.5%]
+
+  CALL: 77(1), 88(1), TT(2), JJ(1), 87s(1), 86s(1), 84o(1), T9o(1), T2s(1), QTo(1), Q9s(2), Q4s(1), Q3o(2), KQo(1), K9s(1), K6o(1), AJo(2), A3o(1)
+    Total: 18 unique combos, 22 instances, median combo frequency: 4.55%
+    By Pot Size:
+      N/A: 77(1), 88(1), TT(2), JJ(1), 87s(1), 86s(1), 84o(1), T9o(1), T2s(1), QTo(1), Q9s(2), Q4s(1), Q3o(2), KQo(1), K9s(1), K6o(1), AJo(2), A3o(1) [22 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: TT(2), 86s(1), T9o(1), T2s(1), QTo(1), Q3o(1), K6o(1), AJo(1) [9 instances, 40.9%]
+      3-6BB: 88(1), 87s(1), 84o(1), Q9s(1), Q4s(1), Q3o(1), KQo(1), AJo(1) [8 instances, 36.4%]
+      10BB+: 77(1), JJ(1), Q9s(1), K9s(1), A3o(1) [5 instances, 22.7%]
+    By Tournament Stage:
+      start: 77(1), 88(1), JJ(1), 87s(1), 86s(1), T9o(1), QTo(1), Q9s(1), Q4s(1), KQo(1), K9s(1), K6o(1), AJo(2), A3o(1) [15 instances, 68.2%]
+      final_table: TT(2), 84o(1), T2s(1), Q9s(1), Q3o(2) [7 instances, 31.8%]
+
+  CHECK: 33(1), 66(1), 77(3), 88(1), 99(2), TT(1), JJ(1), QQ(1), 32o(1), 32s(1), 43s(1), 42s(1), 75o(1), 74s(1), 87s(1), 86s(1), 84o(1), 83s(1), 98o(1), 97o(1), 96o(1), T9s(2), T9o(2), T7s(1), T7o(1), T5o(1), T3o(1), J9o(1), J7o(2), QJo(2), QTo(2), Q9o(1), Q9s(1), Q7s(1), Q7o(1), Q6s(1), Q4s(1), Q3o(3), KQo(2), Q2s(1), Q2o(1), KJs(1), KTs(1), KTo(1), K9o(2), K9s(1), K8s(1), K7o(2), K6o(1), K5o(1), AA(1), AKs(1), AKo(1), AJo(5), ATo(1), A9o(1), A8o(1), A5o(1), A3s(2), A3o(1)
+    Total: 60 unique combos, 78 instances, median combo frequency: 1.28%
+    By Pot Size:
+      N/A: 33(1), 66(1), 77(3), 88(1), 99(2), TT(1), JJ(1), QQ(1), 32o(1), 32s(1), 43s(1), 42s(1), 75o(1), 74s(1), 87s(1), 86s(1), 84o(1), 83s(1), 98o(1), 97o(1), 96o(1), T9o(2), T9s(2), T7s(1), T7o(1), T5o(1), T3o(1), J9o(1), J7o(2), QJo(2), QTo(2), Q9o(1), Q9s(1), Q7o(1), Q7s(1), Q6s(1), Q4s(1), Q3o(3), Q2s(1), KQo(2), Q2o(1), KJs(1), KTs(1), KTo(1), K9o(2), K9s(1), K8s(1), K7o(2), K6o(1), K5o(1), AA(1), AKs(1), AKo(1), AJo(5), ATo(1), A9o(1), A8o(1), A5o(1), A3o(1), A3s(2) [78 instances, 100.0%]
+    By Big Blinds:
+      N/A: 33(1), 66(1), 77(3), 88(1), 99(2), TT(1), JJ(1), QQ(1), 32o(1), 32s(1), 43s(1), 42s(1), 75o(1), 74s(1), 87s(1), 86s(1), 84o(1), 83s(1), 98o(1), 97o(1), 96o(1), T9s(2), T9o(2), T7o(1), T7s(1), T5o(1), T3o(1), J9o(1), J7o(2), QJo(2), QTo(2), Q9s(1), Q9o(1), Q7o(1), Q7s(1), Q6s(1), Q4s(1), Q3o(3), Q2o(1), Q2s(1), KQo(2), KJs(1), KTs(1), KTo(1), K9s(1), K9o(2), K8s(1), K7o(2), K6o(1), K5o(1), AA(1), AKo(1), AKs(1), AJo(5), ATo(1), A9o(1), A8o(1), A5o(1), A3o(1), A3s(2) [78 instances, 100.0%]
+    By Tournament Stage:
+      start: 33(1), 77(1), 88(1), 99(2), JJ(1), QQ(1), 32s(1), 75o(1), 74s(1), 87s(1), 86s(1), 98o(1), 97o(1), 96o(1), T9s(2), T9o(2), T7s(1), T5o(1), T3o(1), J9o(1), J7o(1), QJo(2), QTo(2), Q9o(1), Q9s(1), Q6s(1), Q4s(1), Q3o(1), KQo(2), Q2o(1), KTs(1), KTo(1), K9s(1), K9o(1), K8s(1), K7o(1), K6o(1), K5o(1), AKs(1), AKo(1), AJo(4), ATo(1), A5o(1), A3s(1) [53 instances, 67.9%]
+      pre_bubble: 43s(1), Q2s(1), A3o(1) [3 instances, 3.8%]
+      final_table: 66(1), 77(2), TT(1), 32o(1), 42s(1), 84o(1), 83s(1), T7o(1), J7o(1), Q7s(1), Q7o(1), Q3o(2), KJs(1), K9o(1), K7o(1), AA(1), AJo(1), A9o(1), A8o(1), A3s(1) [22 instances, 28.2%]
+
+RIVER:
+--------------------------------------------------------------------------------
+
+  RAISE: 66(1), T9s(1), QJo(1)
+    Total: 3 unique combos, 3 instances, median combo frequency: 33.33%
+    By Pot Size:
+      0.5x: QJo(1) [1 instances, 33.3%]
+      0.75x: 66(1), T9s(1) [2 instances, 66.7%]
+    By Big Blinds:
+      3-6BB: T9s(1) [1 instances, 33.3%]
+      6-10BB: 66(1), QJo(1) [2 instances, 66.7%]
+    By Tournament Stage:
+      start: QJo(1) [1 instances, 33.3%]
+      final_table: 66(1), T9s(1) [2 instances, 66.7%]
+
+  BET: 66(1), QQ(1), 42s(1), 42o(1), 96o(1), T9o(1), T9s(1), T8o(1), T7s(1), T7o(1), J9o(1), QTs(1), QTo(1), Q6s(1), KTs(1), K7o(1), AA(2), AJo(4), A3o(1)
+    Total: 19 unique combos, 23 instances, median combo frequency: 4.35%
+    By Pot Size:
+      <0.33x: T7o(1), QTs(1), QTo(1), AJo(2), A3o(1) [6 instances, 26.1%]
+      0.33x: 42o(1), J9o(1), KTs(1), AJo(1) [4 instances, 17.4%]
+      0.5x: 66(1), QQ(1), 42s(1), T8o(1), T7s(1), AA(1), AJo(1) [7 instances, 30.4%]
+      0.75x: Q6s(1) [1 instances, 4.3%]
+      1x: T9s(1), K7o(1), AA(1) [3 instances, 13.0%]
+      2x: 96o(1) [1 instances, 4.3%]
+      3x+: T9o(1) [1 instances, 4.3%]
+    By Big Blinds:
+      1-3BB: 66(1), 96o(1), T9o(1), T8o(1), T7o(1), J9o(1), QTs(1), QTo(1), Q6s(1), AJo(2) [11 instances, 47.8%]
+      3-6BB: 42o(1), 42s(1), T7s(1), K7o(1), AJo(1) [5 instances, 21.7%]
+      6-10BB: KTs(1), AJo(1) [2 instances, 8.7%]
+      10BB+: QQ(1), T9s(1), AA(2), A3o(1) [5 instances, 21.7%]
+    By Tournament Stage:
+      start: QQ(1), 42o(1), 96o(1), T9o(1), T9s(1), T7s(1), J9o(1), QTo(1), Q6s(1), KTs(1), AA(1), AJo(3), A3o(1) [15 instances, 65.2%]
+      final_table: 66(1), 42s(1), T8o(1), T7o(1), QTs(1), K7o(1), AA(1), AJo(1) [8 instances, 34.8%]
+
+  CALL: 66(1), TT(1), 87s(1), T9s(1), JTs(1), J7o(1), QJo(1), QTo(1), KJo(1), AJo(1), A9o(1)
+    Total: 11 unique combos, 11 instances, median combo frequency: 9.09%
+    By Pot Size:
+      N/A: 66(1), TT(1), 87s(1), T9s(1), JTs(1), J7o(1), QJo(1), QTo(1), KJo(1), AJo(1), A9o(1) [11 instances, 100.0%]
+    By Big Blinds:
+      <1BB: 66(1) [1 instances, 9.1%]
+      1-3BB: TT(1), JTs(1) [2 instances, 18.2%]
+      3-6BB: J7o(1), QJo(1), QTo(1) [3 instances, 27.3%]
+      10BB+: 87s(1), T9s(1), KJo(1), AJo(1), A9o(1) [5 instances, 45.5%]
+    By Tournament Stage:
+      start: 87s(1), T9s(1), J7o(1), QJo(1), QTo(1), AJo(1) [6 instances, 54.5%]
+      final_table: 66(1), TT(1), JTs(1), KJo(1), A9o(1) [5 instances, 45.5%]
+
+  CHECK: 33(1), 77(3), 88(1), 99(2), TT(1), 32s(1), 32o(1), 43s(1), 75o(1), 74s(1), 87s(1), 86s(1), 84o(1), 83o(1), 83s(1), 98o(1), 97o(1), 96s(1), T9s(1), T9o(1), T7o(1), T5o(1), T3o(1), T2s(1), JTs(1), J9o(2), J7o(2), QJo(3), QTo(2), Q9s(1), Q9o(1), Q7s(1), Q7o(1), Q4s(1), Q3o(2), KQo(2), Q2o(1), Q2s(1), KJs(1), KJo(1), KTo(1), K9o(2), K8s(1), K7o(1), K6o(1), K5o(2), AKo(1), AKs(1), AJo(4), A9o(2), A8o(1), A6o(1), A5s(1), A5o(1), A3s(2), A3o(1)
+    Total: 56 unique combos, 73 instances, median combo frequency: 1.37%
+    By Pot Size:
+      N/A: 33(1), 77(3), 88(1), 99(2), TT(1), 32s(1), 32o(1), 43s(1), 75o(1), 74s(1), 87s(1), 86s(1), 84o(1), 83s(1), 83o(1), 98o(1), 97o(1), 96s(1), T9o(1), T9s(1), T7o(1), T5o(1), T3o(1), T2s(1), JTs(1), J9o(2), J7o(2), QJo(3), QTo(2), Q9o(1), Q9s(1), Q7s(1), Q7o(1), Q4s(1), Q3o(2), Q2o(1), KQo(2), Q2s(1), KJo(1), KJs(1), KTo(1), K9o(2), K8s(1), K7o(1), K6o(1), K5o(2), AKo(1), AKs(1), AJo(4), A9o(2), A8o(1), A6o(1), A5s(1), A5o(1), A3o(1), A3s(2) [73 instances, 100.0%]
+    By Big Blinds:
+      N/A: 33(1), 77(3), 88(1), 99(2), TT(1), 32o(1), 32s(1), 43s(1), 75o(1), 74s(1), 87s(1), 86s(1), 84o(1), 83o(1), 83s(1), 98o(1), 97o(1), 96s(1), T9o(1), T9s(1), T7o(1), T5o(1), T3o(1), T2s(1), JTs(1), J9o(2), J7o(2), QJo(3), QTo(2), Q9o(1), Q9s(1), Q7o(1), Q7s(1), Q4s(1), Q3o(2), Q2o(1), Q2s(1), KQo(2), KJo(1), KJs(1), KTo(1), K9o(2), K8s(1), K7o(1), K6o(1), K5o(2), AKs(1), AKo(1), AJo(4), A9o(2), A8o(1), A6o(1), A5s(1), A5o(1), A3o(1), A3s(2) [73 instances, 100.0%]
+    By Tournament Stage:
+      start: 33(1), 77(1), 88(1), 99(2), 32s(1), 75o(1), 74s(1), 87s(1), 86s(1), 83o(1), 98o(1), 97o(1), 96s(1), T9s(1), T9o(1), T5o(1), T3o(1), J9o(1), J7o(1), QJo(3), QTo(2), Q9s(1), Q9o(1), Q4s(1), Q3o(1), KQo(2), Q2o(1), KTo(1), K9o(1), K8s(1), K7o(1), K6o(1), K5o(2), AKo(1), AKs(1), AJo(4), A6o(1), A5o(1), A3s(1) [48 instances, 65.8%]
+      pre_bubble: 43s(1), J9o(1), Q2s(1), A3o(1) [4 instances, 5.5%]
+      final_table: 77(2), TT(1), 32o(1), 84o(1), 83s(1), T7o(1), T2s(1), JTs(1), J7o(1), Q7o(1), Q7s(1), Q3o(1), KJs(1), KJo(1), K9o(1), A9o(2), A8o(1), A5s(1), A3s(1) [21 instances, 28.8%]
+
+================================================================================
+POSITION: BB
+================================================================================
+
+PREFLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 22(3), 33(1), 44(3), 55(5), 66(3), 77(4), 88(4), 99(3), TT(1), JJ(5), QQ(7), KK(4), 62s(1), 76o(1), 86o(1), 83o(1), 97o(1), 96s(1), T8o(1), T7s(1), T7o(2), T4s(1), T3o(1), JTo(4), J9o(1), J8s(2), J8o(1), J7o(1), J7s(2), J3s(1), QJo(4), QJs(2), QTo(1), Q9o(2), Q8s(1), Q7s(1), Q7o(3), Q6o(1), Q4s(3), Q4o(1), Q3s(1), KQo(6), KQs(4), KJo(8), KJs(1), KTo(3), KTs(1), K9o(1), K8s(2), K7o(1), K6s(2), K5s(1), AA(6), AKs(2), AKo(13), AQo(9), AQs(3), AJo(5), AJs(5), ATo(9), ATs(1), A9s(2), A9o(8), A8s(1), A8o(2), A7s(2), A7o(1), A6o(3), A6s(1), A5o(2), A4o(1), A4s(1), A3s(1), A2o(5)
+    Total: 74 unique combos, 200 instances, median combo frequency: 1.00%
+    By Pot Size:
+      OPEN: 22(2), 33(1), 55(1), 66(1), 77(2), 88(2), 99(2), QQ(2), KK(1), 76o(1), 86o(1), 96s(1), T7o(1), T7s(1), T4s(1), T3o(1), JTo(3), J8o(1), J8s(2), J7s(2), J7o(1), QJs(2), QJo(4), Q4o(1), Q4s(3), KQo(3), KQs(3), KJo(4), KJs(1), KTo(1), K8s(1), K7o(1), K6s(2), K5s(1), AA(2), AKs(1), AKo(5), AQo(4), AJs(5), AJo(2), ATs(1), ATo(2), A9o(5), A9s(1), A8s(1), A7s(1), A5o(1), A4s(1), A3s(1), A2o(2) [92 instances, 46.0%]
+      0.5x: 55(1), T8o(1), ATo(1) [3 instances, 1.5%]
+      0.75x: 88(2), JJ(1), QQ(1), Q7s(1), A4o(1) [6 instances, 3.0%]
+      1x: 22(1), JJ(1), QQ(1), 62s(1), 97o(1), T7o(1), Q7o(2), KTo(1), K8s(1), AA(1), AKo(1), A9o(1), A8o(1), A6o(1) [15 instances, 7.5%]
+      1.5x: 77(1), KQo(1), KTs(1), AKo(2), AQo(1), AQs(1), ATo(1), A6s(1) [9 instances, 4.5%]
+      2x: 55(1), 66(1), TT(1), JJ(1), J3s(1), Q3s(1), KQo(1), KJo(2), AA(1), AKo(2), AQo(1), AJo(1), ATo(1), A9o(1), A7s(1) [17 instances, 8.5%]
+      3x+: 44(3), 55(2), 66(1), 77(1), 99(1), JJ(2), QQ(3), KK(3), 83o(1), JTo(1), J9o(1), QTo(1), Q9o(2), Q8s(1), Q7o(1), Q6o(1), KQo(1), KQs(1), KJo(2), KTo(1), K9o(1), AA(2), AKs(1), AKo(3), AQo(3), AQs(2), AJo(2), ATo(4), A9o(1), A9s(1), A8o(1), A7o(1), A6o(2), A5o(1), A2o(3) [58 instances, 29.0%]
+    By Big Blinds:
+      MINRAISE: 22(1), 55(1), 66(1), 77(1), 88(1), 99(1), QQ(2), 97o(1), T8o(1), T7s(1), T7o(1), JTo(2), J8s(1), J8o(1), J7s(1), J3s(1), QJo(1), Q7o(1), KQo(1), KQs(1), KJs(1), KTo(1), K8s(1), AA(2), AKo(4), AQo(1), AJs(3), ATs(1), ATo(1), A9o(4), A8s(1), A2o(1) [43 instances, 21.5%]
+      2.5BB: QJo(1), Q4s(1), KJo(1), ATo(1), A9o(1), A7s(1), A5o(1) [7 instances, 3.5%]
+      3BB: 22(1), 33(1), 77(1), QQ(1), KK(1), Q9o(1), KQs(1), KJo(1), K7o(1), K6s(1), AKs(1), AQs(1), ATo(1) [13 instances, 6.5%]
+      4-5BB: 22(1), 66(1), 62s(1), 76o(1), 83o(1), J7o(1), Q7o(1), Q7s(1), Q6o(1), Q4s(1), KQs(1), KJo(3), KTo(1), KTs(1), AA(1), AKo(1), AQo(1), AJo(2), A4o(1) [22 instances, 11.0%]
+      6-9BB: 55(3), 77(1), 88(1), 99(1), JJ(1), QQ(1), KK(1), 96s(1), T7o(1), T4s(1), T3o(1), J8s(1), QJo(1), Q8s(1), Q4o(1), Q3s(1), KQs(1), KQo(2), KJo(1), K6s(1), K5s(1), AKo(1), AKs(1), AQo(5), AQs(1), A9o(1), A8o(2), A7s(1), A6o(1), A5o(1), A3s(1) [39 instances, 19.5%]
+      10BB+: 44(3), 55(1), 66(1), 77(1), 88(2), 99(1), TT(1), JJ(4), QQ(3), KK(2), 86o(1), JTo(2), J9o(1), J7s(1), QJo(1), QJs(2), QTo(1), Q9o(1), Q7o(1), Q4s(1), KQo(3), KJo(2), KTo(1), K9o(1), K8s(1), AA(3), AKo(7), AQo(2), AQs(1), AJs(2), AJo(3), ATo(6), A9s(2), A9o(2), A7o(1), A6s(1), A6o(2), A4s(1), A2o(4) [76 instances, 38.0%]
+    By Tournament Stage:
+      start: 22(1), 44(2), 55(3), 66(2), 88(3), 99(1), TT(1), JJ(4), QQ(4), KK(3), 62s(1), 96s(1), T8o(1), JTo(2), J9o(1), J8s(2), J7s(1), QJo(2), Q9o(1), Q7o(2), Q7s(1), Q3s(1), KQo(5), KQs(2), KJs(1), KJo(2), KTo(1), KTs(1), K8s(2), K7o(1), AA(4), AKs(1), AKo(8), AQo(3), AJo(5), AJs(4), ATo(7), A9o(3), A8o(2), A7o(1), A7s(1), A6s(1), A5o(1), A4s(1), A3s(1), A2o(2) [100 instances, 50.0%]
+      pre_bubble: 77(1), Q4s(1), KJo(1), AQo(1), A5o(1) [5 instances, 2.5%]
+      bubble: J7s(1), A4o(1) [2 instances, 1.0%]
+      final_table: 22(2), 33(1), 44(1), 55(2), 66(1), 77(3), 88(1), 99(2), JJ(1), QQ(3), KK(1), 76o(1), 86o(1), 83o(1), 97o(1), T7s(1), T7o(2), T4s(1), T3o(1), JTo(2), J8o(1), J7o(1), J3s(1), QJo(2), QJs(2), QTo(1), Q9o(1), Q8s(1), Q7o(1), Q6o(1), Q4s(2), Q4o(1), KQs(2), KQo(1), KJo(5), KTo(2), K9o(1), K6s(2), K5s(1), AA(2), AKo(5), AKs(1), AQs(3), AQo(5), AJs(1), ATs(1), ATo(2), A9o(5), A9s(2), A8s(1), A7s(1), A6o(3), A2o(3) [93 instances, 46.5%]
+
+  CALL: 33(3), 44(3), 55(1), 77(1), 88(7), 99(5), TT(6), JJ(5), QQ(8), KK(4), 32s(1), 54s(1), 53o(1), 65o(3), 64o(3), 64s(1), 76s(4), 76o(2), 74o(1), 87o(1), 86s(2), 86o(3), 85o(1), 84s(1), 82o(1), 82s(1), 98s(1), 98o(2), 97o(2), 96o(1), 96s(1), 95o(1), 93s(1), T9o(1), T9s(1), T8o(4), T7s(1), T7o(2), T6s(1), T5o(3), T3o(1), T2s(1), JTo(3), JTs(2), J9s(1), J8o(6), J7o(2), J7s(3), J6o(1), J5o(1), J3o(1), J2s(1), J2o(2), QJo(3), QJs(4), QTs(1), QTo(4), Q9s(1), Q9o(4), Q8s(1), Q6o(2), Q6s(2), Q4s(2), KQo(5), KQs(3), KJo(7), KTs(1), KTo(3), K9s(1), K9o(3), K8s(2), K8o(3), K7s(1), K7o(1), K6o(6), K5o(1), K4o(1), K4s(3), AA(1), AKs(3), AKo(14), AQo(10), AJs(2), AJo(7), ATo(9), A9s(3), A9o(7), A8s(1), A8o(10), A7o(3), A6s(2), A6o(3), A5s(1), A5o(3), A4o(1), A3s(2), A3o(5), A2o(2), A2s(2)
+    Total: 99 unique combos, 273 instances, median combo frequency: 0.73%
+    By Pot Size:
+      N/A: 33(3), 44(3), 55(1), 77(1), 88(7), 99(5), TT(6), JJ(5), QQ(8), KK(4), 32s(1), 54s(1), 53o(1), 65o(3), 64o(3), 64s(1), 76s(4), 76o(2), 74o(1), 87o(1), 86s(2), 86o(3), 85o(1), 84s(1), 82s(1), 82o(1), 98s(1), 98o(2), 97o(2), 96s(1), 96o(1), 95o(1), 93s(1), T9s(1), T9o(1), T8o(4), T7o(2), T7s(1), T6s(1), T5o(3), T3o(1), T2s(1), JTs(2), JTo(3), J9s(1), J8o(6), J7o(2), J7s(3), J6o(1), J5o(1), J3o(1), J2s(1), J2o(2), QJo(3), QJs(4), QTs(1), QTo(4), Q9s(1), Q9o(4), Q8s(1), Q6s(2), Q6o(2), Q4s(2), KQo(5), KQs(3), KJo(7), KTs(1), KTo(3), K9s(1), K9o(3), K8o(3), K8s(2), K7o(1), K7s(1), K6o(6), K5o(1), K4o(1), AA(1), K4s(3), AKs(3), AKo(14), AQo(10), AJs(2), AJo(7), ATo(9), A9s(3), A9o(7), A8o(10), A8s(1), A7o(3), A6s(2), A6o(3), A5s(1), A5o(3), A4o(1), A3o(5), A3s(2), A2s(2), A2o(2) [273 instances, 100.0%]
+    By Big Blinds:
+      1BB_CALL: 55(1), 88(2), 99(2), JJ(2), QQ(2), 32s(1), 53o(1), 65o(3), 64o(3), 76s(3), 76o(2), 74o(1), 87o(1), 86s(1), 86o(2), 85o(1), 84s(1), 82o(1), 82s(1), 98s(1), 96s(1), 93s(1), T9o(1), T8o(3), T7s(1), T7o(1), T6s(1), T5o(2), T3o(1), T2s(1), JTo(1), JTs(1), J9s(1), J8o(1), J7o(2), J7s(2), J5o(1), J2s(1), J2o(2), QJs(1), QTo(2), Q9o(2), Q6o(1), Q6s(2), Q4s(2), KQo(2), KQs(1), KJo(2), KTo(1), K9o(1), K8s(1), K8o(2), K7s(1), K6o(4), K5o(1), K4s(1), AKs(2), AKo(1), AQo(2), AJo(1), A9o(2), A9s(1), A8o(3), A7o(1), A6o(1), A6s(1), A5s(1), A4o(1), A3s(2), A3o(2) [105 instances, 38.5%]
+      2BB_CALL: TT(2), 54s(1), 64s(1), 76s(1), 86o(1), 86s(1), 98o(1), 97o(2), 95o(1), T9s(1), T7o(1), J8o(1), Q9o(1), KJo(1), K9s(1), K8s(1), K7o(1), K6o(1), K4s(2), AKo(2), AQo(1), A8s(1) [26 instances, 9.5%]
+      3-4BB_CALL: 33(1), 44(1), JJ(2), QQ(1), KK(1), 98o(1), 96o(1), T5o(1), J8o(2), J6o(1), J3o(1), QJs(1), QJo(2), QTo(1), Q9s(1), Q9o(1), KQo(1), KJo(1), KTo(1), K6o(1), AKo(2), AQo(1), AJo(1), A9s(1), A9o(2), A8o(1), A7o(1), A5o(2), A3o(1) [35 instances, 12.8%]
+      5BB+_CALL: 33(2), 44(2), 77(1), 88(5), 99(3), TT(4), JJ(1), QQ(5), KK(3), T8o(1), JTo(2), JTs(1), J8o(2), J7s(1), QJs(2), QJo(1), QTo(1), QTs(1), Q8s(1), Q6o(1), KQo(2), KQs(2), KJo(3), KTs(1), KTo(1), K9o(2), K8o(1), AA(1), K4o(1), AKo(9), AKs(1), AQo(6), AJo(5), AJs(2), ATo(9), A9o(3), A9s(1), A8o(6), A7o(1), A6s(1), A6o(2), A5o(1), A3o(2), A2o(2), A2s(2) [107 instances, 39.2%]
+    By Tournament Stage:
+      start: 33(2), 44(3), 55(1), 77(1), 88(4), 99(2), TT(3), JJ(3), QQ(3), KK(3), 32s(1), 54s(1), 53o(1), 65o(2), 64s(1), 64o(1), 76s(4), 76o(2), 74o(1), 87o(1), 86o(2), 85o(1), 84s(1), 82s(1), 98o(1), 97o(1), 96o(1), 96s(1), 93s(1), T9s(1), T9o(1), T7o(1), T5o(2), JTo(1), JTs(1), J8o(2), J7o(2), J7s(1), J3o(1), QJs(2), QJo(2), QTo(4), QTs(1), Q9o(1), Q6o(2), Q6s(1), Q4s(2), KQo(3), KQs(2), KJo(2), KTs(1), KTo(2), K9o(1), K8s(1), K8o(2), K7s(1), K6o(3), K4s(2), AA(1), AKo(6), AKs(2), AQo(4), AJo(3), AJs(2), ATo(6), A9o(6), A9s(2), A8s(1), A8o(4), A7o(1), A6o(1), A6s(1), A5s(1), A4o(1), A3s(1), A3o(2), A2o(1), A2s(1) [145 instances, 53.1%]
+      pre_bubble: 65o(1), 98o(1), 97o(1), T2s(1), J9s(1), QJs(1), K9o(1), K6o(1), AKo(1), A6o(1) [10 instances, 3.7%]
+      bubble: T7o(1) [1 instances, 0.4%]
+      final_table: 33(1), 88(3), 99(3), TT(3), JJ(2), QQ(5), KK(1), 64o(2), 86s(2), 86o(1), 82o(1), 98s(1), 95o(1), T8o(4), T7s(1), T6s(1), T5o(1), T3o(1), JTs(1), JTo(2), J8o(4), J7s(2), J6o(1), J5o(1), J2s(1), J2o(2), QJo(1), QJs(1), Q9s(1), Q9o(3), Q8s(1), Q6s(1), KQo(2), KQs(1), KJo(5), KTo(1), K9o(1), K9s(1), K8o(1), K8s(1), K7o(1), K6o(2), K5o(1), K4o(1), K4s(1), AKo(7), AKs(1), AQo(6), AJo(4), ATo(3), A9o(1), A9s(1), A8o(6), A7o(2), A6s(1), A6o(1), A5o(3), A3o(3), A3s(1), A2o(1), A2s(1) [117 instances, 42.9%]
+
+  CHECK: 22(1), 32o(2), 43o(1), 42o(1), 65o(2), 62s(1), 74o(1), 83o(1), 83s(1), 98o(1), 96o(1), 95s(1), 95o(1), 93s(1), T9s(1), T9o(2), T7s(1), T7o(2), T5o(1), T4o(1), T2s(1), J7o(1), J3o(1), J2o(2), Q9o(1), Q6o(1), Q4o(1), Q3o(1), KQo(1), Q2s(1), KTo(1), K9o(1), K8o(1), K6o(1), K4o(1), AKo(1), AJo(1), A5o(1)
+    Total: 38 unique combos, 43 instances, median combo frequency: 2.33%
+    By Pot Size:
+      N/A: 22(1), 32o(2), 43o(1), 42o(1), 65o(2), 62s(1), 74o(1), 83s(1), 83o(1), 98o(1), 96o(1), 95s(1), 95o(1), 93s(1), T9o(2), T9s(1), T7s(1), T7o(2), T5o(1), T4o(1), T2s(1), J7o(1), J3o(1), J2o(2), Q9o(1), Q6o(1), Q4o(1), Q3o(1), Q2s(1), KQo(1), KTo(1), K9o(1), K8o(1), K6o(1), K4o(1), AKo(1), AJo(1), A5o(1) [43 instances, 100.0%]
+    By Big Blinds:
+      N/A: 22(1), 32o(2), 43o(1), 42o(1), 65o(2), 62s(1), 74o(1), 83o(1), 83s(1), 98o(1), 96o(1), 95s(1), 95o(1), 93s(1), T9o(2), T9s(1), T7o(2), T7s(1), T5o(1), T4o(1), T2s(1), J7o(1), J3o(1), J2o(2), Q9o(1), Q6o(1), Q4o(1), Q3o(1), Q2s(1), KQo(1), KTo(1), K9o(1), K8o(1), K6o(1), K4o(1), AKo(1), AJo(1), A5o(1) [43 instances, 100.0%]
+    By Tournament Stage:
+      start: 22(1), 32o(2), 42o(1), 98o(1), 96o(1), 95o(1), 93s(1), T9o(2), T5o(1), T4o(1), T2s(1), J3o(1), J2o(2), Q4o(1), Q3o(1), Q2s(1), KQo(1), KTo(1), K8o(1), K6o(1), K4o(1) [24 instances, 55.8%]
+      pre_bubble: T7s(1) [1 instances, 2.3%]
+      final_table: 43o(1), 65o(2), 62s(1), 74o(1), 83s(1), 83o(1), 95s(1), T9s(1), T7o(2), J7o(1), Q9o(1), Q6o(1), K9o(1), AKo(1), AJo(1), A5o(1) [18 instances, 41.9%]
+
+FLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 42o(1), 65o(3), 86o(1), 82s(1), 97o(1), T9o(1), T7s(1), T7o(1), JTs(1), QTo(1), Q4s(1), KQs(1), KTo(1), AQo(1), ATo(1), A7o(1)
+    Total: 16 unique combos, 18 instances, median combo frequency: 5.56%
+    By Pot Size:
+      0.5x: QTo(1), KQs(1), ATo(1) [3 instances, 16.7%]
+      0.75x: 65o(1), 82s(1), 97o(1) [3 instances, 16.7%]
+      1x: 86o(1), T7s(1), JTs(1), KTo(1), AQo(1) [5 instances, 27.8%]
+      1.5x: 65o(1), A7o(1) [2 instances, 11.1%]
+      2x: T9o(1), Q4s(1) [2 instances, 11.1%]
+      3x+: 42o(1), 65o(1), T7o(1) [3 instances, 16.7%]
+    By Big Blinds:
+      1-3BB: ATo(1) [1 instances, 5.6%]
+      3-6BB: 65o(1), 82s(1) [2 instances, 11.1%]
+      6-10BB: 86o(1), 97o(1), AQo(1), A7o(1) [4 instances, 22.2%]
+      10BB+: 42o(1), 65o(2), T9o(1), T7o(1), T7s(1), JTs(1), QTo(1), Q4s(1), KQs(1), KTo(1) [11 instances, 61.1%]
+    By Tournament Stage:
+      start: 42o(1), 65o(1), 86o(1), 82s(1), 97o(1), T9o(1), JTs(1), QTo(1), Q4s(1), KQs(1), KTo(1) [11 instances, 61.1%]
+      final_table: 65o(2), T7s(1), T7o(1), AQo(1), ATo(1), A7o(1) [7 instances, 38.9%]
+
+  BET: 22(1), 88(2), TT(1), QQ(1), KK(1), 43o(1), 53o(1), 65o(1), 64o(1), 74o(2), 83o(1), 98s(1), 97o(1), 95o(1), T9o(1), T8o(1), JTo(1), J9s(1), J7s(1), QTo(1), Q9o(1), K9s(1), K8o(1), K6o(1), AA(2), AKo(1), AQo(1), AJo(1), AJs(3), ATs(1), A9o(1), A8s(2), A6s(1), A5o(1), A3s(1)
+    Total: 35 unique combos, 41 instances, median combo frequency: 2.44%
+    By Pot Size:
+      <0.33x: TT(1), 83o(1), 95o(1), AKo(1), A9o(1), A3s(1) [6 instances, 14.6%]
+      0.33x: 64o(1), Q9o(1), A5o(1) [3 instances, 7.3%]
+      0.5x: 88(1), QQ(1), KK(1), K6o(1), AA(1), AQo(1), AJs(1), AJo(1), ATs(1), A8s(2), A6s(1) [12 instances, 29.3%]
+      0.75x: 97o(1) [1 instances, 2.4%]
+      1x: 88(1), 65o(1), T9o(1), T8o(1), QTo(1), K8o(1), AA(1), AJs(2) [9 instances, 22.0%]
+      1.5x: 74o(1), 98s(1), K9s(1) [3 instances, 7.3%]
+      2x: 53o(1), 74o(1), J7s(1) [3 instances, 7.3%]
+      3x+: 22(1), 43o(1), JTo(1), J9s(1) [4 instances, 9.8%]
+    By Big Blinds:
+      <1BB: A9o(1) [1 instances, 2.4%]
+      1-3BB: 88(2), TT(1), 65o(1), 64o(1), 83o(1), 95o(1), T9o(1), J7s(1), Q9o(1), K6o(1), AKo(1), AJs(2), AJo(1), ATs(1), A8s(1), A6s(1), A5o(1), A3s(1) [20 instances, 48.8%]
+      3-6BB: 22(1), QQ(1), 43o(1), 74o(1), 98s(1), 97o(1), T8o(1), QTo(1), K8o(1), AQo(1), A8s(1) [11 instances, 26.8%]
+      6-10BB: KK(1), 53o(1), 74o(1), K9s(1) [4 instances, 9.8%]
+      10BB+: JTo(1), J9s(1), AA(2), AJs(1) [5 instances, 12.2%]
+    By Tournament Stage:
+      start: 22(1), 88(2), TT(1), QQ(1), KK(1), 53o(1), 74o(1), T9o(1), JTo(1), J7s(1), QTo(1), K8o(1), AA(1), AQo(1), AJs(3), A8s(1), A5o(1), A3s(1) [21 instances, 51.2%]
+      pre_bubble: 97o(1), J9s(1), K6o(1) [3 instances, 7.3%]
+      final_table: 43o(1), 65o(1), 64o(1), 74o(1), 83o(1), 98s(1), 95o(1), T8o(1), Q9o(1), K9s(1), AA(1), AKo(1), AJo(1), ATs(1), A9o(1), A8s(1), A6s(1) [17 instances, 41.5%]
+
+  CALL: 55(1), 77(1), KK(1), 32o(1), 64o(1), 76s(2), 76o(1), 74o(1), 87o(1), 86s(1), 84s(1), 98o(1), 96s(1), 95o(1), 93s(1), T9o(1), T8o(1), T7o(1), T6s(1), T4o(1), T3o(1), T2s(2), JTo(1), J7s(1), J2o(1), QJo(1), QTo(2), Q9o(2), Q6s(1), KQo(1), KJo(1), KTo(1), K9o(1), K8o(1), K8s(1), K6o(2), K4s(1), AA(1), AKo(4), AJs(1), A9o(1), A9s(1), A8o(1), A8s(1), A5s(1), A5o(1), A3o(1)
+    Total: 47 unique combos, 55 instances, median combo frequency: 1.82%
+    By Pot Size:
+      N/A: 55(1), 77(1), KK(1), 32o(1), 64o(1), 76s(2), 76o(1), 74o(1), 87o(1), 86s(1), 84s(1), 98o(1), 96s(1), 95o(1), 93s(1), T9o(1), T8o(1), T7o(1), T6s(1), T4o(1), T3o(1), T2s(2), JTo(1), J7s(1), J2o(1), QJo(1), QTo(2), Q9o(2), Q6s(1), KQo(1), KJo(1), KTo(1), K9o(1), K8o(1), K8s(1), K6o(2), K4s(1), AA(1), AKo(4), AJs(1), A9s(1), A9o(1), A8o(1), A8s(1), A5s(1), A5o(1), A3o(1) [55 instances, 100.0%]
+    By Big Blinds:
+      <1BB: 64o(1), T8o(1), T7o(1), A8s(1) [4 instances, 7.3%]
+      1-3BB: 55(1), 32o(1), 76o(1), 87o(1), 98o(1), 96s(1), 95o(1), T6s(1), T4o(1), T3o(1), T2s(1), JTo(1), QJo(1), KQo(1), KJo(1), KTo(1), K9o(1), K8s(1), K8o(1), A9o(1), A8o(1), A5o(1) [22 instances, 40.0%]
+      3-6BB: KK(1), 76s(1), 74o(1), 84s(1), 93s(1), T9o(1), T2s(1), J7s(1), J2o(1), Q9o(2), Q6s(1), K6o(2), K4s(1), AKo(2), A5s(1), A3o(1) [19 instances, 34.5%]
+      6-10BB: QTo(1), AKo(1) [2 instances, 3.6%]
+      10BB+: 77(1), 76s(1), 86s(1), QTo(1), AA(1), AKo(1), AJs(1), A9s(1) [8 instances, 14.5%]
+    By Tournament Stage:
+      start: 55(1), KK(1), 32o(1), 76s(2), 76o(1), 87o(1), 84s(1), 98o(1), 96s(1), 93s(1), T9o(1), T7o(1), T4o(1), T2s(1), QTo(2), Q6s(1), KQo(1), KJo(1), K8o(1), K8s(1), K6o(1), K4s(1), AKo(2), AJs(1), A9o(1), A9s(1), A8o(1), A5s(1), A3o(1) [32 instances, 58.2%]
+      pre_bubble: 77(1), T2s(1), K6o(1) [3 instances, 5.5%]
+      bubble: J7s(1) [1 instances, 1.8%]
+      final_table: 64o(1), 74o(1), 86s(1), 95o(1), T8o(1), T6s(1), T3o(1), JTo(1), J2o(1), QJo(1), Q9o(2), KTo(1), K9o(1), AA(1), AKo(2), A8s(1), A5o(1) [19 instances, 34.5%]
+
+  CHECK: 22(1), 55(1), 66(1), 99(1), 32o(1), 42o(1), 54s(1), 65o(4), 64s(1), 62s(1), 76s(3), 76o(2), 86o(2), 86s(1), 85o(1), 84s(1), 83s(1), 83o(1), 82s(1), 98o(2), 96o(1), 96s(1), 95s(1), 95o(1), 93s(2), T9o(2), T9s(2), T8o(1), T7o(2), T7s(2), T6s(1), T5o(3), T4o(1), T2s(1), JTo(2), JTs(1), J8s(1), J7o(3), J7s(1), J3o(2), J2o(3), QJo(2), QTo(2), Q9o(3), Q6s(1), Q6o(1), Q4s(3), Q4o(1), Q3o(1), KQo(2), KQs(1), Q2s(1), KJo(1), KJs(1), KTo(1), K9o(2), K8o(2), K8s(2), K7s(1), K6o(2), K4o(1), K4s(1), AKs(1), AKo(3), AJs(1), A9o(2), A9s(1), A8o(2), A7o(1), A6o(1), A5s(1), A5o(1), A4o(1), A3o(2)
+    Total: 74 unique combos, 111 instances, median combo frequency: 0.90%
+    By Pot Size:
+      N/A: 22(1), 55(1), 66(1), 99(1), 32o(1), 42o(1), 54s(1), 65o(4), 64s(1), 62s(1), 76s(3), 76o(2), 86o(2), 86s(1), 85o(1), 84s(1), 83s(1), 83o(1), 82s(1), 98o(2), 96s(1), 96o(1), 95s(1), 95o(1), 93s(2), T9s(2), T9o(2), T8o(1), T7s(2), T7o(2), T6s(1), T5o(3), T4o(1), T2s(1), JTs(1), JTo(2), J8s(1), J7o(3), J7s(1), J3o(2), J2o(3), QJo(2), QTo(2), Q9o(3), Q6s(1), Q6o(1), Q4s(3), Q4o(1), Q3o(1), KQo(2), KQs(1), Q2s(1), KJo(1), KJs(1), KTo(1), K9o(2), K8o(2), K8s(2), K7s(1), K6o(2), K4o(1), K4s(1), AKs(1), AKo(3), AJs(1), A9s(1), A9o(2), A8o(2), A7o(1), A6o(1), A5s(1), A5o(1), A4o(1), A3o(2) [111 instances, 100.0%]
+    By Big Blinds:
+      N/A: 22(1), 55(1), 66(1), 99(1), 32o(1), 42o(1), 54s(1), 65o(4), 64s(1), 62s(1), 76s(3), 76o(2), 86s(1), 86o(2), 85o(1), 84s(1), 83o(1), 83s(1), 82s(1), 98o(2), 96s(1), 96o(1), 95s(1), 95o(1), 93s(2), T9o(2), T9s(2), T8o(1), T7o(2), T7s(2), T6s(1), T5o(3), T4o(1), T2s(1), JTs(1), JTo(2), J8s(1), J7s(1), J7o(3), J3o(2), J2o(3), QJo(2), QTo(2), Q9o(3), Q6o(1), Q6s(1), Q4s(3), Q4o(1), Q3o(1), Q2s(1), KQo(2), KQs(1), KJo(1), KJs(1), KTo(1), K9o(2), K8s(2), K8o(2), K7s(1), K6o(2), K4o(1), K4s(1), AKs(1), AKo(3), AJs(1), A9s(1), A9o(2), A8o(2), A7o(1), A6o(1), A5s(1), A5o(1), A4o(1), A3o(2) [111 instances, 100.0%]
+    By Tournament Stage:
+      start: 22(1), 55(1), 66(1), 99(1), 32o(1), 42o(1), 54s(1), 65o(2), 64s(1), 76s(3), 76o(2), 86o(1), 85o(1), 84s(1), 82s(1), 98o(2), 96s(1), 96o(1), 95o(1), 93s(2), T9o(2), T9s(1), T5o(3), T4o(1), JTo(1), JTs(1), J8s(1), J7o(2), J3o(2), J2o(2), QJo(1), QTo(2), Q9o(1), Q6s(1), Q4o(1), Q4s(2), Q3o(1), Q2s(1), KQo(2), KJo(1), KJs(1), KTo(1), K9o(1), K8s(2), K8o(2), K7s(1), K6o(2), K4o(1), K4s(1), AKs(1), AKo(2), AJs(1), A9o(2), A9s(1), A8o(2), A6o(1), A5s(1), A4o(1), A3o(2) [81 instances, 73.0%]
+      pre_bubble: 65o(1), T7s(1), T2s(1) [3 instances, 2.7%]
+      bubble: J7s(1) [1 instances, 0.9%]
+      final_table: 65o(1), 62s(1), 86s(1), 86o(1), 83o(1), 83s(1), 95s(1), T9s(1), T8o(1), T7o(2), T7s(1), T6s(1), JTo(1), J7o(1), J2o(1), QJo(1), Q9o(2), Q6o(1), Q4s(1), KQs(1), K9o(1), AKo(1), A7o(1), A5o(1) [26 instances, 23.4%]
+
+TURN:
+--------------------------------------------------------------------------------
+
+  RAISE: 32o(1), T4o(1), QTo(1), KQo(1)
+    Total: 4 unique combos, 4 instances, median combo frequency: 25.00%
+    By Pot Size:
+      0.5x: 32o(1) [1 instances, 25.0%]
+      0.75x: T4o(1), KQo(1) [2 instances, 50.0%]
+      1x: QTo(1) [1 instances, 25.0%]
+    By Big Blinds:
+      1-3BB: 32o(1) [1 instances, 25.0%]
+      3-6BB: T4o(1) [1 instances, 25.0%]
+      10BB+: QTo(1), KQo(1) [2 instances, 50.0%]
+    By Tournament Stage:
+      start: 32o(1), T4o(1), QTo(1), KQo(1) [4 instances, 100.0%]
+
+  BET: 88(2), 99(1), TT(1), 32o(1), 86o(1), 97o(1), 96o(1), 95o(1), T9s(1), T9o(1), T7o(1), J7s(2), J3o(1), J2o(1), Q9o(1), Q6o(1), Q4s(2), KQo(1), KQs(1), KJs(1), KTo(1), AKo(2), AJo(1), AJs(1), ATs(1), ATo(1), A9o(1), A8o(1), A5o(1), A4o(1), A3s(1)
+    Total: 31 unique combos, 35 instances, median combo frequency: 2.86%
+    By Pot Size:
+      <0.33x: TT(1), 97o(1), T9s(1), T9o(1), AKo(1), AJo(1), AJs(1), A3s(1) [8 instances, 22.9%]
+      0.33x: 88(1), Q4s(2), KQs(1) [4 instances, 11.4%]
+      0.5x: 88(1), 99(1), 86o(1), J7s(1), ATs(1), ATo(1), A9o(1), A5o(1) [8 instances, 22.9%]
+      0.75x: 95o(1), J7s(1), A4o(1) [3 instances, 8.6%]
+      1x: J2o(1), Q9o(1), KJs(1), KTo(1), AKo(1), A8o(1) [6 instances, 17.1%]
+      1.5x: 32o(1), KQo(1) [2 instances, 5.7%]
+      2x: 96o(1), T7o(1), J3o(1), Q6o(1) [4 instances, 11.4%]
+    By Big Blinds:
+      1-3BB: 88(1), 99(1), TT(1), 32o(1), 86o(1), 97o(1), 95o(1), T9s(1), T7o(1), J7s(1), J2o(1), Q4s(2), KQo(1), KQs(1), AKo(1), AJs(1), AJo(1), A3s(1) [19 instances, 54.3%]
+      3-6BB: 88(1), 96o(1), T9o(1), J3o(1), Q9o(1), Q6o(1), KJs(1), AKo(1), ATo(1), A9o(1), A8o(1), A5o(1), A4o(1) [13 instances, 37.1%]
+      6-10BB: J7s(1), KTo(1), ATs(1) [3 instances, 8.6%]
+    By Tournament Stage:
+      start: 88(2), 99(1), TT(1), 32o(1), 96o(1), 95o(1), T9o(1), T9s(1), J7s(1), J3o(1), J2o(1), Q9o(1), Q4s(1), KQo(1), KJs(1), AKo(1), AJs(1), A9o(1), A8o(1), A5o(1), A4o(1), A3s(1) [23 instances, 65.7%]
+      pre_bubble: 97o(1) [1 instances, 2.9%]
+      bubble: J7s(1) [1 instances, 2.9%]
+      final_table: 86o(1), T7o(1), Q6o(1), Q4s(1), KQs(1), KTo(1), AKo(1), AJo(1), ATs(1), ATo(1) [10 instances, 28.6%]
+
+  CALL: 55(1), 88(1), 62s(1), 76s(1), 87o(1), 86o(1), 84s(1), 82s(1), 98o(1), 96s(1), 95o(1), T9o(1), T9s(1), T8o(1), T7o(1), T6s(1), T3o(1), T2s(2), J7o(1), J7s(1), J3o(2), J2o(2), KJo(1), K9o(1), K8o(1), K8s(2), K6o(2), K4o(1), K4s(1), AKs(1), AKo(1), AJs(2), A9s(1), A6o(1), A5o(1), A3o(2)
+    Total: 36 unique combos, 43 instances, median combo frequency: 2.33%
+    By Pot Size:
+      N/A: 55(1), 88(1), 62s(1), 76s(1), 87o(1), 86o(1), 84s(1), 82s(1), 98o(1), 96s(1), 95o(1), T9s(1), T9o(1), T8o(1), T7o(1), T6s(1), T3o(1), T2s(2), J7o(1), J7s(1), J3o(2), J2o(2), KJo(1), K9o(1), K8o(1), K8s(2), K6o(2), K4o(1), K4s(1), AKo(1), AKs(1), AJs(2), A9s(1), A6o(1), A5o(1), A3o(2) [43 instances, 100.0%]
+    By Big Blinds:
+      <1BB: J3o(1) [1 instances, 2.3%]
+      1-3BB: 62s(1), 87o(1), T9s(1), T8o(1), T6s(1), T3o(1), T2s(1), J2o(1), KJo(1), K9o(1), K8s(1), K4o(1), AKs(1), AJs(2), A3o(1) [16 instances, 37.2%]
+      3-6BB: 55(1), 88(1), 98o(1), 96s(1), 95o(1), T7o(1), J7o(1), J7s(1), J3o(1), K8s(1), K8o(1), A6o(1), A5o(1) [13 instances, 30.2%]
+      6-10BB: 76s(1), 86o(1), T9o(1), K6o(1), K4s(1) [5 instances, 11.6%]
+      10BB+: 84s(1), 82s(1), T2s(1), J2o(1), K6o(1), AKo(1), A9s(1), A3o(1) [8 instances, 18.6%]
+    By Tournament Stage:
+      start: 55(1), 88(1), 76s(1), 87o(1), 86o(1), 84s(1), 82s(1), 98o(1), 96s(1), 95o(1), T9o(1), T2s(1), J7o(1), J3o(2), J2o(1), KJo(1), K8s(2), K8o(1), K6o(1), K4s(1), K4o(1), AKs(1), AJs(2), A9s(1), A6o(1), A3o(2) [30 instances, 69.8%]
+      pre_bubble: T2s(1), K6o(1) [2 instances, 4.7%]
+      bubble: J7s(1) [1 instances, 2.3%]
+      final_table: 62s(1), T9s(1), T8o(1), T7o(1), T6s(1), T3o(1), J2o(1), K9o(1), AKo(1), A5o(1) [10 instances, 23.3%]
+
+  CHECK: 22(1), 55(1), 66(1), 54s(1), 65o(3), 64s(1), 62s(1), 76s(2), 76o(2), 86o(1), 85o(1), 84s(1), 83s(1), 83o(2), 82s(1), 98o(2), 97o(1), 96s(1), 95s(1), 95o(1), 93s(2), T9o(1), T8o(1), T7s(1), T6s(1), T5o(3), T4o(1), T2s(1), JTo(2), J8s(1), J7o(3), J2o(1), QJo(2), QTo(1), Q9o(2), Q6s(1), Q4o(1), Q3o(1), KQo(1), Q2s(1), KJo(1), KTo(1), K9o(2), K8o(1), K8s(2), K7s(1), K6o(3), K4s(1), AJs(1), A9o(1), A9s(1), A8o(1), A8s(1), A6o(1), A5o(1), A3o(2)
+    Total: 56 unique combos, 75 instances, median combo frequency: 1.33%
+    By Pot Size:
+      N/A: 22(1), 55(1), 66(1), 54s(1), 65o(3), 64s(1), 62s(1), 76s(2), 76o(2), 86o(1), 85o(1), 84s(1), 83o(2), 83s(1), 82s(1), 98o(2), 97o(1), 96s(1), 95s(1), 95o(1), 93s(2), T9o(1), T8o(1), T7s(1), T6s(1), T5o(3), T4o(1), T2s(1), JTo(2), J8s(1), J7o(3), J2o(1), QJo(2), QTo(1), Q9o(2), Q6s(1), Q4o(1), Q3o(1), KQo(1), Q2s(1), KJo(1), KTo(1), K9o(2), K8s(2), K8o(1), K7s(1), K6o(3), K4s(1), AJs(1), A9s(1), A9o(1), A8s(1), A8o(1), A6o(1), A5o(1), A3o(2) [75 instances, 100.0%]
+    By Big Blinds:
+      N/A: 22(1), 55(1), 66(1), 54s(1), 65o(3), 64s(1), 62s(1), 76s(2), 76o(2), 86o(1), 85o(1), 84s(1), 83o(2), 83s(1), 82s(1), 98o(2), 97o(1), 96s(1), 95s(1), 95o(1), 93s(2), T9o(1), T8o(1), T7s(1), T6s(1), T5o(3), T4o(1), T2s(1), JTo(2), J8s(1), J7o(3), J2o(1), QJo(2), QTo(1), Q9o(2), Q6s(1), Q4o(1), Q3o(1), Q2s(1), KQo(1), KJo(1), KTo(1), K9o(2), K8o(1), K8s(2), K7s(1), K6o(3), K4s(1), AJs(1), A9o(1), A9s(1), A8o(1), A8s(1), A6o(1), A5o(1), A3o(2) [75 instances, 100.0%]
+    By Tournament Stage:
+      start: 22(1), 55(1), 66(1), 54s(1), 65o(2), 64s(1), 76s(2), 76o(2), 86o(1), 85o(1), 84s(1), 82s(1), 98o(2), 97o(1), 96s(1), 93s(2), T9o(1), T5o(3), T4o(1), JTo(1), J8s(1), J7o(2), QJo(1), QTo(1), Q6s(1), Q4o(1), Q3o(1), Q2s(1), KQo(1), KJo(1), KTo(1), K9o(1), K8o(1), K8s(2), K7s(1), K6o(2), K4s(1), AJs(1), A9o(1), A9s(1), A8s(1), A8o(1), A6o(1), A3o(2) [55 instances, 73.3%]
+      pre_bubble: 65o(1), T7s(1), T2s(1), K6o(1) [4 instances, 5.3%]
+      final_table: 62s(1), 83s(1), 83o(2), 95s(1), 95o(1), T8o(1), T6s(1), JTo(1), J7o(1), J2o(1), QJo(1), Q9o(2), K9o(1), A5o(1) [16 instances, 21.3%]
+
+RIVER:
+--------------------------------------------------------------------------------
+
+  RAISE: 32o(1)
+    Total: 1 unique combos, 1 instances, median combo frequency: 100.00%
+    By Pot Size:
+      0.75x: 32o(1) [1 instances, 100.0%]
+    By Big Blinds:
+      6-10BB: 32o(1) [1 instances, 100.0%]
+    By Tournament Stage:
+      start: 32o(1) [1 instances, 100.0%]
+
+  BET: 88(1), 99(1), TT(1), 76o(1), 83o(1), 96o(1), 95o(1), T8o(1), T2s(1), J7o(2), J2o(1), Q6s(1), KJs(1), KTo(1), AKo(1), A9o(1), A8s(1), A4o(1), A3s(1)
+    Total: 19 unique combos, 20 instances, median combo frequency: 5.00%
+    By Pot Size:
+      <0.33x: 88(1), 99(1), TT(1), 95o(1), T2s(1), J7o(1), KTo(1), A9o(1), A4o(1), A3s(1) [10 instances, 50.0%]
+      0.33x: AKo(1) [1 instances, 5.0%]
+      0.5x: T8o(1), J2o(1), Q6s(1), KJs(1), A8s(1) [5 instances, 25.0%]
+      1x: 96o(1) [1 instances, 5.0%]
+      2x: 76o(1), J7o(1) [2 instances, 10.0%]
+      3x+: 83o(1) [1 instances, 5.0%]
+    By Big Blinds:
+      1-3BB: 88(1), 99(1), TT(1), 95o(1), J7o(2), KTo(1), AKo(1), A4o(1), A3s(1) [10 instances, 50.0%]
+      3-6BB: 83o(1), T8o(1), T2s(1), A9o(1) [4 instances, 20.0%]
+      6-10BB: 76o(1), 96o(1), Q6s(1), KJs(1), A8s(1) [5 instances, 25.0%]
+      10BB+: J2o(1) [1 instances, 5.0%]
+    By Tournament Stage:
+      start: 88(1), 99(1), TT(1), 76o(1), 96o(1), T2s(1), J7o(1), Q6s(1), KJs(1), A9o(1), A8s(1), A4o(1), A3s(1) [13 instances, 65.0%]
+      final_table: 83o(1), 95o(1), T8o(1), J7o(1), J2o(1), KTo(1), AKo(1) [7 instances, 35.0%]
+
+  CALL: 87o(1), 86o(1), 97o(1), 95o(1), J3o(1), J2o(1), QJo(1), Q4o(1), KJo(1), K8o(1), K6o(1), AKo(1), AJs(1), A9o(1), A6o(1)
+    Total: 15 unique combos, 15 instances, median combo frequency: 6.67%
+    By Pot Size:
+      N/A: 87o(1), 86o(1), 97o(1), 95o(1), J3o(1), J2o(1), QJo(1), Q4o(1), KJo(1), K8o(1), K6o(1), AKo(1), AJs(1), A9o(1), A6o(1) [15 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: J2o(1), QJo(1), Q4o(1), KJo(1), AKo(1), AJs(1) [6 instances, 40.0%]
+      3-6BB: 87o(1), J3o(1) [2 instances, 13.3%]
+      6-10BB: 95o(1), K8o(1), A6o(1) [3 instances, 20.0%]
+      10BB+: 86o(1), 97o(1), K6o(1), A9o(1) [4 instances, 26.7%]
+    By Tournament Stage:
+      start: 87o(1), 86o(1), 97o(1), J3o(1), J2o(1), Q4o(1), KJo(1), K8o(1), K6o(1), AJs(1), A9o(1), A6o(1) [12 instances, 80.0%]
+      final_table: 95o(1), QJo(1), AKo(1) [3 instances, 20.0%]
+
+  CHECK: 22(1), 55(1), 66(1), 88(1), 54s(1), 65o(3), 64s(1), 62s(1), 76s(2), 76o(1), 86o(2), 85o(1), 84s(1), 83o(1), 83s(1), 98o(2), 96s(1), 95s(1), 93s(2), T9o(1), T9s(2), T7s(1), T6s(1), T5o(3), T4o(1), T3o(1), JTo(2), J8s(1), J7o(1), J7s(1), J3o(1), J2o(1), QJo(2), Q9o(3), Q4s(2), Q3o(1), Q2s(1), KQo(1), KQs(1), KJo(1), KTo(1), K9o(2), K8o(1), K8s(1), K7s(1), K6o(2), K4o(1), K4s(1), AKo(1), AKs(1), AJo(1), AJs(2), ATs(1), A9o(1), A9s(1), A8o(1), A6o(1), A5o(2), A3o(1)
+    Total: 59 unique combos, 77 instances, median combo frequency: 1.30%
+    By Pot Size:
+      N/A: 22(1), 55(1), 66(1), 88(1), 54s(1), 65o(3), 64s(1), 62s(1), 76s(2), 76o(1), 86o(2), 85o(1), 84s(1), 83o(1), 83s(1), 98o(2), 96s(1), 95s(1), 93s(2), T9o(1), T9s(2), T7s(1), T6s(1), T5o(3), T4o(1), T3o(1), JTo(2), J8s(1), J7o(1), J7s(1), J3o(1), J2o(1), QJo(2), Q9o(3), Q4s(2), Q3o(1), Q2s(1), KQo(1), KQs(1), KJo(1), KTo(1), K9o(2), K8o(1), K8s(1), K7s(1), K6o(2), K4o(1), K4s(1), AKo(1), AKs(1), AJs(2), AJo(1), ATs(1), A9s(1), A9o(1), A8o(1), A6o(1), A5o(2), A3o(1) [77 instances, 100.0%]
+    By Big Blinds:
+      N/A: 22(1), 55(1), 66(1), 88(1), 54s(1), 65o(3), 64s(1), 62s(1), 76s(2), 76o(1), 86o(2), 85o(1), 84s(1), 83s(1), 83o(1), 98o(2), 96s(1), 95s(1), 93s(2), T9o(1), T9s(2), T7s(1), T6s(1), T5o(3), T4o(1), T3o(1), JTo(2), J8s(1), J7o(1), J7s(1), J3o(1), J2o(1), QJo(2), Q9o(3), Q4s(2), Q3o(1), Q2s(1), KQo(1), KQs(1), KJo(1), KTo(1), K9o(2), K8o(1), K8s(1), K7s(1), K6o(2), K4o(1), K4s(1), AKo(1), AKs(1), AJs(2), AJo(1), ATs(1), A9s(1), A9o(1), A8o(1), A6o(1), A5o(2), A3o(1) [77 instances, 100.0%]
+    By Tournament Stage:
+      start: 22(1), 55(1), 66(1), 88(1), 54s(1), 65o(2), 64s(1), 76s(2), 76o(1), 86o(1), 85o(1), 84s(1), 98o(2), 96s(1), 93s(2), T9o(1), T9s(1), T5o(3), T4o(1), JTo(1), J8s(1), J7o(1), J7s(1), J3o(1), J2o(1), QJo(1), Q9o(1), Q4s(1), Q3o(1), KQo(1), Q2s(1), KJo(1), KTo(1), K9o(1), K8s(1), K8o(1), K7s(1), K6o(2), K4s(1), K4o(1), AKs(1), AKo(1), AJs(2), A9s(1), A9o(1), A8o(1), A6o(1), A5o(1), A3o(1) [57 instances, 74.0%]
+      pre_bubble: 65o(1), T7s(1) [2 instances, 2.6%]
+      final_table: 62s(1), 86o(1), 83o(1), 83s(1), 95s(1), T9s(1), T6s(1), T3o(1), JTo(1), QJo(1), Q9o(2), Q4s(1), KQs(1), K9o(1), AJo(1), ATs(1), A5o(1) [18 instances, 23.4%]
+
+================================================================================
+POSITION: CO
+================================================================================
+
+PREFLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 22(1), 33(2), 44(6), 55(7), 66(2), 77(5), 88(2), 99(4), TT(4), JJ(7), QQ(8), KK(8), 54s(1), 65s(1), 64o(1), 63o(1), 76s(1), 73s(1), 97o(1), T8o(1), T8s(1), T7s(1), T3s(1), T3o(1), JTo(2), JTs(1), J9s(3), J9o(1), J3s(1), QJo(6), QJs(1), QTo(1), QTs(1), Q9o(2), Q9s(1), Q2s(1), KQo(4), KQs(3), KJo(8), KJs(1), KTs(2), KTo(2), K9o(3), K9s(1), K8s(1), K7o(1), K7s(2), K6s(1), AA(2), K4s(1), AKs(4), AKo(8), AQs(1), AQo(9), AJs(3), AJo(9), ATo(9), ATs(1), A9o(3), A9s(3), A8s(1), A8o(3), A7o(2), A6o(2), A6s(2), A5s(1), A5o(2), A4s(1), A4o(4), A3s(2), A3o(2), A2s(1)
+    Total: 72 unique combos, 194 instances, median combo frequency: 1.03%
+    By Pot Size:
+      OPEN: 22(1), 33(1), 44(4), 55(4), 66(2), 77(4), 88(2), 99(1), TT(1), JJ(2), QQ(1), KK(3), 54s(1), 64o(1), 76s(1), 73s(1), 97o(1), T8s(1), T7s(1), T3o(1), T3s(1), JTo(2), JTs(1), J9s(3), J9o(1), J3s(1), QJo(5), QJs(1), QTo(1), Q9s(1), Q9o(1), KQo(2), KQs(3), Q2s(1), KJo(5), KJs(1), KTs(1), KTo(2), K9o(2), K9s(1), K7o(1), K7s(2), K6s(1), K4s(1), AA(2), AKs(1), AKo(6), AQo(2), AQs(1), AJs(1), AJo(3), ATo(5), ATs(1), A9s(2), A9o(3), A8o(2), A7o(2), A6s(2), A6o(1), A5s(1), A5o(2), A4s(1), A4o(3), A3s(2), A3o(2), A2s(1) [121 instances, 62.4%]
+      0.75x: AQo(1) [1 instances, 0.5%]
+      1x: 33(1), TT(1), JJ(1), QQ(1), KK(2), 63o(1), K8s(1) [8 instances, 4.1%]
+      1.5x: JJ(1), KK(1), 65s(1), Q9o(1), AQo(1), AJo(3), ATo(1), A4o(1) [10 instances, 5.2%]
+      2x: 55(1), 99(1), TT(2), JJ(2), QQ(3), KK(1), T8o(1), QJo(1), KJo(1), KTs(1), K9o(1), AKs(1), AQo(2), ATo(1), A9s(1), A6o(1) [21 instances, 10.8%]
+      3x+: 44(2), 55(2), 77(1), 99(2), JJ(1), QQ(3), KK(1), QTs(1), KQo(2), KJo(2), AKo(2), AKs(2), AQo(3), AJo(3), AJs(2), ATo(2), A8o(1), A8s(1) [33 instances, 17.0%]
+    By Big Blinds:
+      MINRAISE: 33(1), 44(1), 55(2), 66(2), 77(2), 88(2), 99(1), TT(1), KK(3), 97o(1), T8s(1), T8o(1), T7s(1), T3o(1), J9s(1), J9o(1), J3s(1), QJs(1), QJo(2), Q9o(1), KQo(2), KQs(2), KJo(2), KJs(1), KTo(1), K9o(1), K8s(1), K7s(1), K7o(1), AA(2), AKo(3), AKs(1), AQs(1), AQo(2), AJo(1), AJs(1), ATs(1), ATo(3), A9o(2), A9s(1), A7o(1), A6s(1), A3s(1), A3o(2), A2s(1) [63 instances, 32.5%]
+      2.5BB: KK(1), 54s(1), QJo(1), K4s(1), A9s(1) [5 instances, 2.6%]
+      3BB: 99(1), JJ(2), QQ(1), 64o(1), 63o(1), T3s(1), QTs(1), Q9o(1), AKo(1), AQo(1), AJo(1), ATo(2), A9o(1), A5s(1), A4o(1), A3s(1) [18 instances, 9.3%]
+      4-5BB: 55(1), JJ(1), QQ(3), KK(1), JTs(1), JTo(1), J9s(1), QJo(1), KTs(1), K9o(1), AKo(1), AQo(1), AJo(2), ATo(1), A9s(1), A8o(1), A7o(1), A6o(2), A4o(1) [23 instances, 11.9%]
+      6-9BB: 33(1), 44(2), 55(1), 77(1), 99(1), TT(2), JJ(1), QQ(1), KK(2), 65s(1), 76s(1), 73s(1), JTo(1), J9s(1), QJo(1), Q9s(1), Q2s(1), KQo(1), KJo(2), KTs(1), K6s(1), AKo(1), AKs(2), AQo(2), AJs(1), AJo(1), ATo(1), A4o(2), A4s(1) [36 instances, 18.6%]
+      10BB+: 22(1), 44(3), 55(3), 77(2), 99(1), TT(1), JJ(3), QQ(3), KK(1), QJo(1), QTo(1), KQo(1), KQs(1), KJo(4), KTo(1), K9s(1), K9o(1), K7s(1), AKo(2), AKs(1), AQo(3), AJs(1), AJo(4), ATo(2), A8s(1), A8o(2), A6s(1), A5o(2) [49 instances, 25.3%]
+    By Tournament Stage:
+      start: 22(1), 33(1), 44(2), 55(3), 66(2), 77(1), 88(2), 99(2), TT(1), JJ(5), QQ(6), KK(5), 54s(1), 65s(1), 76s(1), 97o(1), T8s(1), T7s(1), JTs(1), J9o(1), J9s(2), QJo(5), QTo(1), Q9o(1), Q9s(1), KQo(2), KQs(2), Q2s(1), KJo(6), KTs(1), KTo(2), K9o(1), K8s(1), K7s(1), K6s(1), K4s(1), AA(1), AKo(5), AKs(3), AQo(6), AJo(6), AJs(2), ATo(9), A9o(3), A9s(3), A8o(1), A8s(1), A7o(1), A6o(1), A6s(1), A5s(1), A5o(2), A4o(3), A3o(1), A3s(1) [119 instances, 61.3%]
+      pre_bubble: 44(1), 99(1), KK(1), JTo(1), J9s(1), KJo(1), K9s(1), AKs(1), AJo(1), AJs(1), A7o(1), A6o(1), A3s(1) [13 instances, 6.7%]
+      bubble: KK(1), Q9o(1), A4o(1) [3 instances, 1.5%]
+      final_table: 33(1), 44(3), 55(4), 77(4), 99(1), TT(3), JJ(2), QQ(2), KK(1), 64o(1), 63o(1), 73s(1), T8o(1), T3o(1), T3s(1), JTo(1), J3s(1), QJo(1), QJs(1), QTs(1), KQo(2), KQs(1), KJs(1), KJo(1), KTs(1), K9o(2), K7s(1), K7o(1), AA(1), AKo(3), AQs(1), AQo(3), AJo(2), ATs(1), A8o(2), A6s(1), A4s(1), A3o(1), A2s(1) [59 instances, 30.4%]
+
+  CALL: 44(3), 55(3), 66(2), 88(1), 99(4), TT(3), JJ(4), QQ(1), KK(7), 54s(1), 64o(1), 62s(1), 76s(1), 75o(1), 87o(1), 98o(2), T9s(2), T8s(1), T8o(1), T3s(1), JTo(2), JTs(2), J9s(1), J8o(2), J5o(1), QJo(5), QJs(3), QTs(5), QTo(2), Q9o(2), Q7s(2), Q7o(3), KQo(3), KQs(3), KJo(4), KJs(2), KTo(6), KTs(2), K9o(2), K8o(2), K8s(2), K7o(2), K5s(1), K4s(2), AA(1), AKs(4), AKo(3), AQs(1), AQo(5), AJs(4), AJo(6), ATo(5), A9s(1), A9o(2), A8o(3), A7s(1), A6o(1), A6s(2), A5s(1), A4s(1), A4o(1), A3o(3), A3s(1), A2o(2)
+    Total: 64 unique combos, 150 instances, median combo frequency: 1.33%
+    By Pot Size:
+      N/A: 44(3), 55(3), 66(2), 88(1), 99(4), TT(3), JJ(4), QQ(1), KK(7), 54s(1), 64o(1), 62s(1), 76s(1), 75o(1), 87o(1), 98o(2), T9s(2), T8s(1), T8o(1), T3s(1), JTs(2), JTo(2), J9s(1), J8o(2), J5o(1), QJo(5), QJs(3), QTo(2), QTs(5), Q9o(2), Q7o(3), Q7s(2), KQo(3), KQs(3), KJo(4), KJs(2), KTo(6), KTs(2), K9o(2), K8o(2), K8s(2), K7o(2), K5s(1), AA(1), K4s(2), AKs(4), AKo(3), AQs(1), AQo(5), AJs(4), AJo(6), ATo(5), A9o(2), A9s(1), A8o(3), A7s(1), A6s(2), A6o(1), A5s(1), A4o(1), A4s(1), A3s(1), A3o(3), A2o(2) [150 instances, 100.0%]
+    By Big Blinds:
+      1BB_CALL: 44(1), TT(1), JJ(3), QQ(1), 62s(1), 98o(2), T8o(1), T3s(1), JTo(1), JTs(1), J8o(2), J5o(1), QJo(1), QTo(1), QTs(1), Q9o(1), Q7s(2), Q7o(2), KQo(2), KQs(1), KJo(2), KTo(2), KTs(1), K9o(1), K8o(2), K8s(2), K7o(1), K4s(1), AKo(1), AJs(1), A9o(1), A9s(1), A8o(2), A6s(1), A3o(3), A2o(2) [51 instances, 34.0%]
+      2BB_CALL: 44(1), 55(2), 66(1), 88(1), 99(1), TT(1), KK(1), 64o(1), 76s(1), 87o(1), T9s(2), JTs(1), JTo(1), QJs(2), QTs(2), Q7o(1), KQs(1), KJo(1), KTo(3), K5s(1), AQs(1), AJs(1), AJo(1), ATo(1), A4o(1) [31 instances, 20.7%]
+      3-4BB_CALL: 99(1), JJ(1), KK(1), 75o(1), QJo(2), QJs(1), Q9o(1), KQo(1), K9o(1), K7o(1), K4s(1), AKs(2), AQo(1), ATo(1), A8o(1), A6o(1), A4s(1) [19 instances, 12.7%]
+      5BB+_CALL: 44(1), 55(1), 66(1), 99(2), TT(1), KK(5), 54s(1), T8s(1), J9s(1), QJo(2), QTo(1), QTs(2), KQs(1), KJo(1), KJs(2), KTo(1), KTs(1), AA(1), AKo(2), AKs(2), AQo(4), AJo(5), AJs(2), ATo(3), A9o(1), A7s(1), A6s(1), A5s(1), A3s(1) [49 instances, 32.7%]
+    By Tournament Stage:
+      start: 44(2), 55(2), 66(1), 88(1), 99(2), TT(2), JJ(2), QQ(1), KK(4), 54s(1), 64o(1), 62s(1), 76s(1), 75o(1), 87o(1), 98o(2), T9s(2), T8o(1), T8s(1), JTs(2), JTo(2), J8o(1), QJo(4), QJs(2), QTo(1), QTs(2), Q7s(1), Q7o(3), KQs(3), KJs(1), KJo(2), KTo(3), K8o(1), K8s(2), K7o(1), K5s(1), AA(1), AKo(2), AKs(2), AQo(3), AJo(6), ATo(5), A8o(2), A6s(2), A5s(1), A4o(1), A4s(1), A3o(1), A2o(1) [89 instances, 59.3%]
+      pre_bubble: J9s(1), QTo(1), K9o(1), A9o(2), A9s(1), A6o(1), A3s(1) [8 instances, 5.3%]
+      bubble: KK(1), Q9o(1) [2 instances, 1.3%]
+      final_table: 44(1), 55(1), 66(1), 99(2), TT(1), JJ(2), KK(2), T3s(1), J8o(1), J5o(1), QJo(1), QJs(1), QTs(3), Q9o(1), Q7s(1), KQo(3), KJo(2), KJs(1), KTo(3), KTs(2), K9o(1), K8o(1), K7o(1), K4s(2), AKo(1), AKs(2), AQs(1), AQo(2), AJs(4), A8o(1), A7s(1), A3o(2), A2o(1) [51 instances, 34.0%]
+
+  CHECK: 76o(2), 98o(1), Q7o(1), Q6o(1), Q3o(1), KQs(1), A7s(1)
+    Total: 7 unique combos, 8 instances, median combo frequency: 12.50%
+    By Pot Size:
+      N/A: 76o(2), 98o(1), Q7o(1), Q6o(1), Q3o(1), KQs(1), A7s(1) [8 instances, 100.0%]
+    By Big Blinds:
+      N/A: 76o(2), 98o(1), Q7o(1), Q6o(1), Q3o(1), KQs(1), A7s(1) [8 instances, 100.0%]
+    By Tournament Stage:
+      start: 76o(1), Q7o(1), Q3o(1) [3 instances, 37.5%]
+      final_table: 76o(1), 98o(1), Q6o(1), KQs(1), A7s(1) [5 instances, 62.5%]
+
+FLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 44(2), 55(1), 99(1), QQ(1), 54s(1), T9s(1), QJs(2), QTs(1), Q7o(1), AJs(1), A7s(1), A3o(1), A2s(1)
+    Total: 13 unique combos, 15 instances, median combo frequency: 6.67%
+    By Pot Size:
+      0.5x: 99(1), AJs(1) [2 instances, 13.3%]
+      0.75x: 55(1), QQ(1), QJs(1), A7s(1), A3o(1) [5 instances, 33.3%]
+      1x: 44(1), 54s(1), QJs(1), A2s(1) [4 instances, 26.7%]
+      1.5x: 44(1), QTs(1), Q7o(1) [3 instances, 20.0%]
+      3x+: T9s(1) [1 instances, 6.7%]
+    By Big Blinds:
+      3-6BB: QJs(1) [1 instances, 6.7%]
+      6-10BB: 44(1), 55(1), 99(1), A7s(1), A3o(1) [5 instances, 33.3%]
+      10BB+: 44(1), QQ(1), 54s(1), T9s(1), QJs(1), QTs(1), Q7o(1), AJs(1), A2s(1) [9 instances, 60.0%]
+    By Tournament Stage:
+      start: 44(2), 99(1), QQ(1), 54s(1), T9s(1), QJs(2), Q7o(1), A3o(1) [10 instances, 66.7%]
+      pre_bubble: AJs(1) [1 instances, 6.7%]
+      final_table: 55(1), QTs(1), A7s(1), A2s(1) [4 instances, 26.7%]
+
+  BET: 44(1), 66(1), 77(1), 88(2), 99(1), QQ(1), KK(1), 62s(1), 76s(1), 76o(1), 97o(1), T8o(1), JTs(2), J9o(1), J8o(1), QJs(1), Q9o(1), Q7s(1), Q7o(2), KQo(2), KQs(2), KJo(1), KTo(2), K9o(2), K8o(1), AA(1), AKo(2), AQs(1), AJo(1), AJs(1), ATo(1), A9s(1), A3s(1)
+    Total: 33 unique combos, 41 instances, median combo frequency: 2.44%
+    By Pot Size:
+      <0.33x: 76s(1), J8o(1), QJs(1), KQo(1), AA(1) [5 instances, 12.2%]
+      0.33x: 44(1), KK(1), J9o(1), K8o(1), AJs(1) [5 instances, 12.2%]
+      0.5x: 99(1), QQ(1), 62s(1), JTs(1), Q7o(2), KQs(1), KTo(1), K9o(1), AQs(1), AJo(1), ATo(1), A3s(1) [13 instances, 31.7%]
+      0.75x: 66(1), 97o(1), KTo(1), AKo(2), A9s(1) [6 instances, 14.6%]
+      1x: 77(1), 88(1), Q9o(1), KQs(1), K9o(1) [5 instances, 12.2%]
+      1.5x: JTs(1), KQo(1) [2 instances, 4.9%]
+      2x: 76o(1), KJo(1) [2 instances, 4.9%]
+      3x+: 88(1), T8o(1), Q7s(1) [3 instances, 7.3%]
+    By Big Blinds:
+      1-3BB: 66(1), 77(1), KK(1), 76s(1), 97o(1), JTs(1), J9o(1), J8o(1), Q7o(1), KQo(1), KQs(1), KTo(1), K9o(1), K8o(1), AKo(1), AQs(1), AJs(1), ATo(1), A3s(1) [19 instances, 46.3%]
+      3-6BB: QQ(1), 62s(1), 76o(1), JTs(1), QJs(1), Q7o(1), KQo(1), KQs(1), KTo(1), AA(1), AKo(1), AJo(1), A9s(1) [13 instances, 31.7%]
+      6-10BB: 44(1), 88(1), 99(1), K9o(1) [4 instances, 9.8%]
+      10BB+: 88(1), T8o(1), Q9o(1), Q7s(1), KJo(1) [5 instances, 12.2%]
+    By Tournament Stage:
+      start: 44(1), 66(1), 88(2), QQ(1), KK(1), 62s(1), 76s(1), 76o(1), 97o(1), T8o(1), JTs(2), J9o(1), Q9o(1), Q7o(2), KQs(2), KTo(2), K9o(1), K8o(1), AA(1), AKo(2), ATo(1), A9s(1), A3s(1) [29 instances, 70.7%]
+      pre_bubble: 99(1), K9o(1), AJs(1) [3 instances, 7.3%]
+      final_table: 77(1), J8o(1), QJs(1), Q7s(1), KQo(2), KJo(1), AQs(1), AJo(1) [9 instances, 22.0%]
+
+  CALL: 44(1), 55(1), 66(1), 88(1), JJ(2), QQ(1), 76o(1), 87o(1), 98o(1), T9s(1), T8o(1), T7s(1), T3s(1), JTo(1), J9s(1), QTo(1), Q9o(1), Q7o(1), Q6o(1), Q3o(1), KQo(1), KQs(2), KJs(1), KJo(1), KTo(2), K8s(1), AKs(1), AKo(1), AQo(2), AJo(1), ATo(3), A6s(1), A5s(1), A3s(1), A3o(2)
+    Total: 35 unique combos, 42 instances, median combo frequency: 2.38%
+    By Pot Size:
+      N/A: 44(1), 55(1), 66(1), 88(1), JJ(2), QQ(1), 76o(1), 87o(1), 98o(1), T9s(1), T8o(1), T7s(1), T3s(1), JTo(1), J9s(1), QTo(1), Q9o(1), Q7o(1), Q6o(1), Q3o(1), KQo(1), KQs(2), KJo(1), KJs(1), KTo(2), K8s(1), AKo(1), AKs(1), AQo(2), AJo(1), ATo(3), A6s(1), A5s(1), A3o(2), A3s(1) [42 instances, 100.0%]
+    By Big Blinds:
+      <1BB: QQ(1), Q7o(1), KQs(1), KJo(1), AKs(1) [5 instances, 11.9%]
+      1-3BB: 66(1), 88(1), JJ(1), 98o(1), T8o(1), QTo(1), Q6o(1), Q3o(1), KQo(1), KTo(1), K8s(1), A6s(1), A3o(1) [13 instances, 31.0%]
+      3-6BB: 87o(1), T9s(1), T7s(1), T3s(1), JTo(1), KTo(1), AJo(1), ATo(1), A3s(1) [9 instances, 21.4%]
+      6-10BB: 44(1), 76o(1), AQo(2), A5s(1) [5 instances, 11.9%]
+      10BB+: 55(1), JJ(1), J9s(1), Q9o(1), KQs(1), KJs(1), AKo(1), ATo(2), A3o(1) [10 instances, 23.8%]
+    By Tournament Stage:
+      start: 44(1), 88(1), JJ(2), QQ(1), 76o(1), 87o(1), T9s(1), T7s(1), JTo(1), QTo(1), Q9o(1), Q7o(1), Q3o(1), KQs(2), KJs(1), KJo(1), KTo(2), K8s(1), AKo(1), AKs(1), AQo(2), ATo(3), A6s(1), A5s(1), A3o(2), A3s(1) [33 instances, 78.6%]
+      pre_bubble: J9s(1) [1 instances, 2.4%]
+      final_table: 55(1), 66(1), 98o(1), T8o(1), T3s(1), Q6o(1), KQo(1), AJo(1) [8 instances, 19.0%]
+
+  CHECK: 55(3), 77(1), TT(1), JJ(1), KK(1), 64o(1), 76o(1), T8s(1), T3s(2), JTo(1), QJs(1), QTo(1), Q9o(1), Q7s(1), Q7o(2), KQs(1), KQo(1), KJo(1), K8s(1), K7s(1), K5s(1), AA(1), K4s(1), AQo(2), AJs(1), ATs(1), A9o(1), A8o(2), A7s(1), A6s(1), A5s(1), A3o(2), A2o(1)
+    Total: 33 unique combos, 40 instances, median combo frequency: 2.50%
+    By Pot Size:
+      N/A: 55(3), 77(1), TT(1), JJ(1), KK(1), 64o(1), 76o(1), T8s(1), T3s(2), JTo(1), QJs(1), QTo(1), Q9o(1), Q7s(1), Q7o(2), KQs(1), KQo(1), KJo(1), K8s(1), K7s(1), K5s(1), AA(1), K4s(1), AQo(2), AJs(1), ATs(1), A9o(1), A8o(2), A7s(1), A6s(1), A5s(1), A3o(2), A2o(1) [40 instances, 100.0%]
+    By Big Blinds:
+      N/A: 55(3), 77(1), TT(1), JJ(1), KK(1), 64o(1), 76o(1), T8s(1), T3s(2), JTo(1), QJs(1), QTo(1), Q9o(1), Q7o(2), Q7s(1), KQs(1), KQo(1), KJo(1), K8s(1), K7s(1), K5s(1), AA(1), K4s(1), AQo(2), AJs(1), ATs(1), A9o(1), A8o(2), A7s(1), A6s(1), A5s(1), A3o(2), A2o(1) [40 instances, 100.0%]
+    By Tournament Stage:
+      start: 55(2), TT(1), JJ(1), KK(1), 64o(1), T8s(1), JTo(1), QJs(1), QTo(1), Q7s(1), Q7o(2), KJo(1), K8s(1), K7s(1), K5s(1), AQo(2), A9o(1), A8o(2), A6s(1), A5s(1), A3o(1), A2o(1) [26 instances, 65.0%]
+      final_table: 55(1), 77(1), 76o(1), T3s(2), Q9o(1), KQs(1), KQo(1), AA(1), K4s(1), AJs(1), ATs(1), A7s(1), A3o(1) [14 instances, 35.0%]
+
+TURN:
+--------------------------------------------------------------------------------
+
+  RAISE: 76s(1), T8s(1), Q9o(1), KQs(1), KTo(1), K8s(1)
+    Total: 6 unique combos, 6 instances, median combo frequency: 16.67%
+    By Pot Size:
+      0.33x: KTo(1) [1 instances, 16.7%]
+      0.5x: T8s(1), KQs(1), K8s(1) [3 instances, 50.0%]
+      1.5x: 76s(1) [1 instances, 16.7%]
+      2x: Q9o(1) [1 instances, 16.7%]
+    By Big Blinds:
+      3-6BB: KTo(1) [1 instances, 16.7%]
+      6-10BB: K8s(1) [1 instances, 16.7%]
+      10BB+: 76s(1), T8s(1), Q9o(1), KQs(1) [4 instances, 66.7%]
+    By Tournament Stage:
+      start: 76s(1), T8s(1), KQs(1), KTo(1), K8s(1) [5 instances, 83.3%]
+      final_table: Q9o(1) [1 instances, 16.7%]
+
+  BET: 66(1), 88(1), 97o(1), T3s(1), JTs(1), J8o(1), QJs(2), Q7o(1), Q6o(1), KQo(1), KQs(2), KTo(2), K9o(1), K8o(1), AA(1), AKo(1), ATo(1), A9s(1), A8o(1), A7s(1), A3o(2), A3s(1)
+    Total: 22 unique combos, 26 instances, median combo frequency: 3.85%
+    By Pot Size:
+      <0.33x: QJs(1), KTo(1) [2 instances, 7.7%]
+      0.33x: JTs(1), Q6o(1), KQs(1), KTo(1), K9o(1), K8o(1), ATo(1) [7 instances, 26.9%]
+      0.5x: 88(1), 97o(1), J8o(1), QJs(1), KQs(1), A7s(1), A3s(1) [7 instances, 26.9%]
+      0.75x: AA(1), A9s(1), A3o(1) [3 instances, 11.5%]
+      1x: Q7o(1), KQo(1), AKo(1), A8o(1), A3o(1) [5 instances, 19.2%]
+      2x: 66(1), T3s(1) [2 instances, 7.7%]
+    By Big Blinds:
+      1-3BB: T3s(1), Q6o(1), K8o(1), A8o(1), A3o(1) [5 instances, 19.2%]
+      3-6BB: 88(1), 97o(1), JTs(1), J8o(1), QJs(1), Q7o(1), KQs(1), KTo(1), AKo(1), A3o(1) [10 instances, 38.5%]
+      6-10BB: 66(1), KQs(1), KTo(1), A3s(1) [4 instances, 15.4%]
+      10BB+: QJs(1), KQo(1), K9o(1), AA(1), ATo(1), A9s(1), A7s(1) [7 instances, 26.9%]
+    By Tournament Stage:
+      start: 66(1), 88(1), 97o(1), JTs(1), QJs(1), Q7o(1), KQs(2), KTo(2), K9o(1), K8o(1), AA(1), AKo(1), ATo(1), A9s(1), A8o(1), A3s(1), A3o(1) [19 instances, 73.1%]
+      final_table: T3s(1), J8o(1), QJs(1), Q6o(1), KQo(1), A7s(1), A3o(1) [7 instances, 26.9%]
+
+  CALL: 55(2), JJ(1), QQ(1), KK(2), 64o(1), 76o(1), T9s(1), T8o(1), JTo(1), QJs(1), Q7o(1), K9o(1), K8o(1), K8s(1), K7s(1), AA(1), AQo(1), A6s(1)
+    Total: 18 unique combos, 20 instances, median combo frequency: 5.00%
+    By Pot Size:
+      N/A: 55(2), JJ(1), QQ(1), KK(2), 64o(1), 76o(1), T9s(1), T8o(1), JTo(1), QJs(1), Q7o(1), K9o(1), K8s(1), K8o(1), K7s(1), AA(1), AQo(1), A6s(1) [20 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: KK(1), 64o(1), 76o(1), Q7o(1), AA(1) [5 instances, 25.0%]
+      3-6BB: 55(2), T8o(1), JTo(1), QJs(1), K8s(1), K7s(1), AQo(1) [8 instances, 40.0%]
+      6-10BB: KK(1), K8o(1), A6s(1) [3 instances, 15.0%]
+      10BB+: JJ(1), QQ(1), T9s(1), K9o(1) [4 instances, 20.0%]
+    By Tournament Stage:
+      start: 55(2), JJ(1), QQ(1), KK(2), 64o(1), T9s(1), JTo(1), Q7o(1), K9o(1), K8s(1), K8o(1), K7s(1), AQo(1), A6s(1) [16 instances, 80.0%]
+      final_table: 76o(1), T8o(1), QJs(1), AA(1) [4 instances, 20.0%]
+
+  CHECK: 77(2), 99(2), TT(1), JJ(1), QQ(1), KK(1), 76o(1), 98o(1), JTo(1), J9o(1), QTo(1), Q7s(1), Q7o(2), Q3o(1), KQs(1), KQo(1), KTo(1), K9o(1), K8s(1), K5s(1), K4s(1), AQo(1), AQs(1), AJs(1), ATo(1), ATs(1), A9o(1), A8o(1), A6s(1), A5s(1), A2o(1)
+    Total: 31 unique combos, 34 instances, median combo frequency: 2.94%
+    By Pot Size:
+      N/A: 77(2), 99(2), TT(1), JJ(1), QQ(1), KK(1), 76o(1), 98o(1), JTo(1), J9o(1), QTo(1), Q7o(2), Q7s(1), Q3o(1), KQs(1), KQo(1), KTo(1), K9o(1), K8s(1), K5s(1), K4s(1), AQs(1), AQo(1), AJs(1), ATo(1), ATs(1), A9o(1), A8o(1), A6s(1), A5s(1), A2o(1) [34 instances, 100.0%]
+    By Big Blinds:
+      N/A: 77(2), 99(2), TT(1), JJ(1), QQ(1), KK(1), 76o(1), 98o(1), JTo(1), J9o(1), QTo(1), Q7o(2), Q7s(1), Q3o(1), KQs(1), KQo(1), KTo(1), K9o(1), K8s(1), K5s(1), K4s(1), AQo(1), AQs(1), AJs(1), ATs(1), ATo(1), A9o(1), A8o(1), A6s(1), A5s(1), A2o(1) [34 instances, 100.0%]
+    By Tournament Stage:
+      start: 99(1), TT(1), JJ(1), QQ(1), KK(1), JTo(1), J9o(1), QTo(1), Q7s(1), Q7o(2), Q3o(1), KTo(1), K8s(1), K5s(1), AQo(1), ATo(1), A9o(1), A8o(1), A6s(1), A5s(1), A2o(1) [22 instances, 64.7%]
+      pre_bubble: 99(1), K9o(1) [2 instances, 5.9%]
+      final_table: 77(2), 76o(1), 98o(1), KQs(1), KQo(1), K4s(1), AQs(1), AJs(1), ATs(1) [10 instances, 29.4%]
+
+RIVER:
+--------------------------------------------------------------------------------
+
+  RAISE: JJ(1), T8o(1), Q7o(1), AA(1)
+    Total: 4 unique combos, 4 instances, median combo frequency: 25.00%
+    By Pot Size:
+      0.33x: T8o(1) [1 instances, 25.0%]
+      0.5x: AA(1) [1 instances, 25.0%]
+      1.5x: JJ(1), Q7o(1) [2 instances, 50.0%]
+    By Big Blinds:
+      6-10BB: T8o(1), AA(1) [2 instances, 50.0%]
+      10BB+: JJ(1), Q7o(1) [2 instances, 50.0%]
+    By Tournament Stage:
+      start: JJ(1), Q7o(1) [2 instances, 50.0%]
+      final_table: T8o(1), AA(1) [2 instances, 50.0%]
+
+  BET: 99(1), JJ(1), 76o(1), 97o(1), JTs(1), QJs(1), Q7o(1), KQo(1), KQs(1), KTo(2), K9o(1), K7s(1), K5s(1), AKo(1), A5s(1), A3o(2), A3s(1)
+    Total: 17 unique combos, 19 instances, median combo frequency: 5.26%
+    By Pot Size:
+      <0.33x: QJs(1), A5s(1) [2 instances, 10.5%]
+      0.5x: 76o(1), 97o(1), Q7o(1), KTo(2), A3o(1) [6 instances, 31.6%]
+      0.75x: KQo(1), KQs(1), K9o(1), A3s(1) [4 instances, 21.1%]
+      1x: K7s(1), K5s(1), AKo(1) [3 instances, 15.8%]
+      1.5x: 99(1), JJ(1), JTs(1) [3 instances, 15.8%]
+      3x+: A3o(1) [1 instances, 5.3%]
+    By Big Blinds:
+      1-3BB: 76o(1), KQo(1), K9o(1) [3 instances, 15.8%]
+      3-6BB: 97o(1), QJs(1), KTo(1), K7s(1), K5s(1), A3o(1) [6 instances, 31.6%]
+      6-10BB: JJ(1), Q7o(1), KTo(1), A5s(1) [4 instances, 21.1%]
+      10BB+: 99(1), JTs(1), KQs(1), AKo(1), A3s(1), A3o(1) [6 instances, 31.6%]
+    By Tournament Stage:
+      start: 99(1), JJ(1), 97o(1), JTs(1), QJs(1), Q7o(1), KQs(1), KTo(2), K7s(1), K5s(1), AKo(1), A5s(1), A3s(1), A3o(1) [15 instances, 78.9%]
+      pre_bubble: K9o(1) [1 instances, 5.3%]
+      final_table: 76o(1), KQo(1), A3o(1) [3 instances, 15.8%]
+
+  CALL: 55(1), 66(1), 77(1), KK(1), 64o(1), 76o(1), T9s(1), J9o(1), K9o(1), AQs(1), ATo(1)
+    Total: 11 unique combos, 11 instances, median combo frequency: 9.09%
+    By Pot Size:
+      N/A: 55(1), 66(1), 77(1), KK(1), 64o(1), 76o(1), T9s(1), J9o(1), K9o(1), AQs(1), ATo(1) [11 instances, 100.0%]
+    By Big Blinds:
+      <1BB: 76o(1) [1 instances, 9.1%]
+      3-6BB: AQs(1), ATo(1) [2 instances, 18.2%]
+      6-10BB: 77(1), J9o(1), K9o(1) [3 instances, 27.3%]
+      10BB+: 55(1), 66(1), KK(1), 64o(1), T9s(1) [5 instances, 45.5%]
+    By Tournament Stage:
+      start: 55(1), 66(1), KK(1), 64o(1), T9s(1), J9o(1), ATo(1) [7 instances, 63.6%]
+      pre_bubble: K9o(1) [1 instances, 9.1%]
+      final_table: 77(1), 76o(1), AQs(1) [3 instances, 27.3%]
+
+  CHECK: 77(1), 88(1), 99(1), TT(1), KK(2), 98o(1), T3s(1), JTo(1), J9o(1), J8o(1), QTo(1), Q7o(2), Q7s(1), Q6o(1), Q3o(1), KQs(1), KTo(2), K4s(1), AQo(1), AJs(1), ATs(1), A9s(1), A9o(1), A8o(1), A6s(1), A2o(1)
+    Total: 26 unique combos, 29 instances, median combo frequency: 3.45%
+    By Pot Size:
+      N/A: 77(1), 88(1), 99(1), TT(1), KK(2), 98o(1), T3s(1), JTo(1), J9o(1), J8o(1), QTo(1), Q7o(2), Q7s(1), Q6o(1), Q3o(1), KQs(1), KTo(2), K4s(1), AQo(1), AJs(1), ATs(1), A9s(1), A9o(1), A8o(1), A6s(1), A2o(1) [29 instances, 100.0%]
+    By Big Blinds:
+      N/A: 77(1), 88(1), 99(1), TT(1), KK(2), 98o(1), T3s(1), JTo(1), J9o(1), J8o(1), QTo(1), Q7o(2), Q7s(1), Q6o(1), Q3o(1), KQs(1), KTo(2), K4s(1), AQo(1), AJs(1), ATs(1), A9s(1), A9o(1), A8o(1), A6s(1), A2o(1) [29 instances, 100.0%]
+    By Tournament Stage:
+      start: 88(1), TT(1), KK(2), JTo(1), J9o(1), QTo(1), Q7s(1), Q7o(2), Q3o(1), KTo(2), AQo(1), A9o(1), A9s(1), A8o(1), A6s(1), A2o(1) [19 instances, 65.5%]
+      pre_bubble: 99(1) [1 instances, 3.4%]
+      final_table: 77(1), 98o(1), T3s(1), J8o(1), Q6o(1), KQs(1), K4s(1), AJs(1), ATs(1) [9 instances, 31.0%]
+
+================================================================================
+POSITION: MP(6)
+================================================================================
+
+PREFLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 44(1), 55(1), 66(1), 77(2), 88(3), 99(4), JJ(5), KK(1), 65o(1), 98s(1), 96s(1), T9s(1), T9o(1), T8o(1), T8s(1), JTo(1), J8s(1), J4s(1), QJs(1), QTo(1), Q6s(1), KQs(1), KQo(1), KJo(1), KTs(1), K9s(2), K6s(1), AA(1), AKo(1), K3o(1), AQs(4), AQo(1), AJo(2), A9o(1), A8o(1), A3s(1), A3o(1), A2s(2)
+    Total: 38 unique combos, 54 instances, median combo frequency: 1.85%
+    By Pot Size:
+      OPEN: 44(1), 77(1), 88(2), 99(3), JJ(3), 98s(1), 96s(1), T9s(1), T8o(1), T8s(1), J8s(1), J4s(1), Q6s(1), KJo(1), KTs(1), K9s(2), K6s(1), AA(1), AKo(1), K3o(1), AQo(1), AQs(3), AJo(1), A8o(1), A3o(1), A2s(2) [35 instances, 64.8%]
+      1x: 65o(1), T9o(1), KQo(1) [3 instances, 5.6%]
+      1.5x: 88(1), KK(1), JTo(1) [3 instances, 5.6%]
+      2x: 77(1), QJs(1), QTo(1), AQs(1), AJo(1), A3s(1) [6 instances, 11.1%]
+      3x+: 55(1), 66(1), 99(1), JJ(2), KQs(1), A9o(1) [7 instances, 13.0%]
+    By Big Blinds:
+      MINRAISE: 44(1), 99(2), JJ(2), 96s(1), T9o(1), T9s(1), T8s(1), T8o(1), J8s(1), J4s(1), Q6s(1), KJo(1), KTs(1), AA(1), AKo(1), AQs(1), A8o(1), A2s(2) [21 instances, 38.9%]
+      2.5BB: 65o(1), K9s(2), K3o(1), AQs(1), AJo(1), A3s(1), A3o(1) [8 instances, 14.8%]
+      3BB: 99(1), 98s(1), AQs(1) [3 instances, 5.6%]
+      4-5BB: 77(1), 88(1) [2 instances, 3.7%]
+      6-9BB: 88(1), 99(1), JJ(1), KK(1), JTo(1), QJs(1), KQs(1), KQo(1), K6s(1), AQs(1) [10 instances, 18.5%]
+      10BB+: 55(1), 66(1), 77(1), 88(1), JJ(2), QTo(1), AQo(1), AJo(1), A9o(1) [10 instances, 18.5%]
+    By Tournament Stage:
+      start: 66(1), 77(2), 88(3), 99(3), JJ(2), KK(1), 98s(1), 96s(1), T9s(1), T9o(1), T8o(1), T8s(1), JTo(1), J8s(1), J4s(1), KQo(1), KJo(1), KTs(1), K9s(1), AA(1), AKo(1), K3o(1), AQs(2), AJo(2), A9o(1), A8o(1), A3s(1), A2s(1) [36 instances, 66.7%]
+      pre_bubble: 55(1), 99(1), Q6s(1), K6s(1), AQs(1), AQo(1) [6 instances, 11.1%]
+      final_table: 44(1), JJ(3), 65o(1), QJs(1), QTo(1), KQs(1), K9s(1), AQs(1), A3o(1), A2s(1) [12 instances, 22.2%]
+
+  CALL: 77(1), 88(2), 99(1), JJ(3), KK(1), 92o(1), T8o(1), T4s(1), JTo(1), JTs(1), J8s(2), QJo(1), Q6s(1), AKo(1), K2o(2), AQs(3), AJo(1), A9o(2), A8o(1), A4s(1)
+    Total: 20 unique combos, 28 instances, median combo frequency: 3.57%
+    By Pot Size:
+      N/A: 77(1), 88(2), 99(1), JJ(3), KK(1), 92o(1), T8o(1), T4s(1), JTo(1), JTs(1), J8s(2), QJo(1), Q6s(1), AKo(1), K2o(2), AQs(3), AJo(1), A9o(2), A8o(1), A4s(1) [28 instances, 100.0%]
+    By Big Blinds:
+      1BB_CALL: 88(1), 92o(1), T4s(1), JTo(1), J8s(1), QJo(1), K2o(2), A9o(2) [10 instances, 35.7%]
+      2BB_CALL: 77(1), 88(1), JTs(1), A4s(1) [4 instances, 14.3%]
+      3-4BB_CALL: JJ(1), Q6s(1) [2 instances, 7.1%]
+      5BB+_CALL: 99(1), JJ(2), KK(1), T8o(1), J8s(1), AKo(1), AQs(3), AJo(1), A8o(1) [12 instances, 42.9%]
+    By Tournament Stage:
+      start: 77(1), 88(2), 99(1), JJ(1), KK(1), T8o(1), T4s(1), JTo(1), JTs(1), J8s(2), AKo(1), K2o(2), AQs(1), AJo(1), A9o(1), A8o(1), A4s(1) [20 instances, 71.4%]
+      pre_bubble: Q6s(1), AQs(1) [2 instances, 7.1%]
+      final_table: JJ(2), 92o(1), QJo(1), AQs(1), A9o(1) [6 instances, 21.4%]
+
+  CHECK: JTo(1)
+    Total: 1 unique combos, 1 instances, median combo frequency: 100.00%
+    By Pot Size:
+      N/A: JTo(1) [1 instances, 100.0%]
+    By Big Blinds:
+      N/A: JTo(1) [1 instances, 100.0%]
+    By Tournament Stage:
+      start: JTo(1) [1 instances, 100.0%]
+
+FLOP:
+--------------------------------------------------------------------------------
+
+  BET: 44(1), 99(1), 96s(1), T8s(1), T4s(1), QJo(1), KTs(1), K2o(1), A2s(1)
+    Total: 9 unique combos, 9 instances, median combo frequency: 11.11%
+    By Pot Size:
+      <0.33x: KTs(1) [1 instances, 11.1%]
+      0.33x: 96s(1) [1 instances, 11.1%]
+      0.5x: 99(1), T4s(1) [2 instances, 22.2%]
+      0.75x: T8s(1), A2s(1) [2 instances, 22.2%]
+      1x: K2o(1) [1 instances, 11.1%]
+      1.5x: 44(1), QJo(1) [2 instances, 22.2%]
+    By Big Blinds:
+      1-3BB: 96s(1), T4s(1), KTs(1) [3 instances, 33.3%]
+      3-6BB: 44(1), T8s(1), QJo(1), K2o(1), A2s(1) [5 instances, 55.6%]
+      6-10BB: 99(1) [1 instances, 11.1%]
+    By Tournament Stage:
+      start: 99(1), 96s(1), T8s(1), T4s(1), KTs(1), K2o(1) [6 instances, 66.7%]
+      final_table: 44(1), QJo(1), A2s(1) [3 instances, 33.3%]
+
+  CALL: 96s(1), T8o(1), JTo(1), QJo(1), Q6s(1), KTs(1), AQs(1), K2o(1), A2s(1)
+    Total: 9 unique combos, 9 instances, median combo frequency: 11.11%
+    By Pot Size:
+      N/A: 96s(1), T8o(1), JTo(1), QJo(1), Q6s(1), KTs(1), AQs(1), K2o(1), A2s(1) [9 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: 96s(1), JTo(1), A2s(1) [3 instances, 33.3%]
+      3-6BB: K2o(1) [1 instances, 11.1%]
+      6-10BB: T8o(1), Q6s(1), KTs(1) [3 instances, 33.3%]
+      10BB+: QJo(1), AQs(1) [2 instances, 22.2%]
+    By Tournament Stage:
+      start: 96s(1), T8o(1), JTo(1), KTs(1), AQs(1), K2o(1), A2s(1) [7 instances, 77.8%]
+      pre_bubble: Q6s(1) [1 instances, 11.1%]
+      final_table: QJo(1) [1 instances, 11.1%]
+
+  CHECK: 99(1), 92o(1), T9o(1), T9s(1), JTo(1), Q6s(1), KJo(1), AA(1), A9o(1), A4s(1), A2s(1)
+    Total: 11 unique combos, 11 instances, median combo frequency: 9.09%
+    By Pot Size:
+      N/A: 99(1), 92o(1), T9s(1), T9o(1), JTo(1), Q6s(1), KJo(1), AA(1), A9o(1), A4s(1), A2s(1) [11 instances, 100.0%]
+    By Big Blinds:
+      N/A: 99(1), 92o(1), T9o(1), T9s(1), JTo(1), Q6s(1), KJo(1), AA(1), A9o(1), A4s(1), A2s(1) [11 instances, 100.0%]
+    By Tournament Stage:
+      start: T9o(1), T9s(1), JTo(1), KJo(1), AA(1), A4s(1), A2s(1) [7 instances, 63.6%]
+      pre_bubble: 99(1), Q6s(1) [2 instances, 18.2%]
+      final_table: 92o(1), A9o(1) [2 instances, 18.2%]
+
+TURN:
+--------------------------------------------------------------------------------
+
+  RAISE: KTs(1)
+    Total: 1 unique combos, 1 instances, median combo frequency: 100.00%
+    By Pot Size:
+      0.5x: KTs(1) [1 instances, 100.0%]
+    By Big Blinds:
+      10BB+: KTs(1) [1 instances, 100.0%]
+    By Tournament Stage:
+      start: KTs(1) [1 instances, 100.0%]
+
+  BET: 44(1), 96s(1), 92o(1), T9s(1), KTs(1), K2o(1), A2s(1)
+    Total: 7 unique combos, 7 instances, median combo frequency: 14.29%
+    By Pot Size:
+      <0.33x: A2s(1) [1 instances, 14.3%]
+      0.33x: T9s(1), KTs(1) [2 instances, 28.6%]
+      0.5x: K2o(1) [1 instances, 14.3%]
+      0.75x: 92o(1) [1 instances, 14.3%]
+      1x: 44(1) [1 instances, 14.3%]
+      1.5x: 96s(1) [1 instances, 14.3%]
+    By Big Blinds:
+      1-3BB: T9s(1), A2s(1) [2 instances, 28.6%]
+      3-6BB: 44(1), 92o(1) [2 instances, 28.6%]
+      6-10BB: KTs(1), K2o(1) [2 instances, 28.6%]
+      10BB+: 96s(1) [1 instances, 14.3%]
+    By Tournament Stage:
+      start: 96s(1), T9s(1), KTs(1), K2o(1) [4 instances, 57.1%]
+      final_table: 44(1), 92o(1), A2s(1) [3 instances, 42.9%]
+
+  CALL: JTo(1), KJo(1), KTs(1), AA(1), A9o(1), A2s(1)
+    Total: 6 unique combos, 6 instances, median combo frequency: 16.67%
+    By Pot Size:
+      N/A: JTo(1), KJo(1), KTs(1), AA(1), A9o(1), A2s(1) [6 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: KJo(1), AA(1), A9o(1) [3 instances, 50.0%]
+      3-6BB: JTo(1), KTs(1) [2 instances, 33.3%]
+      6-10BB: A2s(1) [1 instances, 16.7%]
+    By Tournament Stage:
+      start: JTo(1), KJo(1), KTs(1), AA(1), A2s(1) [5 instances, 83.3%]
+      final_table: A9o(1) [1 instances, 16.7%]
+
+  CHECK: 99(1), T9o(1), T8s(1), T4s(1), JTo(1), Q6s(1), A4s(1), A2s(1)
+    Total: 8 unique combos, 8 instances, median combo frequency: 12.50%
+    By Pot Size:
+      N/A: 99(1), T9o(1), T8s(1), T4s(1), JTo(1), Q6s(1), A4s(1), A2s(1) [8 instances, 100.0%]
+    By Big Blinds:
+      N/A: 99(1), T9o(1), T8s(1), T4s(1), JTo(1), Q6s(1), A4s(1), A2s(1) [8 instances, 100.0%]
+    By Tournament Stage:
+      start: T9o(1), T8s(1), T4s(1), JTo(1), A4s(1), A2s(1) [6 instances, 75.0%]
+      pre_bubble: 99(1), Q6s(1) [2 instances, 25.0%]
+
+RIVER:
+--------------------------------------------------------------------------------
+
+  RAISE: AA(1), A9o(1)
+    Total: 2 unique combos, 2 instances, median combo frequency: 50.00%
+    By Pot Size:
+      0.75x: A9o(1) [1 instances, 50.0%]
+      2x: AA(1) [1 instances, 50.0%]
+    By Big Blinds:
+      3-6BB: A9o(1) [1 instances, 50.0%]
+      6-10BB: AA(1) [1 instances, 50.0%]
+    By Tournament Stage:
+      start: AA(1) [1 instances, 50.0%]
+      final_table: A9o(1) [1 instances, 50.0%]
+
+  BET: 44(1), 92o(1), A2s(1)
+    Total: 3 unique combos, 3 instances, median combo frequency: 33.33%
+    By Pot Size:
+      0.33x: 92o(1) [1 instances, 33.3%]
+      0.5x: 44(1), A2s(1) [2 instances, 66.7%]
+    By Big Blinds:
+      3-6BB: 92o(1) [1 instances, 33.3%]
+      6-10BB: 44(1) [1 instances, 33.3%]
+      10BB+: A2s(1) [1 instances, 33.3%]
+    By Tournament Stage:
+      final_table: 44(1), 92o(1), A2s(1) [3 instances, 100.0%]
+
+  CALL: T8s(1)
+    Total: 1 unique combos, 1 instances, median combo frequency: 100.00%
+    By Pot Size:
+      N/A: T8s(1) [1 instances, 100.0%]
+    By Big Blinds:
+      6-10BB: T8s(1) [1 instances, 100.0%]
+    By Tournament Stage:
+      start: T8s(1) [1 instances, 100.0%]
+
+  CHECK: 99(1), T9o(1), T9s(1), T4s(1), JTo(1), Q6s(1), KJo(1), A4s(1), A2s(1)
+    Total: 9 unique combos, 9 instances, median combo frequency: 11.11%
+    By Pot Size:
+      N/A: 99(1), T9s(1), T9o(1), T4s(1), JTo(1), Q6s(1), KJo(1), A4s(1), A2s(1) [9 instances, 100.0%]
+    By Big Blinds:
+      N/A: 99(1), T9s(1), T9o(1), T4s(1), JTo(1), Q6s(1), KJo(1), A4s(1), A2s(1) [9 instances, 100.0%]
+    By Tournament Stage:
+      start: T9s(1), T9o(1), T4s(1), JTo(1), KJo(1), A4s(1), A2s(1) [7 instances, 77.8%]
+      pre_bubble: 99(1), Q6s(1) [2 instances, 22.2%]
+
+================================================================================
+POSITION: MP(7+)
+================================================================================
+
+PREFLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 22(1), 33(2), 44(2), 55(1), 77(2), 88(3), 99(2), JJ(4), QQ(7), KK(5), 54o(1), 87s(1), 98s(2), T9s(1), T8o(1), T4s(1), JTo(1), JTs(1), QJo(3), QJs(2), QTo(1), Q9o(1), Q8s(1), Q5s(1), Q4s(1), KQo(4), KQs(2), KJs(2), KTs(1), K9o(2), K6s(1), AA(2), K4s(1), AKs(6), AKo(6), AQs(1), AQo(6), AJo(6), ATs(3), ATo(3), A9o(2), A7s(3), A6s(1), A5s(1), A3o(2), A2s(1)
+    Total: 46 unique combos, 104 instances, median combo frequency: 1.92%
+    By Pot Size:
+      OPEN: 33(2), 44(1), 55(1), 77(2), 88(1), 99(1), JJ(3), QQ(2), KK(4), 54o(1), 98s(2), T9s(1), T8o(1), T4s(1), JTo(1), JTs(1), QJo(2), QJs(2), QTo(1), Q9o(1), Q8s(1), Q4s(1), KQs(2), KQo(2), KJs(1), K9o(2), K6s(1), AA(1), K4s(1), AKs(4), AKo(4), AQo(4), AJo(3), ATs(1), ATo(3), A9o(1), A7s(3), A6s(1), A3o(2), A2s(1) [70 instances, 67.3%]
+      0.75x: QQ(1) [1 instances, 1.0%]
+      1x: QJo(1), Q5s(1), AKs(1), AKo(1), AQo(1), ATs(1) [6 instances, 5.8%]
+      1.5x: AKo(1) [1 instances, 1.0%]
+      2x: JJ(1), QQ(3), KK(1), 87s(1), KQo(1), AA(1), AKs(1), AQs(1), ATs(1), A9o(1) [12 instances, 11.5%]
+      3x+: 22(1), 44(1), 88(2), 99(1), QQ(1), KQo(1), KJs(1), KTs(1), AQo(1), AJo(3), A5s(1) [14 instances, 13.5%]
+    By Big Blinds:
+      MINRAISE: 33(1), 55(1), 77(1), JJ(2), QQ(3), KK(1), T8o(1), T4s(1), JTo(1), JTs(1), QJs(1), QJo(2), QTo(1), Q9o(1), Q4s(1), KQo(1), KQs(1), KJs(1), K9o(1), K6s(1), AA(2), K4s(1), AKo(3), AKs(2), AQo(3), AJo(2), ATo(1), ATs(1), A9o(1), A7s(1), A6s(1), A3o(2) [44 instances, 42.3%]
+      2.5BB: 99(1), QJs(1), Q8s(1), A7s(1) [4 instances, 3.8%]
+      3BB: 44(1), KK(1), 98s(1), T9s(1), Q5s(1), KQs(1), KTs(1), K9o(1), AKo(1), AQo(1), ATo(1), A5s(1) [12 instances, 11.5%]
+      4-5BB: QQ(1), KK(1), 87s(1), 98s(1), AKs(1), AJo(1) [6 instances, 5.8%]
+      6-9BB: 22(1), 33(1), 44(1), QQ(1), KK(1), AKo(1), AKs(1), AQo(1), AJo(2), A7s(1) [11 instances, 10.6%]
+      10BB+: 77(1), 88(3), 99(1), JJ(2), QQ(2), KK(1), 54o(1), QJo(1), KQo(3), KJs(1), AKo(1), AKs(2), AQs(1), AQo(1), AJo(1), ATs(2), ATo(1), A9o(1), A2s(1) [27 instances, 26.0%]
+    By Tournament Stage:
+      start: 22(1), 33(2), 44(1), 55(1), 77(1), 88(1), 99(1), JJ(2), QQ(3), KK(3), 54o(1), 87s(1), 98s(1), T9s(1), T8o(1), JTo(1), JTs(1), QJs(2), QJo(3), QTo(1), Q9o(1), Q8s(1), Q5s(1), KQo(3), KQs(1), KJs(2), KTs(1), K9o(2), K6s(1), K4s(1), AA(2), AKs(4), AKo(3), AQo(5), AJo(4), ATo(2), ATs(3), A7s(2), A6s(1), A5s(1), A3o(2), A2s(1) [73 instances, 70.2%]
+      pre_bubble: 44(1), 88(1), QQ(1), A9o(1) [4 instances, 3.8%]
+      final_table: 77(1), 88(1), 99(1), JJ(2), QQ(3), KK(2), 98s(1), T4s(1), Q4s(1), KQs(1), KQo(1), AKo(3), AKs(2), AQs(1), AQo(1), AJo(2), ATo(1), A9o(1), A7s(1) [27 instances, 26.0%]
+
+  CALL: 22(1), 33(1), 44(3), 55(1), 77(1), 88(1), 99(1), JJ(2), QQ(1), KK(2), 98s(1), T9o(1), T9s(1), T7s(1), JTo(3), J9s(1), QJo(1), QTo(1), Q9o(2), Q8s(2), KQo(3), KQs(1), KJo(2), KJs(1), KTs(1), KTo(1), K9o(1), K8s(1), K5o(1), AA(3), K4s(1), AKo(3), AQo(5), K2s(2), AJo(3), ATo(3), A6s(1)
+    Total: 37 unique combos, 61 instances, median combo frequency: 1.64%
+    By Pot Size:
+      N/A: 22(1), 33(1), 44(3), 55(1), 77(1), 88(1), 99(1), JJ(2), QQ(1), KK(2), 98s(1), T9o(1), T9s(1), T7s(1), JTo(3), J9s(1), QJo(1), QTo(1), Q9o(2), Q8s(2), KQo(3), KQs(1), KJo(2), KJs(1), KTs(1), KTo(1), K9o(1), K8s(1), K5o(1), K4s(1), AA(3), AKo(3), AQo(5), K2s(2), AJo(3), ATo(3), A6s(1) [61 instances, 100.0%]
+    By Big Blinds:
+      1BB_CALL: 33(1), 44(2), 55(1), 99(1), QQ(1), T9s(1), T9o(1), JTo(1), J9s(1), QTo(1), Q9o(1), Q8s(2), KQo(2), KJo(1), KTs(1), K8s(1), K5o(1), AA(1), AKo(2), K2s(2), AJo(2), ATo(1), A6s(1) [29 instances, 47.5%]
+      2BB_CALL: 22(1), 88(1), T7s(1), QJo(1), KQs(1), AQo(2), ATo(1) [8 instances, 13.1%]
+      3-4BB_CALL: JTo(1), KTo(1), K9o(1), AJo(1) [4 instances, 6.6%]
+      5BB+_CALL: 44(1), 77(1), JJ(2), KK(2), 98s(1), JTo(1), Q9o(1), KQo(1), KJo(1), KJs(1), K4s(1), AA(2), AKo(1), AQo(3), ATo(1) [20 instances, 32.8%]
+    By Tournament Stage:
+      start: 22(1), 55(1), 88(1), JJ(1), KK(1), T9o(1), T7s(1), JTo(3), J9s(1), QJo(1), QTo(1), Q9o(1), KQo(3), KQs(1), KJo(2), KJs(1), KTs(1), KTo(1), K9o(1), K8s(1), K4s(1), AA(3), AKo(1), AQo(4), AJo(2), ATo(1), A6s(1) [38 instances, 62.3%]
+      pre_bubble: 44(1) [1 instances, 1.6%]
+      final_table: 33(1), 44(2), 77(1), 99(1), JJ(1), QQ(1), KK(1), 98s(1), T9s(1), Q9o(1), Q8s(2), K5o(1), AKo(2), AQo(1), K2s(2), AJo(1), ATo(2) [22 instances, 36.1%]
+
+FLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: QJs(1), Q8s(1), KQo(1), AA(1), AQo(1), A7s(1)
+    Total: 6 unique combos, 6 instances, median combo frequency: 16.67%
+    By Pot Size:
+      0.5x: Q8s(1), KQo(1) [2 instances, 33.3%]
+      0.75x: QJs(1), AQo(1) [2 instances, 33.3%]
+      1.5x: AA(1) [1 instances, 16.7%]
+      3x+: A7s(1) [1 instances, 16.7%]
+    By Big Blinds:
+      3-6BB: QJs(1) [1 instances, 16.7%]
+      6-10BB: AA(1) [1 instances, 16.7%]
+      10BB+: Q8s(1), KQo(1), AQo(1), A7s(1) [4 instances, 66.7%]
+    By Tournament Stage:
+      start: QJs(1), KQo(1), AA(1), AQo(1) [4 instances, 66.7%]
+      final_table: Q8s(1), A7s(1) [2 instances, 33.3%]
+
+  BET: 88(1), JTo(1), QTo(1), Q8s(2), Q4s(1), K9o(2), AKo(1), K2s(1), ATs(1), A7s(1)
+    Total: 10 unique combos, 12 instances, median combo frequency: 8.33%
+    By Pot Size:
+      <0.33x: K9o(1) [1 instances, 8.3%]
+      0.33x: 88(1), K2s(1), A7s(1) [3 instances, 25.0%]
+      0.5x: Q8s(1), Q4s(1), K9o(1), AKo(1), ATs(1) [5 instances, 41.7%]
+      0.75x: Q8s(1) [1 instances, 8.3%]
+      1x: QTo(1) [1 instances, 8.3%]
+      2x: JTo(1) [1 instances, 8.3%]
+    By Big Blinds:
+      <1BB: K9o(1) [1 instances, 8.3%]
+      1-3BB: 88(1), QTo(1), AKo(1), K2s(1) [4 instances, 33.3%]
+      3-6BB: Q8s(2), Q4s(1), K9o(1), ATs(1), A7s(1) [6 instances, 50.0%]
+      10BB+: JTo(1) [1 instances, 8.3%]
+    By Tournament Stage:
+      start: 88(1), JTo(1), QTo(1), Q8s(1), K9o(2), ATs(1), A7s(1) [8 instances, 66.7%]
+      final_table: Q8s(1), Q4s(1), AKo(1), K2s(1) [4 instances, 33.3%]
+
+  CALL: 22(1), QQ(1), KK(2), T9s(1), T7s(1), J9s(1), QJo(2), Q9o(1), Q4s(1), KQs(1), K6s(1), AKo(2), AQo(1), ATo(1), A6s(1), A5s(1)
+    Total: 16 unique combos, 19 instances, median combo frequency: 5.26%
+    By Pot Size:
+      N/A: 22(1), QQ(1), KK(2), T9s(1), T7s(1), J9s(1), QJo(2), Q9o(1), Q4s(1), KQs(1), K6s(1), AKo(2), AQo(1), ATo(1), A6s(1), A5s(1) [19 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: 22(1), J9s(1), QJo(1), K6s(1), AKo(1), ATo(1) [6 instances, 31.6%]
+      3-6BB: KQs(1), AQo(1) [2 instances, 10.5%]
+      6-10BB: KK(1), QJo(1), Q9o(1), Q4s(1), AKo(1), A6s(1), A5s(1) [7 instances, 36.8%]
+      10BB+: QQ(1), KK(1), T9s(1), T7s(1) [4 instances, 21.1%]
+    By Tournament Stage:
+      start: 22(1), QQ(1), KK(1), T9s(1), T7s(1), J9s(1), QJo(2), Q9o(1), K6s(1), AQo(1), A6s(1), A5s(1) [13 instances, 68.4%]
+      final_table: KK(1), Q4s(1), KQs(1), AKo(2), ATo(1) [6 instances, 31.6%]
+
+  CHECK: 33(2), QQ(2), T9s(1), T8o(1), JTs(1), J9s(1), QJo(1), QJs(2), Q9o(1), KTs(2), K8s(1), K6s(1), K5o(1), AJo(2), A9o(1), A6s(1), A3o(1)
+    Total: 17 unique combos, 22 instances, median combo frequency: 4.55%
+    By Pot Size:
+      N/A: 33(2), QQ(2), T9s(1), T8o(1), JTs(1), J9s(1), QJo(1), QJs(2), Q9o(1), KTs(2), K8s(1), K6s(1), K5o(1), AJo(2), A9o(1), A6s(1), A3o(1) [22 instances, 100.0%]
+    By Big Blinds:
+      N/A: 33(2), QQ(2), T9s(1), T8o(1), JTs(1), J9s(1), QJo(1), QJs(2), Q9o(1), KTs(2), K8s(1), K6s(1), K5o(1), AJo(2), A9o(1), A6s(1), A3o(1) [22 instances, 100.0%]
+    By Tournament Stage:
+      start: 33(1), QQ(1), T9s(1), T8o(1), JTs(1), J9s(1), QJs(2), QJo(1), KTs(2), K8s(1), K6s(1), AJo(1), A6s(1), A3o(1) [16 instances, 72.7%]
+      pre_bubble: QQ(1) [1 instances, 4.5%]
+      final_table: 33(1), Q9o(1), K5o(1), AJo(1), A9o(1) [5 instances, 22.7%]
+
+TURN:
+--------------------------------------------------------------------------------
+
+  RAISE: Q9o(1), K8s(1)
+    Total: 2 unique combos, 2 instances, median combo frequency: 50.00%
+    By Pot Size:
+      0.75x: Q9o(1) [1 instances, 50.0%]
+      1x: K8s(1) [1 instances, 50.0%]
+    By Big Blinds:
+      3-6BB: K8s(1) [1 instances, 50.0%]
+      10BB+: Q9o(1) [1 instances, 50.0%]
+    By Tournament Stage:
+      start: Q9o(1), K8s(1) [2 instances, 100.0%]
+
+  BET: 22(1), QQ(1), QJo(1), K5o(1), K2s(1), AJo(1), A9o(1)
+    Total: 7 unique combos, 7 instances, median combo frequency: 14.29%
+    By Pot Size:
+      0.33x: K2s(1) [1 instances, 14.3%]
+      0.5x: 22(1), QQ(1), QJo(1), AJo(1), A9o(1) [5 instances, 71.4%]
+      1x: K5o(1) [1 instances, 14.3%]
+    By Big Blinds:
+      1-3BB: QQ(1), AJo(1), A9o(1) [3 instances, 42.9%]
+      3-6BB: K5o(1), K2s(1) [2 instances, 28.6%]
+      6-10BB: 22(1), QJo(1) [2 instances, 28.6%]
+    By Tournament Stage:
+      start: 22(1), QJo(1), AJo(1) [3 instances, 42.9%]
+      pre_bubble: QQ(1) [1 instances, 14.3%]
+      final_table: K5o(1), K2s(1), A9o(1) [3 instances, 42.9%]
+
+  CALL: 22(1), QQ(1), J9s(1), QJo(1), Q9o(2), KQs(1), KTs(1), K9o(1), K5o(1), AQo(1), K2s(1)
+    Total: 11 unique combos, 12 instances, median combo frequency: 8.33%
+    By Pot Size:
+      N/A: 22(1), QQ(1), J9s(1), QJo(1), Q9o(2), KQs(1), KTs(1), K9o(1), K5o(1), AQo(1), K2s(1) [12 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: Q9o(1), KTs(1) [2 instances, 16.7%]
+      3-6BB: J9s(1), KQs(1), K9o(1), K2s(1) [4 instances, 33.3%]
+      6-10BB: QQ(1), AQo(1) [2 instances, 16.7%]
+      10BB+: 22(1), QJo(1), Q9o(1), K5o(1) [4 instances, 33.3%]
+    By Tournament Stage:
+      start: 22(1), QQ(1), J9s(1), QJo(1), Q9o(1), KTs(1), K9o(1), AQo(1) [8 instances, 66.7%]
+      final_table: Q9o(1), KQs(1), K5o(1), K2s(1) [4 instances, 33.3%]
+
+  CHECK: 33(2), 88(1), QQ(1), T8o(1), JTs(1), J9s(1), QJs(2), QTo(1), Q8s(1), KTs(1), K9o(1), K6s(1), AJo(1), ATo(1), A7s(1), A6s(1), A3o(1)
+    Total: 17 unique combos, 19 instances, median combo frequency: 5.26%
+    By Pot Size:
+      N/A: 33(2), 88(1), QQ(1), T8o(1), JTs(1), J9s(1), QJs(2), QTo(1), Q8s(1), KTs(1), K9o(1), K6s(1), AJo(1), ATo(1), A7s(1), A6s(1), A3o(1) [19 instances, 100.0%]
+    By Big Blinds:
+      N/A: 33(2), 88(1), QQ(1), T8o(1), JTs(1), J9s(1), QJs(2), QTo(1), Q8s(1), KTs(1), K9o(1), K6s(1), AJo(1), ATo(1), A7s(1), A6s(1), A3o(1) [19 instances, 100.0%]
+    By Tournament Stage:
+      start: 33(1), 88(1), QQ(1), T8o(1), JTs(1), J9s(1), QJs(2), QTo(1), Q8s(1), KTs(1), K9o(1), K6s(1), A7s(1), A6s(1), A3o(1) [16 instances, 84.2%]
+      final_table: 33(1), AJo(1), ATo(1) [3 instances, 15.8%]
+
+RIVER:
+--------------------------------------------------------------------------------
+
+  RAISE: KQs(1), KTs(1)
+    Total: 2 unique combos, 2 instances, median combo frequency: 50.00%
+    By Pot Size:
+      0.5x: KQs(1), KTs(1) [2 instances, 100.0%]
+    By Big Blinds:
+      6-10BB: KTs(1) [1 instances, 50.0%]
+      10BB+: KQs(1) [1 instances, 50.0%]
+    By Tournament Stage:
+      start: KTs(1) [1 instances, 50.0%]
+      final_table: KQs(1) [1 instances, 50.0%]
+
+  BET: QJs(1), Q9o(1), K2s(1), AJo(1), ATo(1)
+    Total: 5 unique combos, 5 instances, median combo frequency: 20.00%
+    By Pot Size:
+      <0.33x: K2s(1), ATo(1) [2 instances, 40.0%]
+      0.33x: Q9o(1) [1 instances, 20.0%]
+      0.75x: QJs(1) [1 instances, 20.0%]
+      1x: AJo(1) [1 instances, 20.0%]
+    By Big Blinds:
+      1-3BB: Q9o(1), ATo(1) [2 instances, 40.0%]
+      3-6BB: QJs(1), K2s(1) [2 instances, 40.0%]
+      10BB+: AJo(1) [1 instances, 20.0%]
+    By Tournament Stage:
+      start: QJs(1), AJo(1) [2 instances, 40.0%]
+      final_table: Q9o(1), K2s(1), ATo(1) [3 instances, 60.0%]
+
+  CALL: Q8s(1), A3o(1)
+    Total: 2 unique combos, 2 instances, median combo frequency: 50.00%
+    By Pot Size:
+      N/A: Q8s(1), A3o(1) [2 instances, 100.0%]
+    By Big Blinds:
+      3-6BB: A3o(1) [1 instances, 50.0%]
+      6-10BB: Q8s(1) [1 instances, 50.0%]
+    By Tournament Stage:
+      start: Q8s(1), A3o(1) [2 instances, 100.0%]
+
+  CHECK: 33(2), 88(1), QQ(1), T8o(1), JTs(1), J9s(1), QJs(1), QTo(1), KTs(1), K9o(1), K6s(1), AJo(1), A7s(1), A6s(1), A3o(1)
+    Total: 15 unique combos, 16 instances, median combo frequency: 6.25%
+    By Pot Size:
+      N/A: 33(2), 88(1), QQ(1), T8o(1), JTs(1), J9s(1), QJs(1), QTo(1), KTs(1), K9o(1), K6s(1), AJo(1), A7s(1), A6s(1), A3o(1) [16 instances, 100.0%]
+    By Big Blinds:
+      N/A: 33(2), 88(1), QQ(1), T8o(1), JTs(1), J9s(1), QJs(1), QTo(1), KTs(1), K9o(1), K6s(1), AJo(1), A7s(1), A6s(1), A3o(1) [16 instances, 100.0%]
+    By Tournament Stage:
+      start: 33(1), 88(1), T8o(1), JTs(1), J9s(1), QJs(1), QTo(1), KTs(1), K9o(1), K6s(1), A7s(1), A6s(1), A3o(1) [13 instances, 81.2%]
+      pre_bubble: QQ(1) [1 instances, 6.2%]
+      final_table: 33(1), AJo(1) [2 instances, 12.5%]
+
+================================================================================
+POSITION: EP(6)
+================================================================================
+
+PREFLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 22(1), 44(1), 55(2), 66(1), 88(5), TT(2), JJ(1), QQ(3), KK(6), 65s(1), 87s(1), 85s(1), T9o(1), JTo(1), J9o(1), J8s(1), QJo(3), QTo(1), Q9s(1), Q4s(1), KQs(3), KQo(1), KJo(5), KTo(2), K9o(1), K9s(1), K7o(1), AA(1), AKo(5), AKs(3), AQo(5), AJo(5), ATs(1), ATo(3), A9o(4), A8s(1), A8o(1), A5o(1), A4o(1), A3o(2), A2s(1)
+    Total: 41 unique combos, 83 instances, median combo frequency: 1.20%
+    By Pot Size:
+      OPEN: 44(1), 55(2), 66(1), 88(5), TT(2), JJ(1), QQ(2), KK(3), 65s(1), 85s(1), T9o(1), JTo(1), J9o(1), J8s(1), QJo(2), QTo(1), Q9s(1), KQs(3), KQo(1), KJo(4), KTo(1), K9s(1), K7o(1), AA(1), AKs(2), AKo(4), AQo(4), AJo(5), ATo(2), ATs(1), A9o(3), A8s(1), A8o(1), A5o(1), A3o(2), A2s(1) [66 instances, 79.5%]
+      0.75x: QQ(1), QJo(1) [2 instances, 2.4%]
+      1x: 87s(1) [1 instances, 1.2%]
+      1.5x: KK(1), AKs(1), AQo(1) [3 instances, 3.6%]
+      2x: K9o(1), A9o(1) [2 instances, 2.4%]
+      3x+: 22(1), KK(2), Q4s(1), KJo(1), KTo(1), AKo(1), ATo(1), A4o(1) [9 instances, 10.8%]
+    By Big Blinds:
+      MINRAISE: 44(1), 55(1), 88(2), QQ(1), KK(2), 65s(1), 85s(1), QJo(2), QTo(1), KQs(2), KJo(1), KTo(1), K9s(1), K7o(1), AA(1), AKo(1), AKs(1), AQo(2), ATo(2), ATs(1), A9o(1) [27 instances, 32.5%]
+      2.5BB: KJo(1), AKo(1), A3o(1) [3 instances, 3.6%]
+      3BB: TT(2), QQ(1), KK(1), 87s(1), AJo(2), A8s(1), A4o(1) [9 instances, 10.8%]
+      4-5BB: 55(1), JJ(1), T9o(1), JTo(1), J9o(1), AKs(1), AKo(1), AQo(2), AJo(2), A9o(1) [12 instances, 14.5%]
+      6-9BB: 88(1), J8s(1), Q9s(1), KQs(1), KJo(2), K9o(1), AKo(1), AJo(1), A9o(1) [10 instances, 12.0%]
+      10BB+: 22(1), 66(1), 88(2), QQ(1), KK(3), QJo(1), Q4s(1), KQo(1), KJo(1), KTo(1), AKs(1), AKo(1), AQo(1), ATo(1), A9o(1), A8o(1), A5o(1), A3o(1), A2s(1) [22 instances, 26.5%]
+    By Tournament Stage:
+      start: 22(1), 55(2), 66(1), 88(4), TT(2), JJ(1), QQ(3), KK(5), 85s(1), JTo(1), J9o(1), J8s(1), QJo(2), QTo(1), KQs(2), KJo(3), KTo(2), K9o(1), K9s(1), K7o(1), AA(1), AKs(3), AKo(5), AQo(3), AJo(1), ATo(2), ATs(1), A9o(1), A5o(1), A4o(1), A3o(1) [56 instances, 67.5%]
+      pre_bubble: 88(1), 65s(1), QJo(1), KJo(1) [4 instances, 4.8%]
+      bubble: AQo(1) [1 instances, 1.2%]
+      final_table: 44(1), KK(1), 87s(1), T9o(1), Q9s(1), Q4s(1), KQo(1), KQs(1), KJo(1), AQo(1), AJo(4), ATo(1), A9o(3), A8s(1), A8o(1), A3o(1), A2s(1) [22 instances, 26.5%]
+
+  CALL: 33(1), 44(3), 55(1), 66(2), 77(1), 88(3), TT(1), QQ(1), KK(4), 43s(1), 76s(2), 75o(1), 87o(1), 86s(1), 85o(2), 85s(1), 83o(1), 83s(1), 96s(1), 94o(1), T8s(1), T8o(1), T6o(1), T4o(1), JTo(1), JTs(1), J9s(2), J7s(2), J3s(1), QJo(1), QTo(3), Q9o(2), Q8s(1), Q3s(1), KQs(1), KJo(1), KTs(4), KTo(4), K9o(1), K6o(2), K5s(1), K4s(1), AKo(5), AQo(4), K2o(2), AQs(1), AJo(1), ATo(2), A9o(1), A8s(1), A7s(2), A5o(1)
+    Total: 52 unique combos, 84 instances, median combo frequency: 1.19%
+    By Pot Size:
+      N/A: 33(1), 44(3), 55(1), 66(2), 77(1), 88(3), TT(1), QQ(1), KK(4), 43s(1), 76s(2), 75o(1), 87o(1), 86s(1), 85o(2), 85s(1), 83o(1), 83s(1), 96s(1), 94o(1), T8o(1), T8s(1), T6o(1), T4o(1), JTs(1), JTo(1), J9s(2), J7s(2), J3s(1), QJo(1), QTo(3), Q9o(2), Q8s(1), Q3s(1), KQs(1), KJo(1), KTs(4), KTo(4), K9o(1), K6o(2), K5s(1), K4s(1), AKo(5), AQo(4), K2o(2), AQs(1), AJo(1), ATo(2), A9o(1), A8s(1), A7s(2), A5o(1) [84 instances, 100.0%]
+    By Big Blinds:
+      1BB_CALL: 44(1), 88(2), 43s(1), 76s(1), 75o(1), 87o(1), 86s(1), 85o(2), 85s(1), 83o(1), 83s(1), 96s(1), 94o(1), T8o(1), T8s(1), T6o(1), T4o(1), JTs(1), J9s(1), J7s(2), J3s(1), Q9o(2), Q8s(1), Q3s(1), KJo(1), KTs(2), KTo(3), K9o(1), K6o(1), K5s(1), K4s(1), AKo(2), K2o(1), AQs(1), AQo(1), A9o(1) [44 instances, 52.4%]
+      2BB_CALL: 44(1), 55(1), 66(1), 77(1), QJo(1), QTo(1), AKo(1), K2o(1), AQo(1), A7s(1), A5o(1) [11 instances, 13.1%]
+      3-4BB_CALL: 33(1), 44(1), 66(1), QQ(1), KK(1), JTo(1), QTo(1), ATo(1) [8 instances, 9.5%]
+      5BB+_CALL: 88(1), TT(1), KK(3), 76s(1), J9s(1), QTo(1), KQs(1), KTs(2), KTo(1), K6o(1), AKo(2), AQo(2), AJo(1), ATo(1), A8s(1), A7s(1) [21 instances, 25.0%]
+    By Tournament Stage:
+      start: 44(2), 55(1), TT(1), QQ(1), KK(2), 75o(1), 87o(1), 85s(1), 85o(1), 83o(1), 96s(1), T8o(1), T6o(1), JTs(1), J9s(2), J7s(1), QJo(1), QTo(2), Q9o(2), KQs(1), KTs(3), KTo(1), K9o(1), K6o(2), AKo(3), K2o(2), AQs(1), AQo(3), ATo(1) [42 instances, 50.0%]
+      pre_bubble: 88(2), 76s(2), JTo(1), K4s(1) [6 instances, 7.1%]
+      bubble: AQo(1) [1 instances, 1.2%]
+      final_table: 33(1), 44(1), 66(2), 77(1), 88(1), KK(2), 43s(1), 86s(1), 85o(1), 83s(1), 94o(1), T8s(1), T4o(1), J7s(1), J3s(1), QTo(1), Q8s(1), Q3s(1), KJo(1), KTs(1), KTo(3), K5s(1), AKo(2), AJo(1), ATo(1), A9o(1), A8s(1), A7s(2), A5o(1) [35 instances, 41.7%]
+
+  CHECK: T7s(1), Q9o(1), Q5o(1)
+    Total: 3 unique combos, 3 instances, median combo frequency: 33.33%
+    By Pot Size:
+      N/A: T7s(1), Q9o(1), Q5o(1) [3 instances, 100.0%]
+    By Big Blinds:
+      N/A: T7s(1), Q9o(1), Q5o(1) [3 instances, 100.0%]
+    By Tournament Stage:
+      start: T7s(1), Q9o(1) [2 instances, 66.7%]
+      final_table: Q5o(1) [1 instances, 33.3%]
+
+FLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: QTo(1), AA(1), K2o(1)
+    Total: 3 unique combos, 3 instances, median combo frequency: 33.33%
+    By Pot Size:
+      1x: QTo(1) [1 instances, 33.3%]
+      1.5x: AA(1) [1 instances, 33.3%]
+      3x+: K2o(1) [1 instances, 33.3%]
+    By Big Blinds:
+      10BB+: QTo(1), AA(1), K2o(1) [3 instances, 100.0%]
+    By Tournament Stage:
+      start: QTo(1), AA(1), K2o(1) [3 instances, 100.0%]
+
+  BET: 55(1), 88(1), TT(1), KK(1), T8o(1), J3s(1), QJo(1), Q9o(1), Q3s(1), KQs(1), KJo(2), KTo(2), K9s(1), K5s(1), AA(1), AQs(1)
+    Total: 16 unique combos, 18 instances, median combo frequency: 5.56%
+    By Pot Size:
+      <0.33x: Q3s(1), KJo(1), KTo(1) [3 instances, 16.7%]
+      0.33x: TT(1), T8o(1), K9s(1) [3 instances, 16.7%]
+      0.5x: 88(1), KK(1), J3s(1), KJo(1), KTo(1) [5 instances, 27.8%]
+      0.75x: AA(1) [1 instances, 5.6%]
+      1x: QJo(1) [1 instances, 5.6%]
+      1.5x: 55(1), KQs(1) [2 instances, 11.1%]
+      2x: K5s(1) [1 instances, 5.6%]
+      3x+: Q9o(1), AQs(1) [2 instances, 11.1%]
+    By Big Blinds:
+      <1BB: KTo(1) [1 instances, 5.6%]
+      1-3BB: T8o(1), J3s(1), Q3s(1), KJo(2), KTo(1), K9s(1), K5s(1) [8 instances, 44.4%]
+      3-6BB: 55(1), 88(1), QJo(1), Q9o(1), AA(1), AQs(1) [6 instances, 33.3%]
+      6-10BB: KQs(1) [1 instances, 5.6%]
+      10BB+: TT(1), KK(1) [2 instances, 11.1%]
+    By Tournament Stage:
+      start: 55(1), 88(1), TT(1), KK(1), T8o(1), Q9o(1), KQs(1), KJo(1), KTo(1), K9s(1), AA(1), AQs(1) [12 instances, 66.7%]
+      pre_bubble: QJo(1) [1 instances, 5.6%]
+      final_table: J3s(1), Q3s(1), KJo(1), KTo(1), K5s(1) [5 instances, 27.8%]
+
+  CALL: 44(1), 55(1), 43s(1), 86s(1), 83s(1), T8s(1), JTs(1), J7s(1), QTo(1), KTs(1), K9o(1), AKo(1), AQs(1), ATs(1), A7s(1)
+    Total: 15 unique combos, 15 instances, median combo frequency: 6.67%
+    By Pot Size:
+      N/A: 44(1), 55(1), 43s(1), 86s(1), 83s(1), T8s(1), JTs(1), J7s(1), QTo(1), KTs(1), K9o(1), AKo(1), AQs(1), ATs(1), A7s(1) [15 instances, 100.0%]
+    By Big Blinds:
+      <1BB: KTs(1), A7s(1) [2 instances, 13.3%]
+      1-3BB: 86s(1), JTs(1), J7s(1), AKo(1) [4 instances, 26.7%]
+      3-6BB: 44(1), 55(1), 43s(1), T8s(1) [4 instances, 26.7%]
+      6-10BB: 83s(1), K9o(1), AQs(1), ATs(1) [4 instances, 26.7%]
+      10BB+: QTo(1) [1 instances, 6.7%]
+    By Tournament Stage:
+      start: 44(1), 55(1), JTs(1), J7s(1), QTo(1), K9o(1), AQs(1), ATs(1) [8 instances, 53.3%]
+      final_table: 43s(1), 86s(1), 83s(1), T8s(1), KTs(1), AKo(1), A7s(1) [7 instances, 46.7%]
+
+  CHECK: 44(1), 55(1), 88(1), TT(1), 43s(1), 87o(1), 86s(1), 96s(1), T8s(1), T7s(1), T6o(1), JTs(1), J7s(1), Q8s(1), Q5o(1), KJo(1), KTs(1), K9o(1), K4s(1), AKs(1), AKo(2), K2o(1), A4o(1)
+    Total: 23 unique combos, 24 instances, median combo frequency: 4.17%
+    By Pot Size:
+      N/A: 44(1), 55(1), 88(1), TT(1), 43s(1), 87o(1), 86s(1), 96s(1), T8s(1), T7s(1), T6o(1), JTs(1), J7s(1), Q8s(1), Q5o(1), KJo(1), KTs(1), K9o(1), K4s(1), AKo(2), AKs(1), K2o(1), A4o(1) [24 instances, 100.0%]
+    By Big Blinds:
+      N/A: 44(1), 55(1), 88(1), TT(1), 43s(1), 87o(1), 86s(1), 96s(1), T8s(1), T7s(1), T6o(1), JTs(1), J7s(1), Q8s(1), Q5o(1), KJo(1), KTs(1), K9o(1), K4s(1), AKs(1), AKo(2), K2o(1), A4o(1) [24 instances, 100.0%]
+    By Tournament Stage:
+      start: 44(1), 55(1), TT(1), 87o(1), 96s(1), T7s(1), T6o(1), JTs(1), J7s(1), KJo(1), K9o(1), AKs(1), AKo(1), K2o(1), A4o(1) [15 instances, 62.5%]
+      pre_bubble: 88(1), K4s(1) [2 instances, 8.3%]
+      final_table: 43s(1), 86s(1), T8s(1), Q8s(1), Q5o(1), KTs(1), AKo(1) [7 instances, 29.2%]
+
+TURN:
+--------------------------------------------------------------------------------
+
+  RAISE: AQs(1)
+    Total: 1 unique combos, 1 instances, median combo frequency: 100.00%
+    By Pot Size:
+      0.33x: AQs(1) [1 instances, 100.0%]
+    By Big Blinds:
+      10BB+: AQs(1) [1 instances, 100.0%]
+    By Tournament Stage:
+      start: AQs(1) [1 instances, 100.0%]
+
+  BET: 55(1), 88(1), TT(1), QJo(1), Q8s(1), KJo(1), K4s(1), AKo(1)
+    Total: 8 unique combos, 8 instances, median combo frequency: 12.50%
+    By Pot Size:
+      <0.33x: KJo(1) [1 instances, 12.5%]
+      0.33x: 55(1), K4s(1) [2 instances, 25.0%]
+      0.5x: Q8s(1), AKo(1) [2 instances, 25.0%]
+      1x: 88(1), TT(1), QJo(1) [3 instances, 37.5%]
+    By Big Blinds:
+      1-3BB: Q8s(1), KJo(1), K4s(1), AKo(1) [4 instances, 50.0%]
+      3-6BB: 55(1), TT(1) [2 instances, 25.0%]
+      10BB+: 88(1), QJo(1) [2 instances, 25.0%]
+    By Tournament Stage:
+      start: 55(1), 88(1), TT(1), KJo(1), AKo(1) [5 instances, 62.5%]
+      pre_bubble: QJo(1), K4s(1) [2 instances, 25.0%]
+      final_table: Q8s(1) [1 instances, 12.5%]
+
+  CALL: 44(1), 88(1), 86s(1), 96s(1), T8s(1), T8o(1), Q5o(1), K9o(1), AKs(1)
+    Total: 9 unique combos, 9 instances, median combo frequency: 11.11%
+    By Pot Size:
+      N/A: 44(1), 88(1), 86s(1), 96s(1), T8o(1), T8s(1), Q5o(1), K9o(1), AKs(1) [9 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: 88(1), 86s(1), Q5o(1), AKs(1) [4 instances, 44.4%]
+      3-6BB: 44(1), 96s(1), T8o(1) [3 instances, 33.3%]
+      10BB+: T8s(1), K9o(1) [2 instances, 22.2%]
+    By Tournament Stage:
+      start: 44(1), 96s(1), T8o(1), K9o(1), AKs(1) [5 instances, 55.6%]
+      pre_bubble: 88(1) [1 instances, 11.1%]
+      final_table: 86s(1), T8s(1), Q5o(1) [3 instances, 33.3%]
+
+  CHECK: 44(1), 43s(1), 87o(1), 86s(1), T8o(1), T8s(1), T7s(1), T6o(1), JTs(1), Q5o(1), KJo(2), KTo(1), KTs(1), K9o(1), K9s(1), K5s(1), AKs(1), AKo(1), A7s(1), A4o(1)
+    Total: 20 unique combos, 21 instances, median combo frequency: 4.76%
+    By Pot Size:
+      N/A: 44(1), 43s(1), 87o(1), 86s(1), T8s(1), T8o(1), T7s(1), T6o(1), JTs(1), Q5o(1), KJo(2), KTo(1), KTs(1), K9s(1), K9o(1), K5s(1), AKo(1), AKs(1), A7s(1), A4o(1) [21 instances, 100.0%]
+    By Big Blinds:
+      N/A: 44(1), 43s(1), 87o(1), 86s(1), T8s(1), T8o(1), T7s(1), T6o(1), JTs(1), Q5o(1), KJo(2), KTo(1), KTs(1), K9s(1), K9o(1), K5s(1), AKo(1), AKs(1), A7s(1), A4o(1) [21 instances, 100.0%]
+    By Tournament Stage:
+      start: 44(1), 87o(1), T8o(1), T7s(1), T6o(1), JTs(1), KJo(1), KTo(1), K9o(1), K9s(1), AKs(1), A4o(1) [12 instances, 57.1%]
+      final_table: 43s(1), 86s(1), T8s(1), Q5o(1), KJo(1), KTs(1), K5s(1), AKo(1), A7s(1) [9 instances, 42.9%]
+
+RIVER:
+--------------------------------------------------------------------------------
+
+  RAISE: A7s(1)
+    Total: 1 unique combos, 1 instances, median combo frequency: 100.00%
+    By Pot Size:
+      1x: A7s(1) [1 instances, 100.0%]
+    By Big Blinds:
+      10BB+: A7s(1) [1 instances, 100.0%]
+    By Tournament Stage:
+      final_table: A7s(1) [1 instances, 100.0%]
+
+  BET: 88(1), TT(1), 43s(1), JTs(1), KJo(2), KTo(1), KTs(1), K9s(1), K4s(1), AKs(1)
+    Total: 10 unique combos, 11 instances, median combo frequency: 9.09%
+    By Pot Size:
+      <0.33x: 88(1), KJo(2), K4s(1) [4 instances, 36.4%]
+      0.33x: 43s(1), K9s(1) [2 instances, 18.2%]
+      0.5x: JTs(1), KTs(1) [2 instances, 18.2%]
+      0.75x: KTo(1), AKs(1) [2 instances, 18.2%]
+      1x: TT(1) [1 instances, 9.1%]
+    By Big Blinds:
+      1-3BB: KJo(2), K4s(1) [3 instances, 27.3%]
+      3-6BB: 43s(1), JTs(1), KTs(1), K9s(1) [4 instances, 36.4%]
+      6-10BB: KTo(1), AKs(1) [2 instances, 18.2%]
+      10BB+: 88(1), TT(1) [2 instances, 18.2%]
+    By Tournament Stage:
+      start: 88(1), TT(1), JTs(1), KJo(1), KTo(1), K9s(1), AKs(1) [7 instances, 63.6%]
+      pre_bubble: K4s(1) [1 instances, 9.1%]
+      final_table: 43s(1), KJo(1), KTs(1) [3 instances, 27.3%]
+
+  CALL: 88(1), 96s(1), Q5o(1), KTs(1), K9o(1), K9s(1)
+    Total: 6 unique combos, 6 instances, median combo frequency: 16.67%
+    By Pot Size:
+      N/A: 88(1), 96s(1), Q5o(1), KTs(1), K9o(1), K9s(1) [6 instances, 100.0%]
+    By Big Blinds:
+      3-6BB: 88(1), Q5o(1), K9s(1) [3 instances, 50.0%]
+      6-10BB: 96s(1), KTs(1) [2 instances, 33.3%]
+      10BB+: K9o(1) [1 instances, 16.7%]
+    By Tournament Stage:
+      start: 96s(1), K9o(1), K9s(1) [3 instances, 50.0%]
+      pre_bubble: 88(1) [1 instances, 16.7%]
+      final_table: Q5o(1), KTs(1) [2 instances, 33.3%]
+
+  CHECK: 44(1), 55(1), 87o(1), 86s(1), T8o(1), T7s(1), T6o(1), Q5o(1), KJo(1), K9o(1), K5s(1), AKo(2), A4o(1)
+    Total: 13 unique combos, 14 instances, median combo frequency: 7.14%
+    By Pot Size:
+      N/A: 44(1), 55(1), 87o(1), 86s(1), T8o(1), T7s(1), T6o(1), Q5o(1), KJo(1), K9o(1), K5s(1), AKo(2), A4o(1) [14 instances, 100.0%]
+    By Big Blinds:
+      N/A: 44(1), 55(1), 87o(1), 86s(1), T8o(1), T7s(1), T6o(1), Q5o(1), KJo(1), K9o(1), K5s(1), AKo(2), A4o(1) [14 instances, 100.0%]
+    By Tournament Stage:
+      start: 44(1), 55(1), 87o(1), T8o(1), T7s(1), T6o(1), KJo(1), K9o(1), AKo(1), A4o(1) [10 instances, 71.4%]
+      final_table: 86s(1), Q5o(1), K5s(1), AKo(1) [4 instances, 28.6%]
+
+================================================================================
+POSITION: EP(7+)
+================================================================================
+
+PREFLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: 44(1), 55(4), 66(1), 77(3), 88(4), 99(1), TT(5), JJ(4), QQ(4), KK(1), 42s(1), 97o(1), 95s(1), T9o(1), T9s(1), JTo(1), JTs(2), J9o(1), J6s(1), J4s(1), J2o(1), QJo(2), QJs(1), QTs(4), KQo(3), KQs(3), KJo(1), KTs(1), KTo(1), K9o(4), AA(3), AKs(4), AKo(8), AQs(3), AQo(11), AJo(4), AJs(4), ATs(1), ATo(2), A9o(1), A9s(1), A7s(4), A6s(2), A5s(1), A5o(1), A3o(2)
+    Total: 46 unique combos, 112 instances, median combo frequency: 1.34%
+    By Pot Size:
+      OPEN: 44(1), 55(3), 66(1), 77(2), 88(4), 99(1), TT(4), JJ(3), QQ(3), KK(1), 42s(1), 97o(1), 95s(1), T9s(1), T9o(1), JTo(1), JTs(2), J9o(1), J6s(1), J4s(1), QJs(1), QJo(2), QTs(2), KQo(3), KQs(2), KTo(1), K9o(3), AKo(5), AKs(2), AQs(3), AQo(8), AJo(3), AJs(3), ATs(1), ATo(1), A9o(1), A9s(1), A7s(3), A6s(2), A3o(2) [83 instances, 74.1%]
+      0.33x: A5o(1) [1 instances, 0.9%]
+      1x: QQ(1), KTs(1), AKo(2) [4 instances, 3.6%]
+      1.5x: AA(1), AKo(1) [2 instances, 1.8%]
+      2x: 55(1), JJ(1), QTs(1), AKs(1), AQo(2), A7s(1) [7 instances, 6.2%]
+      3x+: 77(1), TT(1), J2o(1), QTs(1), KQs(1), KJo(1), K9o(1), AA(2), AKs(1), AQo(1), AJs(1), AJo(1), ATo(1), A5s(1) [15 instances, 13.4%]
+    By Big Blinds:
+      MINRAISE: 55(2), 66(1), 77(2), 88(1), TT(1), JJ(3), QQ(1), KK(1), 42s(1), 97o(1), 95s(1), T9o(1), JTs(1), JTo(1), J6s(1), J4s(1), QJs(1), QJo(1), KQs(2), KQo(1), K9o(3), AKo(4), AKs(1), AQs(2), AQo(2), AJo(1), AJs(2), ATs(1), ATo(1), A7s(2), A6s(2) [46 instances, 41.1%]
+      2.5BB: TT(1), A7s(1) [2 instances, 1.8%]
+      3BB: 88(1), TT(1), QQ(1), JTs(1), QJo(1), QTs(1), KJo(1), KTo(1), K9o(1), AKs(1), AQo(3), AJo(1), A9o(1) [15 instances, 13.4%]
+      4-5BB: 44(1), 77(1), 88(1), QQ(1), KQo(1), A9s(1), A3o(1) [7 instances, 6.2%]
+      6-9BB: 55(2), 99(1), J9o(1), QTs(2), KQo(1), KQs(1), AA(1), AQs(1), AQo(5), AJs(2), ATo(1), A7s(1), A5o(1), A3o(1) [21 instances, 18.8%]
+      10BB+: 88(1), TT(2), JJ(1), QQ(1), T9s(1), J2o(1), QTs(1), KTs(1), AA(2), AKo(4), AKs(2), AQo(1), AJo(2), A5s(1) [21 instances, 18.8%]
+    By Tournament Stage:
+      start: 55(4), 66(1), 77(3), 88(3), TT(2), JJ(4), QQ(4), KK(1), 95s(1), T9o(1), T9s(1), JTs(2), JTo(1), J4s(1), QJs(1), QJo(1), QTs(3), KQo(2), KQs(2), KJo(1), KTs(1), KTo(1), K9o(3), AA(2), AKo(7), AKs(4), AQo(6), AQs(1), AJo(4), AJs(2), ATs(1), A9s(1), A9o(1), A7s(3), A6s(2), A5o(1), A5s(1), A3o(1) [81 instances, 72.3%]
+      pre_bubble: 88(1), 97o(1), QJo(1), KQs(1), AQo(1) [5 instances, 4.5%]
+      final_table: 44(1), 99(1), TT(3), 42s(1), J9o(1), J6s(1), J2o(1), QTs(1), KQo(1), K9o(1), AA(1), AKo(1), AQo(4), AQs(2), AJs(2), ATo(2), A7s(1), A3o(1) [26 instances, 23.2%]
+
+  CALL: 22(1), 33(2), 44(2), 55(6), 66(1), 77(2), 88(5), 99(2), QQ(3), KK(1), 32s(1), 65s(2), 87s(2), 84s(1), 98o(1), 93s(1), T9s(1), T9o(3), JTs(1), J6s(1), J4s(1), QJs(1), QTo(2), QTs(2), Q9o(3), KQs(3), KQo(2), KJo(2), KTs(2), K9o(2), K8s(2), K7o(1), AA(3), AKs(1), AKo(4), AQs(1), AQo(5), AJs(3), AJo(2), ATs(2), ATo(3), A9o(1), A9s(3), A8s(3), A7o(1), A5o(1), A4s(1), A3o(3)
+    Total: 48 unique combos, 99 instances, median combo frequency: 2.02%
+    By Pot Size:
+      N/A: 22(1), 33(2), 44(2), 55(6), 66(1), 77(2), 88(5), 99(2), QQ(3), KK(1), 32s(1), 65s(2), 87s(2), 84s(1), 98o(1), 93s(1), T9o(3), T9s(1), JTs(1), J6s(1), J4s(1), QJs(1), QTs(2), QTo(2), Q9o(3), KQs(3), KQo(2), KJo(2), KTs(2), K9o(2), K8s(2), K7o(1), AA(3), AKs(1), AKo(4), AQo(5), AQs(1), AJs(3), AJo(2), ATs(2), ATo(3), A9s(3), A9o(1), A8s(3), A7o(1), A5o(1), A4s(1), A3o(3) [99 instances, 100.0%]
+    By Big Blinds:
+      1BB_CALL: 22(1), 33(1), 44(1), 55(2), 66(1), 77(2), 88(2), 99(2), QQ(1), 65s(2), 87s(2), 84s(1), 98o(1), 93s(1), T9o(2), J6s(1), QTs(1), QTo(1), Q9o(2), KQs(1), KJo(1), KTs(1), K9o(1), K8s(2), K7o(1), AA(2), AKo(1), AQo(1), AJs(3), ATo(1), ATs(1), A9s(1), A9o(1), A8s(3), A7o(1), A5o(1), A4s(1), A3o(2) [53 instances, 53.5%]
+      2BB_CALL: 32s(1), T9o(1), J4s(1), QTo(1), KQo(1), KQs(1), AA(1), AQs(1), ATo(1), A9s(1), A3o(1) [11 instances, 11.1%]
+      3-4BB_CALL: 55(1), QQ(1), T9s(1), Q9o(1), KJo(1), K9o(1), AKo(1), AQo(1), AJo(1) [9 instances, 9.1%]
+      5BB+_CALL: 33(1), 44(1), 55(3), 88(3), QQ(1), KK(1), JTs(1), QJs(1), QTs(1), KQo(1), KQs(1), KTs(1), AKs(1), AKo(2), AQo(3), AJo(1), ATs(1), ATo(1), A9s(1) [26 instances, 26.3%]
+    By Tournament Stage:
+      start: 22(1), 44(2), 55(5), 66(1), 77(2), 88(5), 99(2), QQ(3), KK(1), 32s(1), 65s(2), 87s(2), 93s(1), T9s(1), T9o(2), JTs(1), J4s(1), QJs(1), QTo(2), QTs(2), Q9o(3), KQs(3), KQo(1), KTs(2), K9o(2), K8s(2), AKs(1), AKo(3), AQo(4), AJo(2), ATo(2), ATs(1), A9s(3), A8s(1), A5o(1), A3o(3) [72 instances, 72.7%]
+      pre_bubble: 55(1), AKo(1), AJs(2) [4 instances, 4.0%]
+      final_table: 33(2), 84s(1), 98o(1), T9o(1), J6s(1), KQo(1), KJo(2), K7o(1), AA(3), AQo(1), AQs(1), AJs(1), ATo(1), ATs(1), A9o(1), A8s(2), A7o(1), A4s(1) [23 instances, 23.2%]
+
+  CHECK: 73o(1), T2o(1), A2o(1)
+    Total: 3 unique combos, 3 instances, median combo frequency: 33.33%
+    By Pot Size:
+      N/A: 73o(1), T2o(1), A2o(1) [3 instances, 100.0%]
+    By Big Blinds:
+      N/A: 73o(1), T2o(1), A2o(1) [3 instances, 100.0%]
+    By Tournament Stage:
+      start: 73o(1), A2o(1) [2 instances, 66.7%]
+      final_table: T2o(1) [1 instances, 33.3%]
+
+FLOP:
+--------------------------------------------------------------------------------
+
+  RAISE: QQ(1), Q9o(1), AQo(1), AJs(1), A4s(1)
+    Total: 5 unique combos, 5 instances, median combo frequency: 20.00%
+    By Pot Size:
+      0.5x: QQ(1), Q9o(1) [2 instances, 40.0%]
+      1x: AQo(1) [1 instances, 20.0%]
+      2x: AJs(1) [1 instances, 20.0%]
+      3x+: A4s(1) [1 instances, 20.0%]
+    By Big Blinds:
+      6-10BB: Q9o(1) [1 instances, 20.0%]
+      10BB+: QQ(1), AQo(1), AJs(1), A4s(1) [4 instances, 80.0%]
+    By Tournament Stage:
+      start: QQ(1), Q9o(1), AQo(1) [3 instances, 60.0%]
+      final_table: AJs(1), A4s(1) [2 instances, 40.0%]
+
+  BET: 44(1), 55(1), 66(1), TT(1), 42s(1), 84s(1), 95s(1), T2o(1), KQs(2), K9o(2), AQo(2), AJs(1), ATo(2), A9o(1), A7s(1), A6s(2)
+    Total: 16 unique combos, 21 instances, median combo frequency: 4.76%
+    By Pot Size:
+      <0.33x: KQs(1), AQo(1), A9o(1) [3 instances, 14.3%]
+      0.33x: 44(1), AQo(1), ATo(1), A7s(1) [4 instances, 19.0%]
+      0.5x: 66(1), 42s(1), 84s(1), K9o(1), AJs(1), A6s(2) [7 instances, 33.3%]
+      0.75x: TT(1), KQs(1) [2 instances, 9.5%]
+      1x: 55(1), T2o(1), ATo(1) [3 instances, 14.3%]
+      2x: K9o(1) [1 instances, 4.8%]
+      3x+: 95s(1) [1 instances, 4.8%]
+    By Big Blinds:
+      <1BB: A9o(1) [1 instances, 4.8%]
+      1-3BB: 66(1), 84s(1), T2o(1), AQo(1), AJs(1), ATo(1), A7s(1), A6s(2) [9 instances, 42.9%]
+      3-6BB: TT(1), 42s(1), KQs(1), K9o(1), AQo(1) [5 instances, 23.8%]
+      6-10BB: KQs(1), ATo(1) [2 instances, 9.5%]
+      10BB+: 44(1), 55(1), 95s(1), K9o(1) [4 instances, 19.0%]
+    By Tournament Stage:
+      start: 44(1), 55(1), 66(1), TT(1), 95s(1), KQs(2), K9o(1), AQo(1), ATo(1), A9o(1), A7s(1), A6s(2) [14 instances, 66.7%]
+      final_table: 42s(1), 84s(1), T2o(1), K9o(1), AQo(1), AJs(1), ATo(1) [7 instances, 33.3%]
+
+  CALL: 44(1), 77(2), 65s(1), 87s(1), T9o(1), J6s(1), QJo(2), K9o(1), K8s(1), AQo(1), A8s(1), A6s(1), A3o(1)
+    Total: 13 unique combos, 15 instances, median combo frequency: 6.67%
+    By Pot Size:
+      N/A: 44(1), 77(2), 65s(1), 87s(1), T9o(1), J6s(1), QJo(2), K9o(1), K8s(1), AQo(1), A8s(1), A6s(1), A3o(1) [15 instances, 100.0%]
+    By Big Blinds:
+      <1BB: A8s(1) [1 instances, 6.7%]
+      1-3BB: 87s(1), T9o(1), K9o(1), A6s(1), A3o(1) [5 instances, 33.3%]
+      3-6BB: 77(1), 65s(1), QJo(2), K8s(1), AQo(1) [6 instances, 40.0%]
+      10BB+: 44(1), 77(1), J6s(1) [3 instances, 20.0%]
+    By Tournament Stage:
+      start: 44(1), 77(2), 65s(1), 87s(1), QJo(1), K9o(1), K8s(1), A6s(1), A3o(1) [10 instances, 66.7%]
+      pre_bubble: QJo(1) [1 instances, 6.7%]
+      final_table: T9o(1), J6s(1), AQo(1), A8s(1) [4 instances, 26.7%]
+
+  CHECK: 22(1), 55(1), 66(1), 77(2), 99(1), TT(1), 32s(1), 65s(1), 73o(1), 87s(1), 93s(1), T9o(2), JTs(1), JTo(1), QJo(1), QTs(1), Q9o(1), KQo(1), KJo(1), K9o(1), K8s(1), AJo(1), AJs(2), ATs(2), A9s(1), A7s(2), A7o(1), A4s(1), A3o(1), A2o(1)
+    Total: 30 unique combos, 35 instances, median combo frequency: 2.86%
+    By Pot Size:
+      N/A: 22(1), 55(1), 66(1), 77(2), 99(1), TT(1), 32s(1), 65s(1), 73o(1), 87s(1), 93s(1), T9o(2), JTs(1), JTo(1), QJo(1), QTs(1), Q9o(1), KQo(1), KJo(1), K9o(1), K8s(1), AJs(2), AJo(1), ATs(2), A9s(1), A7s(2), A7o(1), A4s(1), A3o(1), A2o(1) [35 instances, 100.0%]
+    By Big Blinds:
+      N/A: 22(1), 55(1), 66(1), 77(2), 99(1), TT(1), 32s(1), 65s(1), 73o(1), 87s(1), 93s(1), T9o(2), JTs(1), JTo(1), QJo(1), QTs(1), Q9o(1), KQo(1), KJo(1), K9o(1), K8s(1), AJo(1), AJs(2), ATs(2), A9s(1), A7o(1), A7s(2), A4s(1), A3o(1), A2o(1) [35 instances, 100.0%]
+    By Tournament Stage:
+      start: 22(1), 55(1), 66(1), 77(2), 99(1), TT(1), 32s(1), 65s(1), 73o(1), 87s(1), 93s(1), T9o(1), JTo(1), JTs(1), QJo(1), Q9o(1), KQo(1), K9o(1), K8s(1), AJo(1), ATs(1), A9s(1), A7s(2), A3o(1), A2o(1) [27 instances, 77.1%]
+      pre_bubble: AJs(1) [1 instances, 2.9%]
+      final_table: T9o(1), QTs(1), KJo(1), AJs(1), ATs(1), A7o(1), A4s(1) [7 instances, 20.0%]
+
+TURN:
+--------------------------------------------------------------------------------
+
+  RAISE: 87s(1), 93s(1)
+    Total: 2 unique combos, 2 instances, median combo frequency: 50.00%
+    By Pot Size:
+      0.5x: 87s(1) [1 instances, 50.0%]
+      1x: 93s(1) [1 instances, 50.0%]
+    By Big Blinds:
+      6-10BB: 87s(1), 93s(1) [2 instances, 100.0%]
+    By Tournament Stage:
+      start: 87s(1), 93s(1) [2 instances, 100.0%]
+
+  BET: 22(1), 66(1), 99(1), TT(1), 32s(1), 42s(1), T9o(1), KJo(1), K9o(1), AJo(1), A9s(1), A7s(2), A6s(1)
+    Total: 13 unique combos, 14 instances, median combo frequency: 7.14%
+    By Pot Size:
+      <0.33x: 22(1), A9s(1) [2 instances, 14.3%]
+      0.33x: T9o(1), KJo(1), A7s(1), A6s(1) [4 instances, 28.6%]
+      0.5x: 66(1), TT(1), 42s(1), K9o(1), AJo(1), A7s(1) [6 instances, 42.9%]
+      0.75x: 32s(1) [1 instances, 7.1%]
+      1x: 99(1) [1 instances, 7.1%]
+    By Big Blinds:
+      1-3BB: 22(1), T9o(1), A7s(1) [3 instances, 21.4%]
+      3-6BB: 66(1), 32s(1), KJo(1), AJo(1), A9s(1), A7s(1), A6s(1) [7 instances, 50.0%]
+      6-10BB: 99(1), TT(1), K9o(1) [3 instances, 21.4%]
+      10BB+: 42s(1) [1 instances, 7.1%]
+    By Tournament Stage:
+      start: 22(1), 66(1), 99(1), TT(1), 32s(1), T9o(1), AJo(1), A9s(1), A7s(2), A6s(1) [11 instances, 78.6%]
+      final_table: 42s(1), KJo(1), K9o(1) [3 instances, 21.4%]
+
+  CALL: 77(1), TT(1), 65s(1), QJo(2), QTs(1), KJo(1), K9o(2), AQo(1), AJs(1), ATs(1), A7s(1), A3o(1)
+    Total: 12 unique combos, 14 instances, median combo frequency: 7.14%
+    By Pot Size:
+      N/A: 77(1), TT(1), 65s(1), QJo(2), QTs(1), KJo(1), K9o(2), AQo(1), AJs(1), ATs(1), A7s(1), A3o(1) [14 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: TT(1), QJo(1), QTs(1), AJs(1), ATs(1), A3o(1) [6 instances, 42.9%]
+      3-6BB: 77(1), K9o(1), A7s(1) [3 instances, 21.4%]
+      6-10BB: QJo(1), KJo(1), AQo(1) [3 instances, 21.4%]
+      10BB+: 65s(1), K9o(1) [2 instances, 14.3%]
+    By Tournament Stage:
+      start: 77(1), TT(1), 65s(1), QJo(1), K9o(1), A7s(1), A3o(1) [7 instances, 50.0%]
+      pre_bubble: QJo(1), AJs(1) [2 instances, 14.3%]
+      final_table: QTs(1), KJo(1), K9o(1), AQo(1), ATs(1) [5 instances, 35.7%]
+
+  CHECK: 55(1), 66(1), 77(1), 65s(1), 73o(1), 87s(1), T9o(1), T2o(1), JTo(1), JTs(1), QJo(1), KQo(1), K9o(1), AQo(2), AJs(2), ATs(1), A8s(1), A7o(1), A6s(1), A3o(1), A2o(1)
+    Total: 21 unique combos, 23 instances, median combo frequency: 4.35%
+    By Pot Size:
+      N/A: 55(1), 66(1), 77(1), 65s(1), 73o(1), 87s(1), T9o(1), T2o(1), JTs(1), JTo(1), QJo(1), KQo(1), K9o(1), AQo(2), AJs(2), ATs(1), A8s(1), A7o(1), A6s(1), A3o(1), A2o(1) [23 instances, 100.0%]
+    By Big Blinds:
+      N/A: 55(1), 66(1), 77(1), 65s(1), 73o(1), 87s(1), T9o(1), T2o(1), JTs(1), JTo(1), QJo(1), KQo(1), K9o(1), AQo(2), AJs(2), ATs(1), A8s(1), A7o(1), A6s(1), A3o(1), A2o(1) [23 instances, 100.0%]
+    By Tournament Stage:
+      start: 55(1), 66(1), 77(1), 65s(1), 73o(1), 87s(1), JTo(1), JTs(1), QJo(1), KQo(1), K9o(1), AQo(1), ATs(1), A6s(1), A3o(1), A2o(1) [16 instances, 69.6%]
+      pre_bubble: AJs(1) [1 instances, 4.3%]
+      final_table: T9o(1), T2o(1), AQo(1), AJs(1), A8s(1), A7o(1) [6 instances, 26.1%]
+
+RIVER:
+--------------------------------------------------------------------------------
+
+  BET: 22(1), 32s(1), 93s(1), T9o(2), JTs(1), QTs(1), KJo(1), AQo(1), AJo(1), ATs(1), A8s(1), A7s(2)
+    Total: 12 unique combos, 14 instances, median combo frequency: 7.14%
+    By Pot Size:
+      <0.33x: 22(1), 93s(1), T9o(2) [4 instances, 28.6%]
+      0.33x: KJo(1), A7s(1) [2 instances, 14.3%]
+      0.5x: 32s(1), JTs(1), AJo(1) [3 instances, 21.4%]
+      0.75x: ATs(1) [1 instances, 7.1%]
+      1x: A7s(1) [1 instances, 7.1%]
+      1.5x: QTs(1), AQo(1), A8s(1) [3 instances, 21.4%]
+    By Big Blinds:
+      1-3BB: 22(1), T9o(1), JTs(1) [3 instances, 21.4%]
+      3-6BB: 93s(1), T9o(1), A7s(1) [3 instances, 21.4%]
+      6-10BB: 32s(1), AJo(1), A8s(1) [3 instances, 21.4%]
+      10BB+: QTs(1), KJo(1), AQo(1), ATs(1), A7s(1) [5 instances, 35.7%]
+    By Tournament Stage:
+      start: 22(1), 32s(1), 93s(1), T9o(1), JTs(1), AJo(1), ATs(1), A7s(2) [9 instances, 64.3%]
+      final_table: T9o(1), QTs(1), KJo(1), AQo(1), A8s(1) [5 instances, 35.7%]
+
+  CALL: 77(1), 42s(1), T9o(1), K9o(1), AQo(1), AJs(1)
+    Total: 6 unique combos, 6 instances, median combo frequency: 16.67%
+    By Pot Size:
+      N/A: 77(1), 42s(1), T9o(1), K9o(1), AQo(1), AJs(1) [6 instances, 100.0%]
+    By Big Blinds:
+      1-3BB: AJs(1) [1 instances, 16.7%]
+      6-10BB: 77(1), T9o(1) [2 instances, 33.3%]
+      10BB+: 42s(1), K9o(1), AQo(1) [3 instances, 50.0%]
+    By Tournament Stage:
+      start: 77(1), T9o(1), K9o(1), AQo(1) [4 instances, 66.7%]
+      final_table: 42s(1), AJs(1) [2 instances, 33.3%]
+
+  CHECK: 55(1), 66(2), 77(1), TT(1), 65s(1), 73o(1), 87s(1), T2o(1), JTo(1), QJo(1), KQo(1), K9o(1), AQo(1), AJs(1), ATs(1), A9s(1), A7o(1), A6s(2), A3o(1), A2o(1)
+    Total: 20 unique combos, 22 instances, median combo frequency: 4.55%
+    By Pot Size:
+      N/A: 55(1), 66(2), 77(1), TT(1), 65s(1), 73o(1), 87s(1), T2o(1), JTo(1), QJo(1), KQo(1), K9o(1), AQo(1), AJs(1), ATs(1), A9s(1), A7o(1), A6s(2), A3o(1), A2o(1) [22 instances, 100.0%]
+    By Big Blinds:
+      N/A: 55(1), 66(2), 77(1), TT(1), 65s(1), 73o(1), 87s(1), T2o(1), JTo(1), QJo(1), KQo(1), K9o(1), AQo(1), AJs(1), ATs(1), A9s(1), A7o(1), A6s(2), A3o(1), A2o(1) [22 instances, 100.0%]
+    By Tournament Stage:
+      start: 55(1), 66(2), 77(1), TT(1), 65s(1), 73o(1), 87s(1), JTo(1), QJo(1), KQo(1), K9o(1), AQo(1), A9s(1), A6s(2), A3o(1), A2o(1) [18 instances, 81.8%]
+      pre_bubble: AJs(1) [1 instances, 4.5%]
+      final_table: T2o(1), ATs(1), A7o(1) [3 instances, 13.6%]
