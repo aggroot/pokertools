@@ -43,12 +43,16 @@ class Hub:
         if not consumers:
             return
 
-        send_tasks = [consumer.send_bytes(data) for consumer in consumers]
-        results = await asyncio.gather(*send_tasks, return_exceptions=True)
+        for consumer in consumers:
+            asyncio.create_task(self._send_to_consumer(producer_id, consumer, data))
 
-        for consumer, result in zip(consumers, results):
-            if isinstance(result, Exception):
-                await self.unregister_consumer(producer_id, consumer)
+    async def _send_to_consumer(
+        self, producer_id: str, consumer: web.WebSocketResponse, data: bytes
+    ) -> None:
+        try:
+            await consumer.send_bytes(data)
+        except Exception:
+            await self.unregister_consumer(producer_id, consumer)
 
 
 async def producer_handler(request: web.Request) -> web.WebSocketResponse:
