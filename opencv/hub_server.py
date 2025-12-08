@@ -1,5 +1,6 @@
 import argparse
 import asyncio
+import contextlib
 import json
 from typing import Dict, Set
 
@@ -10,6 +11,9 @@ class Hub:
     def __init__(self) -> None:
         self.producers: Dict[str, web.WebSocketResponse] = {}
         self.consumers: Dict[str, Set[web.WebSocketResponse]] = {}
+        self.latest_frames: Dict[str, bytes] = {}
+        self.consumer_queues: Dict[web.WebSocketResponse, asyncio.Queue[bytes]] = {}
+        self.consumer_tasks: Dict[web.WebSocketResponse, asyncio.Task[None]] = {}
         self.lock = asyncio.Lock()
 
     async def register_producer(self, producer_id: str, ws: web.WebSocketResponse) -> bool:
@@ -23,12 +27,17 @@ class Hub:
         async with self.lock:
             self.producers.pop(producer_id, None)
             consumers = self.consumers.pop(producer_id, set())
+            self.latest_frames.pop(producer_id, None)
         for consumer in consumers:
             await consumer.close(code=1000, message=b"Producer disconnected")
 
     async def register_consumer(self, producer_id: str, ws: web.WebSocketResponse) -> None:
         async with self.lock:
             self.consumers.setdefault(producer_id, set()).add(ws)
+            queue: asyncio.Queue[bytes] = asyncio.Queue(maxsize=2)
+            self.consumer_queues[ws] = queue
+            task = asyncio.create_task(self._send_from_queue(producer_id, ws, queue))
+            self.consumer_tasks[ws] = task
 
     async def unregister_consumer(self, producer_id: str, ws: web.WebSocketResponse) -> None:
         async with self.lock:
@@ -36,21 +45,35 @@ class Hub:
                 self.consumers[producer_id].discard(ws)
                 if not self.consumers[producer_id]:
                     self.consumers.pop(producer_id, None)
+            queue = self.consumer_queues.pop(ws, None)
+            task = self.consumer_tasks.pop(ws, None)
+        if task:
+            task.cancel()
+            with contextlib.suppress(asyncio.CancelledError):
+                await task
 
     async def broadcast_frame(self, producer_id: str, data: bytes) -> None:
         async with self.lock:
+            self.latest_frames[producer_id] = data
             consumers = list(self.consumers.get(producer_id, []))
-        if not consumers:
-            return
-
         for consumer in consumers:
-            asyncio.create_task(self._send_to_consumer(producer_id, consumer, data))
+            queue = self.consumer_queues.get(consumer)
+            if queue is None:
+                continue
+            if queue.full():
+                try:
+                    queue.get_nowait()
+                except asyncio.QueueEmpty:
+                    pass
+            queue.put_nowait(data)
 
-    async def _send_to_consumer(
-        self, producer_id: str, consumer: web.WebSocketResponse, data: bytes
+    async def _send_from_queue(
+        self, producer_id: str, consumer: web.WebSocketResponse, queue: asyncio.Queue[bytes]
     ) -> None:
         try:
-            await consumer.send_bytes(data)
+            while True:
+                frame = await queue.get()
+                await consumer.send_bytes(frame)
         except Exception:
             await self.unregister_consumer(producer_id, consumer)
 
