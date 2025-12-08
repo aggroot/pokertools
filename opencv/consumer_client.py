@@ -29,7 +29,7 @@ async def consume(args: argparse.Namespace) -> None:
                 ts_path.parent.mkdir(parents=True, exist_ok=True)
                 cv2.imwrite(str(ts_path), frame)
 
-    await nc.subscribe(subject, cb=lambda msg: asyncio.create_task(handle_message(msg)))
+    await nc.subscribe(subject, cb=handle_message)
 
     print(f"Subscribed to {subject}")
     try:
