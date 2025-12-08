@@ -1,7 +1,5 @@
 import argparse
 import asyncio
-import base64
-import json
 import threading
 import time
 from typing import Optional

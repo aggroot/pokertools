@@ -2,7 +2,7 @@ import argparse
 import asyncio
 import contextlib
 import json
-from typing import Dict, Set
+from typing import Dict, Set, Tuple
 
 from aiohttp import web, WSMsgType
 
@@ -11,8 +11,9 @@ class Hub:
     def __init__(self) -> None:
         self.producers: Dict[str, web.WebSocketResponse] = {}
         self.consumers: Dict[str, Set[web.WebSocketResponse]] = {}
-        self.latest_frames: Dict[str, bytes] = {}
-        self.consumer_queues: Dict[web.WebSocketResponse, asyncio.Queue[bytes]] = {}
+        self.consumer_queues: Dict[
+            Tuple[str, web.WebSocketResponse], asyncio.Queue[bytes]
+        ] = {}
         self.consumer_tasks: Dict[web.WebSocketResponse, asyncio.Task[None]] = {}
         self.lock = asyncio.Lock()
 
@@ -27,7 +28,6 @@ class Hub:
         async with self.lock:
             self.producers.pop(producer_id, None)
             consumers = self.consumers.pop(producer_id, set())
-            self.latest_frames.pop(producer_id, None)
         for consumer in consumers:
             await consumer.close(code=1000, message=b"Producer disconnected")
 
@@ -35,7 +35,7 @@ class Hub:
         async with self.lock:
             self.consumers.setdefault(producer_id, set()).add(ws)
             queue: asyncio.Queue[bytes] = asyncio.Queue(maxsize=2)
-            self.consumer_queues[ws] = queue
+            self.consumer_queues[(producer_id, ws)] = queue
             task = asyncio.create_task(self._send_from_queue(producer_id, ws, queue))
             self.consumer_tasks[ws] = task
 
@@ -45,7 +45,7 @@ class Hub:
                 self.consumers[producer_id].discard(ws)
                 if not self.consumers[producer_id]:
                     self.consumers.pop(producer_id, None)
-            queue = self.consumer_queues.pop(ws, None)
+            self.consumer_queues.pop((producer_id, ws), None)
             task = self.consumer_tasks.pop(ws, None)
         if task:
             task.cancel()
@@ -54,10 +54,11 @@ class Hub:
 
     async def broadcast_frame(self, producer_id: str, data: bytes) -> None:
         async with self.lock:
-            self.latest_frames[producer_id] = data
-            consumers = list(self.consumers.get(producer_id, []))
-        for consumer in consumers:
-            queue = self.consumer_queues.get(consumer)
+            consumer_items = [
+                (consumer, self.consumer_queues.get((producer_id, consumer)))
+                for consumer in self.consumers.get(producer_id, set())
+            ]
+        for consumer, queue in consumer_items:
             if queue is None:
                 continue
             if queue.full():
