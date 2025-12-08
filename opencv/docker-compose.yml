@@ -1,46 +1,25 @@
 version: "3.8"
 
 services:
-  snapshot:
+  hub:
     build: .
-    devices:
-      - "/dev/video0:/dev/video0"
-    environment:
-      - SNAPSHOT_DEVICE=/dev/video0
-      - SNAPSHOT_WIDTH=1920
-      - SNAPSHOT_HEIGHT=1080
-      - SNAPSHOT_FPS=30
-      - SNAPSHOT_QUALITY=95
-      - SNAPSHOT_INTERVAL=0
-    command:
-      [
-        "python",
-        "snapshot_server.py",
-        "--device",
-        "${SNAPSHOT_DEVICE:-/dev/video0}",
-        "--width",
-        "${SNAPSHOT_WIDTH:-1920}",
-        "--height",
-        "${SNAPSHOT_HEIGHT:-1080}",
-        "--fps",
-        "${SNAPSHOT_FPS:-30}",
-        "--quality",
-        "${SNAPSHOT_QUALITY:-95}",
-        "--interval",
-        "${SNAPSHOT_INTERVAL:-0}",
-        "--host",
-        "0.0.0.0",
-        "--port",
-        "8081",
-      ]
+    expose:
+      - "9000"
 
   nginx:
     image: nginx:stable
     ports:
+      - "80:80"
       - "443:443"
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      - ./certs:/etc/nginx/certs:ro
-      - ./auth:/etc/nginx/auth:ro
+      - ./certbot/www:/var/www/certbot:ro
+      - ./certbot/live:/etc/letsencrypt:ro
     depends_on:
-      - snapshot
+      - hub
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/live:/etc/letsencrypt

@@ -5,6 +5,7 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY snapshot_server.py snapshot_server.py
+COPY hub_server.py hub_server.py
+COPY consumer_client.html consumer_client.html
 
-CMD ["python", "snapshot_server.py", "--host", "0.0.0.0", "--port", "8081"]
+CMD ["python", "hub_server.py", "--host", "0.0.0.0", "--port", "9000"]
