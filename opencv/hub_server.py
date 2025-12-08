@@ -1,7 +1,8 @@
 import argparse
 import asyncio
 import json
-from typing import Dict, Set
+from contextlib import suppress
+from typing import Dict, Set, Tuple
 
 from aiohttp import web, WSMsgType
 
@@ -10,6 +11,8 @@ class Hub:
     def __init__(self) -> None:
         self.producers: Dict[str, web.WebSocketResponse] = {}
         self.consumers: Dict[str, Set[web.WebSocketResponse]] = {}
+        self.consumer_queues: Dict[Tuple[str, web.WebSocketResponse], asyncio.Queue[bytes]] = {}
+        self.consumer_tasks: Dict[Tuple[str, web.WebSocketResponse], asyncio.Task[None]] = {}
         self.lock = asyncio.Lock()
 
     async def register_producer(self, producer_id: str, ws: web.WebSocketResponse) -> bool:
@@ -22,40 +25,64 @@ class Hub:
 
     async def unregister_producer(self, producer_id: str) -> None:
         async with self.lock:
-            self.producers.pop(producer_id, None)
-            consumers = self.consumers.pop(producer_id, set())
+            ws = self.producers.pop(producer_id, None)
+            consumers = list(self.consumers.pop(producer_id, set()))
         for consumer in consumers:
-            await consumer.close(code=1000, message=b"Producer disconnected")
+            await self.unregister_consumer(producer_id, consumer)
+        if ws and not ws.closed:
+            await ws.close()
 
     async def register_consumer(self, producer_id: str, ws: web.WebSocketResponse) -> bool:
         async with self.lock:
-            if producer_id not in self.consumers:
+            if producer_id not in self.producers:
                 return False
-            self.consumers[producer_id].add(ws)
+            self.consumers.setdefault(producer_id, set()).add(ws)
+            queue: asyncio.Queue[bytes] = asyncio.Queue(maxsize=2)
+            self.consumer_queues[(producer_id, ws)] = queue
+            task = asyncio.create_task(self._forward_frames(producer_id, ws, queue))
+            self.consumer_tasks[(producer_id, ws)] = task
         return True
 
     async def unregister_consumer(self, producer_id: str, ws: web.WebSocketResponse) -> None:
         async with self.lock:
             if producer_id in self.consumers:
                 self.consumers[producer_id].discard(ws)
+            queue = self.consumer_queues.pop((producer_id, ws), None)
+            task = self.consumer_tasks.pop((producer_id, ws), None)
+        if task:
+            task.cancel()
+            with suppress(asyncio.CancelledError):
+                await task
+        if queue:
+            while not queue.empty():
+                queue.get_nowait()
+        if not ws.closed:
+            with suppress(Exception):
+                await ws.close()
 
-    async def broadcast_frame(self, producer_id: str, data: bytes) -> None:
+    async def broadcast_frame(self, producer_id: str, frame: bytes) -> None:
         async with self.lock:
-            targets = list(self.consumers.get(producer_id, set()))
-        for consumer in targets:
-            asyncio.create_task(self._send_frame(producer_id, consumer, data))
+            targets = [
+                self.consumer_queues.get((producer_id, consumer))
+                for consumer in self.consumers.get(producer_id, set())
+            ]
+        for queue in targets:
+            if queue is None:
+                continue
+            if queue.full():
+                with suppress(asyncio.QueueEmpty):
+                    queue.get_nowait()
+            queue.put_nowait(frame)
 
-    async def _send_frame(
-        self, producer_id: str, consumer: web.WebSocketResponse, data: bytes
+    async def _forward_frames(
+        self, producer_id: str, consumer: web.WebSocketResponse, queue: asyncio.Queue[bytes]
     ) -> None:
-        if consumer.closed:
-            await self.unregister_consumer(producer_id, consumer)
-            return
         try:
-            await consumer.send_bytes(data)
+            while True:
+                frame = await queue.get()
+                await consumer.send_bytes(frame)
         except Exception:
-            await self.unregister_consumer(producer_id, consumer)
-            await consumer.close()
+            asyncio.create_task(self.unregister_consumer(producer_id, consumer))
 
 
 hub = Hub()
@@ -125,7 +152,7 @@ def create_app() -> web.Application:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="WebSocket hub router.")
+    parser = argparse.ArgumentParser(description="WebSocket frame hub.")
     parser.add_argument("--host", default="0.0.0.0")
     parser.add_argument("--port", type=int, default=9000)
     return parser.parse_args()
