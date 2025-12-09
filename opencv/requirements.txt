@@ -1,0 +1,3 @@
+# Dependencies for read_rtmp.py
+opencv-python
+numpy
